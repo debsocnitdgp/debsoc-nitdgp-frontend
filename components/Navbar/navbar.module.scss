@@ -1,0 +1,91 @@
+@import "styles/variables.scss";
+
+.header {
+  width: 100%;
+  height: 72px;
+  position: sticky;
+  margin-bottom: clamp(20px, 4vw, 36px);
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  .headerContainer {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 3%;
+    margin: 0 auto;
+    max-width: 1300px;
+
+    @include min-q(757px) {
+      padding: 0px 6%;
+      max-width: 1200px;
+    }
+
+    @include min-q(500px) {
+      padding: 0px 10%;
+      max-width: 1720px;
+    }
+
+    .headerLeft {
+      display: flex;
+      align-items: center;
+      .debsoc {
+        margin-left: 15px;
+        display: flex;
+        flex-direction: row;
+        font-weight: 700;
+        font-size: clamp(22px, 4.5vw, 36px);
+        justify-content: center;
+        align-items: center;
+        padding: 8px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      }
+    }
+
+    .headerRight {
+      display: flex;
+      align-items: center;
+        .drawerOpener {
+            margin: 0px 10px;
+            margin-top: 5px;
+            display: none;
+
+            @include max-q(758px) {
+                display: block;
+            }
+        }
+        li {
+            text-decoration: none;
+        }
+          .menuList {
+              display: flex;
+              align-items: center;
+              
+              @include max-q(758px) {
+                  display: none;
+              }
+
+              .menuListItem {
+                  margin-left: 50px;
+            
+                  a {
+                      color: $black;
+                      font-weight: 400;
+                      font-size: 1rem;
+                  }
+
+                  @include max-q(758px) {
+                      margin-left: 25px;
+                  }
+              }
+    
+
+    }
+  }
+}

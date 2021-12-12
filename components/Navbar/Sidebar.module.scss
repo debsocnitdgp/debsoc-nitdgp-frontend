@@ -1,0 +1,62 @@
+@import "styles/variables.scss";
+
+.backdrop {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    // background: $backdrop;
+    min-width: 100vw;
+    min-height: 100% !important;
+    height: 100%;
+}
+
+.sidebar {
+    height: 100%;
+    background: $white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    max-width: 320px;
+    z-index: 200;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    .menuList {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 60px;
+
+        .menuListItem {
+            margin: 15px 30px;
+
+            a {
+                color: $black;
+                // font-weight: $font-medium;
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .LogInButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 16px;
+        border-radius: 5px;
+        // border: 1px solid $bg-blue-900;
+        // color: $bg-blue-900;
+        margin: 15px 30px;
+    }
+}
+
+.open {
+    transform: translateX(0);
+}

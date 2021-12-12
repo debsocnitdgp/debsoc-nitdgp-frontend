@@ -1,0 +1,106 @@
+@import "styles/variables.scss";
+
+.landing {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
+  .colwrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .col1 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 35%;
+      padding-right: clamp(20px, 5vw, 60px);
+      img {
+        width: clamp(50px, 14.7vw, 171px);
+        height: clamp(90px, 26.5vw, 309px);
+      }
+    }
+    .col2 {
+      width: 65%;
+      padding-left: clamp(20px, 5vw, 60px);
+      margin-top: 32px;
+      .heading {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+      }
+      .head1 {
+        color: $white;
+        font-size: clamp(42px, 12vw, 134px);
+        margin: 0px;
+        z-index: 0;
+        line-height: 1;
+        position: absolute;
+        font-weight: 700;
+        bottom: 0;
+        left: 0;
+      }
+      .head2 {
+        font-size: clamp(18px, 4.5vw, 50px);
+        color: $black;
+        margin: 0px;
+        font-weight: 700;
+        line-height: 1.4;
+        z-index: 1;
+        span {
+          color: $purple;
+        }
+      }
+      .line {
+        width: clamp(100px, 50vw, 580px);
+        height: 1px;
+        background-color: $black;
+      }
+      .head3 {
+        font-size: clamp(18px, 3.5vw, 36px);
+        margin-top: 8px;
+        font-weight: 400;
+      }
+      .body {
+        margin-top: 15px;
+        max-width: 70%;
+        line-height: 1.25;
+        font-weight: 400;
+        @include max-q(758px) {
+          display: none;
+        }
+      }
+      .bigButton {
+        margin-top: 20px;
+        @include max-q(758px) {
+          display: none;
+        }
+      }
+    }
+  }
+  button {
+    background-color: $purple;
+    color: $white;
+    border: none;
+    width: clamp(90px, 10vw, 120px);
+    height: clamp(25px, 2.8vw, 30px);
+    border-radius: 5px;
+    font-size: clamp(12px, 1.3vw, 14px);
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .body2 {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 400;
+    .smallButton {
+      margin-top: 15px;
+    }
+    @include min-q(757px) {
+      display: none;
+    }
+  }
+}
