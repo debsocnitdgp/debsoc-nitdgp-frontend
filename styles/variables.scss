@@ -1,0 +1,15 @@
+$white : #fff;
+$black : #1C1F26;
+$purple : #6F57FF;
+
+@mixin min-q($var) {
+    @media only screen and (min-width: $var) {
+        @content;
+    }
+}
+
+@mixin max-q($var) {
+    @media only screen and (max-width: $var) {
+        @content;
+    }
+}

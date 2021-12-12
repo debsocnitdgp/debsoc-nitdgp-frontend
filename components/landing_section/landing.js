@@ -6,7 +6,7 @@ export default function Landing() {
       <div className={styles.landing}>
         <div className={styles.colwrapper}>
           <div className={styles.col1}>
-            <img src="Images/dslogo.png" alt="" />
+            <img src="Images/DEBSOClogo.png" alt="" />
           </div>
           <div className={styles.col2}>
             <div className={styles.heading}>
