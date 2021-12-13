@@ -104,3 +104,37 @@
     }
   }
 }
+.bannerItems {
+    width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+         position: absolute;
+         z-index: 1;
+.banner {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+   width: clamp(305px, 60vw, 890px);
+    height: clamp(60px, 5.5vw, 125px);
+   border-radius: 7px;
+   box-shadow: 0px 3px 30px 4px rgba(0, 0, 0, 0.15);
+   border: clamp(1.5px, 0.5vw, 3px) solid $black;
+   margin-top: clamp(50px, 6vw, 70px);
+  .item{
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: clamp(10px, 2vw, 30px);
+      font-weight: 700;
+      font-size: clamp(15px,1.8vw,30px);
+      img {
+        width: clamp(20px,3.5vw,52px);
+         height: clamp(20px, 3.5vw, 52px);
+          margin-right: clamp(5px, 1vw, 20px);
+      }
+  }
+}
+}

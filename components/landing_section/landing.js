@@ -34,6 +34,22 @@ export default function Landing() {
           <button className={styles.smallButton}>Know More</button>
         </div>
       </div>
+      <div className={styles.bannerItems}>
+        <div className={styles.banner}>
+          <div className={styles.item}>
+            <img src="Images/partypopper.png" alt="party" />
+            <div className="">Design</div>
+          </div>
+          <div className={styles.item}>
+            <img src="Images/partypopper.png" alt="party" />
+            <div className="">Debate</div>
+          </div>
+          <div className={styles.item}>
+            <img src="Images/partypopper.png" alt="party" />
+            <div className="">Organise</div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

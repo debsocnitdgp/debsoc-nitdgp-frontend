@@ -1,0 +1,9 @@
+@import "styles/variables.scss";
+
+.whatWeDo {
+    margin: 0 auto;
+    margin-top: clamp(80px, 9vw, 115px);
+    background-color: $black;
+    width: 100%;
+    height: 500px;
+}

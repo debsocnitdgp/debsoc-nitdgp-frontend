@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../components/Navbar/navbar";
 import Landing from "../components/landing_section/landing";
+import What from "../components/what_we/what_we_do";
 import { ACTION_TYPES } from "../redux/actions/countriesAction";
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
       </Head>
        <Navbar/>
        <Landing/>
+       <What />
       {/* <main className={styles.main}>
         <h1>All Countries</h1>
         {fetchedCountries?.map((c) => (
