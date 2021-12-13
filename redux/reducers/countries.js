@@ -5,7 +5,7 @@ const initialState = {
   countriesList: []
 };
 
-export default (state = initialState, action) => {
+export default  (state = initialState, action) => {
   switch (action.type) {
       
     case ACTION_TYPES.COUNTRIES_FETCHED:

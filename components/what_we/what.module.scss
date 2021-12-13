@@ -3,14 +3,14 @@
 .whatWeDo {
     margin: 0 auto;
     margin-top: clamp(80px, 9vw, 115px);
-      padding-bottom: clamp(80px, 9vw, 115px);
     background-color: $black;
     width: 100%;
-    height: 100%;
+    height: clamp(480px, 55vw,600px);
     .col1{
         max-width: 1440px;
         display: flex;
         align-items: center;
+        flex-direction: column;
         justify-content: center;
     .head1{
         text-align: center;
@@ -37,5 +37,45 @@
     color: $white;
     font-size: clamp(12px,1.1vw,18px);
     line-height: 1.4;
+          padding-bottom: clamp(80px, 9vw, 115px);
+}
+.col2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+.col2Wrapper {
+    // position: absolute;
+    background-color: $purple;
+    width: clamp(385px, 85vw, 1353px);
+    color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: clamp(40px, 4.5vw, 50px);
+        .listItems{
+            margin: clamp(20px,2.5vw,30px);
+            text-align: center;
+             display: flex;
+             align-items: center;
+             flex-direction: column;
+             justify-content: center;
+                  width: clamp(150px, 22vw, 260px);
+             img {
+                  width: clamp(40px, 6vw, 80px);
+                  height: clamp(40px, 6vw, 80px);
+                   margin-bottom: clamp(10px, 1.1vw, 12px);
+             }
+             .head{
+                  font-size: clamp(20px, 2.2vw, 25px);
+                  font-weight: 700;
+                    margin-bottom: clamp(10px, 1.1vw, 12px);
+             }
+        .body{
+       
+            font-size: clamp(12px, 1.1vw, 18px);
+        }
+    }
+}
 }
 }
