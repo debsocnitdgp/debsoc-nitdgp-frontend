@@ -3,7 +3,39 @@
 .whatWeDo {
     margin: 0 auto;
     margin-top: clamp(80px, 9vw, 115px);
+      padding-bottom: clamp(80px, 9vw, 115px);
     background-color: $black;
     width: 100%;
-    height: 500px;
+    height: 100%;
+    .col1{
+        max-width: 1440px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    .head1{
+        text-align: center;
+          padding-top: clamp(120px, 14vw, 160px);
+         color: rgba(255, 255, 255, 0.2);
+         font-size: clamp(50px,9vw,144px);
+         position: absolute;
+         z-index: 0;
+         font-weight: 700;
+    }
+    .head2{
+        font-weight: 700;
+            z-index: 50;
+        padding-top: clamp(140px, 18vw, 230px);
+         color: $white;
+           font-size: clamp(25px, 3.5vw, 44px);
+    }
+}
+.content {
+    text-align: center;
+    margin: 0 auto;
+        margin-top: 18px;
+    width: clamp(230px,40vw,610px);
+    color: $white;
+    font-size: clamp(12px,1.1vw,18px);
+    line-height: 1.4;
+}
 }

@@ -19,7 +19,7 @@
     margin: 0 auto;
     max-width: 1300px;
 
-    @include min-q(757px) {
+    @include min-q(800px) {
       padding: 0px 6%;
       max-width: 1200px;
     }
