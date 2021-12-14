@@ -1,35 +1,95 @@
 @import "styles/variables.scss";
 
 .wrapper {
-       margin-top: clamp(100px, 14vw, 180px);
-   @include disp;
-.head1 {
+  margin-top: clamp(100px, 14vw, 180px);
+  @include disp;
+  .head1 {
     text-align: center;
     color: $purple;
     font-weight: 700;
-    font-size: clamp(64px,10vw,144px);
-   position: absolute;
-   z-index: 0;
-}
+    font-size: clamp(64px, 10vw, 144px);
+    position: absolute;
+    z-index: 0;
+  }
 }
 .events {
-            margin-top: clamp(18px, 3vw, 40px);
-    background-color: $purple;
-    color: $white;
-    height: 400px;
-     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    .head2 {
-        font-size: clamp(24px,3.6vw,48px);
-        z-index: 20000;
-        font-weight: 700;
+  margin-top: clamp(18px, 3vw, 40px);
+  background-color: $purple;
+  color: $white;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  .head2 {
+    font-size: clamp(24px, 3.6vw, 48px);
+    z-index: 20000;
+    font-weight: 700;
+  }
+  .content {
+    margin: clamp(18px, 3vw, 40px);
+    width: clamp(256px, 45vw, 676px);
+    font-size: clamp(12px, 1.1vw, 18px);
+    line-height: 1.4;
+  }
+}
+.future {
+  background-color: $black;
+  color: $white;
+  display: flex;
+  img {
+      width: clamp(68px,10vw,151px);
+      overflow: hidden;
+      height: auto;
+  }
+  .futureWrapper {
+    padding: 100px 0;
+    @include disp;
+    margin: 0 auto;
+    max-width: 1330px;
+    @include max-q(800px) {
+      flex-direction: column;
     }
-    .content {
-         margin: clamp(18px, 3vw, 40px);
-        width: clamp(256px,45vw, 676px);
-         font-size: clamp(12px, 1.1vw, 18px);
-         line-height: 1.4;
+    .head {
+      font-weight: 700;
+      font-size: clamp(20px, 3vw, 40px);
+      @include min-q(800px) {
+        width: 40%;
+      }
     }
+    .col2 {
+      display: flex;
+      justify-content: flex-end;
+      @include min-q(800px) {
+        width: 50%;
+      }
+      .email {
+          margin-top: clamp(18px, 2vw, 22px);
+        background-color: $white;
+        width: fit-content;
+        border-radius: 5px;
+        padding: clamp(3px, 0.4vw,5px);
+        @include disp;
+        input {
+          color: rgba(0, 0, 0, 0.49);
+             font-size: clamp(12px, 1.3vw, 14px);
+          border: transparent;
+          box-sizing: border-box;
+          outline: none;
+        }
+        button {
+          background-color: $purple;
+          color: $white;
+          border: none;
+          width: clamp(100px, 12vw, 156px);
+          height: clamp(30px, 3.2vw, 40px);
+          border-radius: 5px;
+          font-size: clamp(12px, 1.3vw, 14px);
+          text-align: center;
+          cursor: pointer;
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }
