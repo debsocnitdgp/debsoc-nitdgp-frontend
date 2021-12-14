@@ -5,19 +5,20 @@ import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../components/Navbar/navbar";
 import Landing from "../components/landing_section/landing";
 import What from "../components/what_we/what_we_do";
-import { ACTION_TYPES } from "../redux/actions/countriesAction";
+import Sponsors from  "../components/sponsors/sponsors";
+// import { ACTION_TYPES } from "../redux/actions/countriesAction";
 
 export default function Home() {
   const dispatch = useDispatch(); 
   // Using the useSelector Hook to fetch the state from store.
   const fetchedCountries = useSelector((state) => state.countries.countriesList);
 
-  React.useEffect(() => {
-    dispatch({
-      type: ACTION_TYPES.FETCH_COUNTRIES,
-    });
-    console.log(fetchedCountries);
-  }, []);
+  // React.useEffect(() => {
+  //   dispatch({
+  //     type: ACTION_TYPES.FETCH_COUNTRIES,
+  //   });
+  //   console.log(fetchedCountries);
+  // }, []);
 
   return (
     <div>
@@ -29,6 +30,7 @@ export default function Home() {
        <Navbar/>
        <Landing/>
        <What />
+       <Sponsors />
       {/* <main className={styles.main}>
         <h1>All Countries</h1>
         {fetchedCountries?.map((c) => (

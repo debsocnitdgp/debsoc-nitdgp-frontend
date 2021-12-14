@@ -13,3 +13,9 @@ $purple : #6F57FF;
         @content;
     }
 }
+
+@mixin disp() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

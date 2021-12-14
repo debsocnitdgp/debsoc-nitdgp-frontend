@@ -4,7 +4,7 @@ import createSagaMiddleware from "redux-saga";
 import rootReducer from "./reducers";
 import rootSaga from "./sagas";
 
-const makeStore = () => {
+const MakeStore = () => {
   let store;
 
   const sagaMiddleware = createSagaMiddleware();
@@ -45,5 +45,5 @@ const makeStore = () => {
   return store;
 };
 
-const wrapper = createWrapper(makeStore);
+const wrapper = createWrapper(MakeStore);
 export { wrapper };

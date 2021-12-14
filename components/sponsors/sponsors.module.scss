@@ -1,0 +1,52 @@
+@import "styles/variables.scss";
+
+.sponsors {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 500px;
+     flex-direction: column;
+           @include disp;
+     background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
+        @include min-q(1000px) {
+                margin-top: 650px;
+        }
+             @include min-q(1500px) {
+                 margin-top: 450px;
+             }
+   .col1 {
+           @include disp;
+           flex-direction: column;
+     .head1 {
+        color: $white;
+        font-size: clamp(50px,10vw,144px);
+        font-weight: 700;
+        position: absolute;
+        z-index: 0;
+    }
+    .head2{
+        color: $black;
+         z-index: 5000;
+         margin-top: clamp(28px, 4vw, 60px);
+         font-size: clamp(20px, 3.5vw, 48px);
+           font-weight: 700;
+    }
+}
+.content {
+    text-align: center;
+    width: clamp(206px, 55vw, 856px);
+    margin-top: clamp( 15px, 1.8vw, 20px);
+     font-size: clamp(12px, 1.1vw, 18px);
+      line-height: 1.4;
+                margin-bottom: clamp(15px, 1.8vw, 20px);
+}
+.logos {
+    @include disp;
+    flex-wrap: wrap;
+    max-width: 1353px;
+    img {
+        width: auto;
+        height: clamp(22px,4.3vw, 64px);
+        margin: clamp(20px, 2.4vw, 28px);
+    }
+}
+}

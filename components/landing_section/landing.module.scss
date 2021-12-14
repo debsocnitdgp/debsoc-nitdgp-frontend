@@ -5,9 +5,7 @@
   margin: 0 auto;
   background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
   .colwrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include disp;
     .col1 {
       display: flex;
       align-items: center;
@@ -106,16 +104,12 @@
 }
 .bannerItems {
     width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+     @include disp;
          position: absolute;
          z-index: 1;
 .banner {
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+   @include disp;
   background-color: $white;
    width: clamp(305px, 60vw, 890px);
     height: clamp(60px, 5.5vw, 125px);
@@ -124,9 +118,7 @@
    border: clamp(1.5px, 0.5vw, 3px) solid $black;
    margin-top: clamp(50px, 6vw, 70px);
   .item{
-    display: flex;
-      align-items: center;
-      justify-content: center;
+     @include disp;
       margin: clamp(10px, 2vw, 30px);
       font-weight: 700;
       font-size: clamp(15px,1.8vw,30px);

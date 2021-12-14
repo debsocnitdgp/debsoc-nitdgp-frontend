@@ -8,10 +8,9 @@
     height: clamp(480px, 55vw,600px);
     .col1{
         max-width: 1440px;
-        display: flex;
-        align-items: center;
+            margin: 0 auto;
+        @include disp;
         flex-direction: column;
-        justify-content: center;
     .head1{
         text-align: center;
           padding-top: clamp(120px, 14vw, 160px);
@@ -72,8 +71,8 @@
                     margin-bottom: clamp(10px, 1.1vw, 12px);
              }
         .body{
-       
-            font-size: clamp(12px, 1.1vw, 18px);
+                font-size: clamp(12px, 1.1vw, 18px);
+                line-height: 1.4;
         }
     }
 }
