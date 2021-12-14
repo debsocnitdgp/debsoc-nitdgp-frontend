@@ -3,9 +3,10 @@ import React from "react";
 import Head from "next/head";
 import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../components/Navbar/navbar";
-import Landing from "../components/landing_section/landing";
-import What from "../components/what_we/what_we_do";
-import Sponsors from  "../components/sponsors/sponsors";
+import Events from "../components/HomePage/Events/events";
+import Landing from "../components/HomePage/landing_section/landing";
+import What from "../components/HomePage/what_we/what_we_do";
+import Sponsors from  "../components/HomePage/sponsors/sponsors";
 // import { ACTION_TYPES } from "../redux/actions/countriesAction";
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
        <Landing/>
        <What />
        <Sponsors />
+       <Events />
       {/* <main className={styles.main}>
         <h1>All Countries</h1>
         {fetchedCountries?.map((c) => (
