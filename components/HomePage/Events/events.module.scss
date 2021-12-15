@@ -37,10 +37,20 @@
   background-color: $black;
   color: $white;
   display: flex;
+  align-items: center;
+  .left {
+      display: flex;
+       justify-content: flex-start;
+  }
+  .right{
+      display: flex;
+      justify-content: flex-end;
+  }
   img {
-      width: clamp(68px,10vw,151px);
+      position: absolute;
+      width: auto;
       overflow: hidden;
-      height: auto;
+      height: clamp(180px,22vw,268px);
   }
   .futureWrapper {
     padding: 100px 0;

@@ -3,6 +3,7 @@ import React from "react";
 import Head from "next/head";
 import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../components/Navbar/navbar";
+import Footer from "../components/Footer/footer";
 import Events from "../components/HomePage/Events/events";
 import Landing from "../components/HomePage/landing_section/landing";
 import What from "../components/HomePage/what_we/what_we_do";
@@ -33,6 +34,7 @@ export default function Home() {
        <What />
        <Sponsors />
        <Events />
+       <Footer />
       {/* <main className={styles.main}>
         <h1>All Countries</h1>
         {fetchedCountries?.map((c) => (

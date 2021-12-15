@@ -1,0 +1,43 @@
+@import "styles/variables.scss";
+
+.footer {
+  background-color: $purple;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: clamp(25px, 4.5vw, 60px);
+    padding-bottom: clamp(25px, 4.5vw, 60px);
+  @include max-q(800px) {
+    display: block;
+  }
+  .col {
+      margin: 0 clamp(25px,6.5vw,100px);
+        @include max-q(800px) {
+            margin: 18px 0;
+        }
+    img {
+      width: clamp(20px, 2.2vw, 25px);
+      height: clamp(20px, 2.2vw, 25px);
+      margin: clamp(5px, 0.6vw, 7px);
+      margin-top: 0;
+    }
+    .Items {
+      font-weight: 500;
+      margin: clamp(5px,0.6vw,7px);
+      font-size: clamp(15px,1.8vw,20px);
+    }
+    .head {
+      font-weight: 700;
+      margin: clamp(7px, 1vw, 13px);
+      font-size: clamp(18px, 2.1vw, 24px);
+    }
+  }
+}
+.copyright {
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    padding: 15px;
+    font-size: clamp(13px,1.5vw,18px);
+}

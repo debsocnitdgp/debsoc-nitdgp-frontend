@@ -15,7 +15,9 @@ export default function Events() {
         </div>
       </div>
       <div className={styles.future}>
-        <img src="Images/leftBubbles.png" alt="" />
+        <div className={styles.left}>
+          <img src="Images/leftBubbles.png" alt="" />
+        </div>
         <div className={styles.futureWrapper}>
           <div className={styles.head}>Get latest Updates on FUTURE EVENTS</div>
           <div className={styles.col2}>
@@ -31,7 +33,9 @@ export default function Events() {
             </div>
           </div>
         </div>
-        <img src="Images/rightBubbles.png" alt="" />
+        <div className={styles.right}>
+          <img src="Images/rightBubbles.png" alt="" />
+        </div>
       </div>
     </>
   );
