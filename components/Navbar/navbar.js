@@ -24,7 +24,14 @@ function Navbar({ page }) {
   const backdropClickHandler = () => {
     setSidebarOpen(false);
   };
+  const [isActive, setActive] = useState(false);
 
+  const add = () => {
+    setActive(!isActive);
+  };
+  useEffect (() => {
+      add();
+  },[]);
   return (
     <div className={`${styles.header} ${top ? styles.navShadow : ""}`}>
       <div className={styles.headerContainer}>
@@ -33,12 +40,12 @@ function Navbar({ page }) {
         </div>
         <div className={styles.headerRight}>
           <div className={styles.menuList}>
-            <div className={styles.menuListItem}>
-              <Link href="#">HOME</Link>
+            <div className={isActive ? `${styles.menuListItemAct}` : `${styles.menuListItem}`}  onClick={add}>
+              <Link href="/">HOME</Link>
             </div>
 
             <div className={styles.menuListItem}>
-              <Link href="#">EVENT</Link>
+              <Link href="/event">EVENT</Link>
             </div>
 
             <div className={styles.menuListItem}>

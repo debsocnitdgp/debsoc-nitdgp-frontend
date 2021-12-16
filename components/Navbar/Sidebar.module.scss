@@ -41,6 +41,14 @@
                 // font-weight: $font-medium;
                 font-size: 1.25rem;
             }
+                a:active {
+                    color: $purple;
+                    font-weight: 700;
+                }
+                   a:hover {
+                       color: $purple;
+                       font-weight: 700;
+                   }
         }
     }
 

@@ -68,6 +68,10 @@
               @include max-q(758px) {
                   display: none;
               }
+               .menuListItemAct {
+                  color: $purple;
+                  font-weight: 700;
+               }
 
               .menuListItem {
                   margin-left: 50px;
@@ -76,6 +80,14 @@
                       color: $black;
                       font-weight: 400;
                       font-size: 1rem;
+                  }
+                     a:hover {
+                       color: $purple;
+                       font-weight: 700;
+                     }
+                  a.active{
+                    color: $purple;
+                    font-weight: 700;
                   }
 
                   @include max-q(758px) {

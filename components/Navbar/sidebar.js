@@ -10,11 +10,11 @@ function Sidebar({ state }) {
       <div className={styles.sidebarDrawer}>
         <div className={styles.menuList}>
           <div className={styles.menuListItem}>
-            <Link href="#">HOME</Link>
+            <Link href="/">HOME</Link>
           </div>
 
           <div className={styles.menuListItem}>
-            <Link href="#">EVENT</Link>
+            <Link href="/event">EVENT</Link>
           </div>
 
           <div className={styles.menuListItem}>

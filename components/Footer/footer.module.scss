@@ -11,18 +11,22 @@
   @include max-q(800px) {
     display: block;
   }
+
   .col {
       margin: 0 clamp(25px,6.5vw,100px);
         @include max-q(800px) {
             margin: 18px 0;
         }
+   
     img {
       width: clamp(20px, 2.2vw, 25px);
       height: clamp(20px, 2.2vw, 25px);
       margin: clamp(5px, 0.6vw, 7px);
       margin-top: 0;
+       cursor: pointer;
     }
     .Items {
+       cursor: pointer;
       font-weight: 500;
       margin: clamp(5px,0.6vw,7px);
       font-size: clamp(15px,1.8vw,20px);

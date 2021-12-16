@@ -1,4 +1,5 @@
 import styles from "./footer.module.scss";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -6,9 +7,15 @@ export default function Footer() {
       <div className={styles.footer}>
         <div className={styles.col}>
           <div className={styles.head}>FIND US HERE</div>
-          <img src="Images/facebook.png" alt="" />
-          <img src="Images/linkedin.png" alt="" />
-          <img src="Images/insta.png" alt="" />
+          <Link href="https://www.facebook.com/debatingsociety3103.nitd/">
+            <img src="Images/facebook.png" alt="" />
+          </Link>
+          <Link href="https://www.linkedin.com/company/debating-society-nit-durgapur">
+            <img src="Images/linkedin.png" alt="" />
+          </Link>
+          <Link href="https://instagram.com/debsocnitd?utm_medium=copy_link">
+            <img src="Images/insta.png" alt="" />
+          </Link>
         </div>
         <div className={styles.col}>
           <div className={styles.head}>CONTACT INFO</div>
@@ -17,8 +24,12 @@ export default function Footer() {
         </div>
         <div className={styles.col}>
           <div className={styles.head}>QUICK LINKS</div>
-          <div className={styles.Items}>Home</div>
-          <div className={styles.Items}>Event</div>
+          <Link href="/">
+            <div className={styles.Items}>Home</div>
+          </Link>
+          <Link href="/event">
+            <div className={styles.Items}>Event</div>
+          </Link>
           <div className={styles.Items}>About Us</div>
         </div>
       </div>
