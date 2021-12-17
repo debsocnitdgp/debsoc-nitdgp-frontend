@@ -18,11 +18,11 @@ function Sidebar({ state }) {
           </div>
 
           <div className={styles.menuListItem}>
-            <Link href="#">ABOUT US</Link>
+            <Link href="/about">ABOUT US</Link>
           </div>
 
           <div className={styles.menuListItem}>
-            <Link href="#">ALUMINI</Link>
+            <Link href="/alumni">ALUMNI</Link>
           </div>
         </div>
       </div>

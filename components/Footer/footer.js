@@ -30,7 +30,9 @@ export default function Footer() {
           <Link href="/event">
             <div className={styles.Items}>Event</div>
           </Link>
-          <div className={styles.Items}>About Us</div>
+          <Link href="/about">
+            <div className={styles.Items}>About Us</div>
+          </Link>
         </div>
       </div>
       <div className={styles.copyright}>
