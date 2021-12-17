@@ -1,9 +1,9 @@
-import styles from "../components/About/about.module.scss";
+import styles from "../components/Alumni/alumni.module.scss";
 import Navbar from "../components/Navbar/navbar";
 import React, { useState, useEffect } from "react";
-import Sophomore from "../components/About/sophomore/sophomore";
-import PreFinal from "../components/About/pre-final/prefinal";
-import Final from "../components/About/Final/final";
+import Twenty from "../components/Alumni/2020/2020";
+import Nine from "../components/Alumni/2019/2019";
+import Eight from "../components/Alumni/2018/2018";
 import Footer from "../components/Footer/footer";
 
 export default function About() {
@@ -69,9 +69,9 @@ export default function About() {
             2020
           </div>
         </div>
-        {!isActive && !isTrue ? <Sophomore /> : <></>}
-        {!isActive && isTrue ? <PreFinal /> : <></>}
-        {isActive && !isTrue ? <Final /> : <></>}
+        {!isActive && !isTrue ?  <Eight /> : <></>}
+        {!isActive && isTrue ? <Nine /> : <></>}
+        {isActive && !isTrue ? <Twenty />: <></>}
       </div>
       <Footer />
     </>

@@ -4,13 +4,14 @@
     max-width: 1440px;
     margin: 0 auto;
     flex-direction: column;
-    @include disp;
     background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
-
+    @include disp;
     .col1 {
         @include disp;
         flex-direction: column;
+            background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
         .head1 {
+            background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
             color: $white;
             font-size: clamp(50px, 10vw, 144px);
             font-weight: 700;
@@ -28,6 +29,7 @@
     }
 
     .content {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
         text-align: center;
         width: clamp(206px, 55vw, 856px);
         margin-top: clamp(15px, 1.8vw, 20px);

@@ -5,19 +5,19 @@
     margin: 0 auto;
     flex-direction: column;
      margin-top: 50px;
-              background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
     @include disp;
+     background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
     .col1 {
         @include disp;
         flex-direction: column;
-         background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
+        background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
         .head1 {
+            background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
             color: $white;
             font-size: clamp(50px, 10vw, 144px);
             font-weight: 700;
             position: absolute;
             z-index: 0;
-                     background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
         }
 
         .head2 {
@@ -30,6 +30,7 @@
     }
 
     .content {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
         text-align: center;
         width: clamp(206px, 55vw, 856px);
         margin-top: clamp(15px, 1.8vw, 20px);
@@ -37,30 +38,9 @@
         line-height: 1.4;
         margin-bottom: clamp(15px, 1.8vw, 20px);
     }
-       .col2 {
-           @include disp;
-           flex-direction: column;
-    margin-bottom: clamp(50px, 6.5vw, 80px);
-        margin-top: clamp(65px, 8vw, 120px);
-    background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
-           .head1 {
-               color: $white;
-               font-size: clamp(50px, 10vw, 144px);
-               font-weight: 700;
-               position: absolute;
-               z-index: 0;
-           }
-
-           .head2 {
-               color: $black;
-               z-index: 50;
-               margin-top: clamp(28px, 4vw, 60px);
-               font-size: clamp(20px, 3.5vw, 48px);
-               font-weight: 700;
-           }
-       }
           .col3 {
               @include disp;
+                   margin-top: clamp(35px, 5.2vw, 70px);
               margin-bottom: clamp(35px, 5.2vw, 70px);
 
               .head1 {
