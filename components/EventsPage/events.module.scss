@@ -37,9 +37,9 @@
     }
     .col2 {
         @include disp;
+          margin-bottom: clamp(35px, 5.2vw, 70px);
         .head1 {
-            margin: clamp(25px, 6.5vw, 150px);
-            margin-top: 0px;
+            margin: 0px clamp(25px, 6.5vw, 150px);
             font-size: clamp(12px,1.9vw,24px);
             font-weight: 700;
             background-color: $purple;
@@ -52,8 +52,7 @@
             }
         }
         .head2 {
-            margin: clamp(25px, 6.5vw, 150px);
-            margin-top: 0px;
+            margin: 0px clamp(25px, 6.5vw, 150px);
             cursor: pointer;
             font-size: clamp(12px, 1.9vw, 24px);
             font-weight: 700;

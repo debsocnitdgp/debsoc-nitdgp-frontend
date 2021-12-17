@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/navbar";
+import Footer from "../components/Footer/footer";
+import OngoingEvents from "../components/EventsPage/Ongoing/ongoing";
+import PastEvent from "../components/EventsPage/pastEvents/past";
+import UpcomingEvents from "../components/EventsPage/Upcoming/upcoming";
 import styles from "../components/EventsPage/events.module.scss";
 
 export default function EVENT() {
@@ -65,7 +69,11 @@ export default function EVENT() {
             ONGOING EVENT
           </div>
         </div>
+        {!isActive && !isTrue ? <PastEvent /> : <></>}
+        {!isActive && isTrue ? <UpcomingEvents /> : <></>}
+        {isActive && !isTrue ? <OngoingEvents /> : <></>}
       </div>
+      <Footer />
     </>
   );
 }
