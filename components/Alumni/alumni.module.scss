@@ -5,6 +5,7 @@
     margin: 0 auto;
     flex-direction: column;
      margin-top: 50px;
+     text-align: center;
     @include disp;
      background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
     .col1 {
@@ -23,9 +24,13 @@
         .head2 {
             color: $black;
             z-index: 50;
-            margin-top: clamp(28px, 4vw, 60px);
+            margin-top: clamp(20px, 4vw, 60px);
             font-size: clamp(20px, 3.5vw, 48px);
             font-weight: 700;
+            @include max-q(420px){
+                padding: 0 3px;
+                margin-top: 70px;
+            }
         }
     }
 
@@ -33,7 +38,7 @@
         background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
         text-align: center;
         width: clamp(206px, 55vw, 856px);
-        margin-top: clamp(15px, 1.8vw, 20px);
+        margin-top: clamp(30px, 1.8vw, 20px);
         font-size: clamp(12px, 1.1vw, 18px);
         line-height: 1.4;
         margin-bottom: clamp(15px, 1.8vw, 20px);

@@ -30,10 +30,11 @@
                 margin: 15px 0;
                 font-weight: 700;
                 font-size: clamp(12px, 1.6vw, 20px);
+                    width: clamp(110px, 15vw, 200px);
             }
 
             .content {
-                width: clamp(150px, 22vw, 280px);
+                width: clamp(110px, 22vw, 280px);
                 font-size: clamp(11px, 1.4vw, 18px);
                 line-height: 1.4;
             }

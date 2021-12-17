@@ -45,7 +45,7 @@
 .col2Wrapper {
     // position: absolute;
     background-color: $purple;
-    width: clamp(385px, 85vw, 1353px);
+    width: clamp(330px, 85vw, 1353px);
     color: $white;
         display: flex;
         align-items: center;
@@ -59,7 +59,7 @@
              align-items: center;
              flex-direction: column;
              justify-content: center;
-                  width: clamp(150px, 22vw, 260px);
+                  width: clamp(110px, 22vw, 260px);
              img {
                   width: clamp(40px, 6vw, 80px);
                   height: clamp(40px, 6vw, 80px);

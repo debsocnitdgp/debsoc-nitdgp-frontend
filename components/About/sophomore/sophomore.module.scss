@@ -10,16 +10,16 @@
     @include disp;
     background-color: $white;
     color: $black;
-    margin: clamp(15px, 1.7vw,20px);
+    margin: clamp(10px, 1.7vw,20px);
     border-radius: clamp(7px, 1.1vw, 15px);
     img{
          border-radius: clamp(7px, 1.1vw, 15px)
          0 0 clamp(7px, 1.1vw, 15px);
-         width:clamp(110px,16vw,216px);
-          height:clamp(110px, 16vw, 216px);
+         width:clamp(85px,16vw,216px);
+          height:clamp(92px, 16vw, 216px);
     }
     .col2 {
-         margin: clamp(15px, 1.7vw, 20px);
+         margin: clamp(8px, 1.7vw, 20px);
         .head1 {
             font-weight: 700;
             font-size: clamp(15px,1.9vw,24px);
@@ -27,13 +27,14 @@
         .head2 {
                margin: clamp(5px, 0.75vw, 10px) 0px;
                font-size: clamp(13px, 1.55vw, 18px);
+               width: clamp(60px,10vw,137px);
         }
     img {
         border-radius: 0;
         filter: invert(80%);
-               width: clamp(18px, 2.1vw, 25px);
-               height: clamp(18px, 2.1vw, 25px);
-               margin: 0px clamp(5px, 0.6vw, 7px);
+               width: clamp(14px, 2.1vw, 25px);
+               height: clamp(14px, 2.1vw, 25px);
+               margin: 0px clamp(3px, 0.6vw, 7px);
                cursor: pointer;
               
     }

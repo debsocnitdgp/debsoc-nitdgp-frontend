@@ -1,5 +1,5 @@
 import styles from "./landing.module.scss";
-
+import Link from "next/link";
 export default function Landing() {
   return (
     <>
@@ -22,7 +22,8 @@ export default function Landing() {
               eiusmod tempor incididunt ut labore et dolore magna Ut enim minim
               veniam, quis nostrud exercitation ullamco laboris nisi
             </div>
-            <button className={styles.bigButton}>Know More</button>
+             <Link href="/about">
+            <button className={styles.bigButton}>Know More</button></Link>
           </div>
         </div>
         <div className={styles.body2}>
@@ -31,7 +32,8 @@ export default function Landing() {
             eiusmod tempor incididunt ut labore et dolore magna Ut enim minim
             veniam, quis nostrud exercitation ullamco
           </div>
-          <button className={styles.smallButton}>Know More</button>
+            <Link href="/about">
+          <button className={styles.smallButton}>Know More</button></Link>
         </div>
       </div>
       <div className={styles.bannerItems}>

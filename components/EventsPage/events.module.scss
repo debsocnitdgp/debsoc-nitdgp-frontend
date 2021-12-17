@@ -45,7 +45,7 @@
             font-size: clamp(12px,1.9vw,24px);
             font-weight: 700;
             background-color: $purple;
-            padding: clamp(10px,1.2vw,15px) clamp(12px,2vw,32px);
+            padding: clamp(10px,1.2vw,15px) clamp(9px,2vw,32px);
             border-radius: clamp(5px, 0.6vw, 7px);
             cursor: pointer;
             color: $white;
@@ -54,12 +54,12 @@
             }
         }
         .head2 {
-            margin: 0px clamp(25px, 6.5vw, 150px);
+            margin: 0px clamp(20px, 6.5vw, 150px);
             cursor: pointer;
-            font-size: clamp(12px, 1.9vw, 24px);
+            font-size: clamp(9px, 1.9vw, 24px);
             font-weight: 700;
                   @include max-q(600px) {
-                      margin: clamp(9px,2vw,30px);
+                      margin: clamp(7px,2vw,30px);
                   }
         }
         .head2:hover {

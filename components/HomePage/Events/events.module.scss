@@ -62,7 +62,7 @@
     }
     .head {
       font-weight: 700;
-      font-size: clamp(20px, 3vw, 40px);
+      font-size: clamp(17px, 3vw, 40px);
       @include min-q(800px) {
         width: 40%;
       }
