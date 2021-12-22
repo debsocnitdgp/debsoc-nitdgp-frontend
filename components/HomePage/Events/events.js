@@ -9,9 +9,16 @@ export default function Events() {
       <div className={styles.events}>
         <div className={styles.head2}>OUR EVENTS</div>
         <div className={styles.content}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna Ut enim minim
-          veniam, quis nostrud exercitation ullamco laboris nisi
+          The Debating Society, NIT Durgapur, hosts an impressive roster of
+          events, including some of the biggest debating events in the eastern
+          circuit, drawing national as well as international participation.
+        </div>
+        <div className={styles.posters}>
+          <img src="Images/apd.png" alt="" />
+          <img src="Images/apd.png" alt="" />
+          <img src="Images/apd.png" alt="" />
+          <img src="Images/apd.png" alt="" />
+          <img src="Images/apd.png" alt="" />
         </div>
       </div>
       <div className={styles.future}>

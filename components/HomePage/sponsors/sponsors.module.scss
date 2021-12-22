@@ -8,11 +8,8 @@
            @include disp;
      background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
         @include min-q(1000px) {
-                margin-top: 650px;
+                margin-top: 600px;
         }
-             @include min-q(1500px) {
-                 margin-top: 450px;
-             }
    .col1 {
            @include disp;
            flex-direction: column;

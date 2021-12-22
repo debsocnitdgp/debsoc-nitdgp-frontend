@@ -13,9 +13,9 @@
         flex-direction: column;
     .head1{
         text-align: center;
-          padding-top: clamp(120px, 14vw, 160px);
+          padding-top: clamp(120px, 13.7vw, 200px);
          color: rgba(255, 255, 255, 0.2);
-         font-size: clamp(50px,9vw,144px);
+         font-size: clamp(50px,10vw,150px);
          position: absolute;
          z-index: 0;
          font-weight: 700;
@@ -23,9 +23,9 @@
     .head2{
         font-weight: 700;
             z-index: 50;
-        padding-top: clamp(140px, 18vw, 230px);
+        padding-top: clamp(140px, 19.5vw, 290px);
          color: $white;
-           font-size: clamp(25px, 3.5vw, 44px);
+           font-size: clamp(18px, 3.3vw, 50px);
     }
 }
 .content {
@@ -36,7 +36,7 @@
     color: $white;
     font-size: clamp(12px,1.1vw,18px);
     line-height: 1.4;
-          padding-bottom: clamp(80px, 9vw, 115px);
+          padding-bottom: clamp(28px, 4.5vw, 68px);
 }
 .col2 {
         display: flex;
@@ -44,8 +44,9 @@
         justify-content: center;
 .col2Wrapper {
     // position: absolute;
+     border-radius: clamp(3px, 0.48vw, 7px);
     background-color: $purple;
-    width: clamp(330px, 85vw, 1353px);
+    width: clamp(330px, 94vw, 1353px);
     color: $white;
         display: flex;
         align-items: center;
@@ -61,17 +62,19 @@
              justify-content: center;
                   width: clamp(110px, 22vw, 260px);
              img {
-                  width: clamp(40px, 6vw, 80px);
-                  height: clamp(40px, 6vw, 80px);
+                  width: clamp(40px, 6.9vw, 100px);
+                  height: clamp(40px, 6.9vw, 100px);
                    margin-bottom: clamp(10px, 1.1vw, 12px);
              }
              .head{
-                  font-size: clamp(20px, 2.2vw, 25px);
+                  font-size: clamp(15px, 2.05vw, 30px);
+                  max-width: 206px;
                   font-weight: 700;
                     margin-bottom: clamp(10px, 1.1vw, 12px);
              }
         .body{
                 font-size: clamp(12px, 1.1vw, 18px);
+                width: clamp(120px,16.9vw,250px);
                 line-height: 1.4;
         }
     }

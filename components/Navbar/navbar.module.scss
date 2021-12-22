@@ -1,13 +1,16 @@
 @import "styles/variables.scss";
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 .header {
   width: 100%;
   height: 72px;
   // position: sticky;
+   margin-top: clamp(7px, 1.5vw, 25px);
   margin-bottom: clamp(20px, 4.5vw, 60px);
   top: 0;
   left: 0;
   z-index: 3;
+  font-family: 'Roboto',
+  sans-serif;
 
   .headerContainer {
     height: 100%;
@@ -33,7 +36,6 @@
       display: flex;
       align-items: center;
       .debsoc {
-        margin-left: 15px;
        @include disp;
         flex-direction: row;
         font-weight: 700;
@@ -49,6 +51,7 @@
     .headerRight {
       display: flex;
       align-items: center;
+       font-weight: 400;
         .drawerOpener {
             margin: 0px 10px;
             margin-top: 5px;
@@ -79,7 +82,7 @@
                   a {
                       color: $black;
                       font-weight: 400;
-                      font-size: 1rem;
+                      font-size: clamp(17px, 1.8vw, 27px);
                   }
                      a:hover {
                        color: $purple;
@@ -88,10 +91,6 @@
                   a.active{
                     color: $purple;
                     font-weight: 700;
-                  }
-
-                  @include max-q(758px) {
-                      margin-left: 25px;
                   }
               }
     
