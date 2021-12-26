@@ -7,37 +7,40 @@
     flex-wrap: wrap;
     margin-bottom: clamp(30px, 3.5vw, 40px);
 
-    .col1 {
-        background-color: $white;
-        color: $black;
-        margin: clamp(15px, 1.7vw, 20px);
-        border-radius: clamp(3px, 0.5vw, 7px);
-        box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.25);
-        @include disp;
+      .col1 {
+          background-color: $white;
+          color: $black;
+          width: clamp(240px, 25.2vw, 363px);
+          margin: clamp(15px, 1.7vw, 20px) clamp(20px, 2.76vw,40px);
+          border-radius: clamp(3px, 0.5vw, 7px);
+          box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.25);
+          @include disp;
 
-        .col2 {
-            @include disp;
-            flex-direction: column;
-            text-align: center;
-            padding: clamp(10px, 1.5vw, 20px);
+          .col2 {
+              @include disp;
+              flex-direction: column;
+              text-align: center;
+              padding: clamp(10px, 1.5vw, 20px);
 
-            img {
-                width: clamp(120px, 22vw, 280px);
-                height: auto;
-            }
+              img {
+                  width: clamp(217px, 23.6vw, 340px);
+                    height: clamp(154px, 16.7vw, 241px);
+              }
 
-            .head {
-                margin: 15px 0;
-                font-weight: 700;
-                font-size: clamp(12px, 1.6vw, 20px);
-                    width: clamp(110px, 15vw, 200px);
-            }
+              .head {
+                  margin: 7px 0;
+                  font-weight: 700;
+                  height: clamp(28px, 4.3vw, 62px);
+                  @include disp;
+                  font-size: clamp(12px, 1.6vw, 20px);
+                  width: clamp(200px, 17.9vw, 258px);
+              }
 
-            .content {
-                width: clamp(110px, 22vw, 280px);
-                font-size: clamp(11px, 1.4vw, 18px);
-                line-height: 1.4;
-            }
-        }
-    }
+              .content {
+                  width: clamp(217px, 23.6vw, 340px);
+                  font-size: clamp(12px, 1.4vw, 18px);
+                  line-height: 1.4;
+              }
+          }
+      }
 }
