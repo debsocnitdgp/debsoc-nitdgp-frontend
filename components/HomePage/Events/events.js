@@ -1,4 +1,5 @@
 import styles from "./events.module.scss";
+import Link from "next/link";
 
 export default function Events() {
   return (
@@ -20,13 +21,19 @@ export default function Events() {
           <img src="Images/apd.png" alt="" />
           <img src="Images/apd.png" alt="" />
         </div>
+        <Link href="/event">
+          <button className={styles.bigButton}>Know More</button>
+        </Link>
       </div>
       <div className={styles.future}>
         <div className={styles.left}>
           <img src="Images/leftBubbles.png" alt="" />
         </div>
         <div className={styles.futureWrapper}>
-          <div className={styles.head}>Get latest Updates on FUTURE EVENTS</div>
+          <div className={styles.head}>
+            Get latest Updates on <br />
+            <span>FUTURE EVENTS</span>
+          </div>
           <div className={styles.col2}>
             <div className={styles.email}>
               <div className={styles.drop}>

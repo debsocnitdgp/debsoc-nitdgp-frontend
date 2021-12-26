@@ -34,7 +34,7 @@
   .posters {
     display: flex;
     overflow-x: scroll;
-    width: 100vw;
+    width: 80%;
     max-width: 1440px;
     margin-left: clamp(34px,10.3vw,149px);
     img {
@@ -52,6 +52,20 @@
     height: 5px;
     background: transparent;
   }
+    button {
+      background-color: $white;
+      color: $black;
+      border: none;
+      width: clamp(80px, 12vw, 156px);
+      height: clamp(34px, 3.2vw, 47px);
+      border-radius: clamp(3px, 0.48vw,7px);
+      font-size: clamp(12px, 1.3vw, 14px);
+      margin-top: clamp(26px,5.45vw,79px);
+       margin-bottom: clamp(31px, 4.6vw, 67px);
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
 }
 .future {
   background-color: $black;
@@ -76,45 +90,56 @@
     padding: 100px 0;
     @include disp;
     margin: 0 auto;
-    max-width: 1330px;
+    // max-width: 1370px;
     @include max-q(800px) {
       flex-direction: column;
     }
     .head {
       font-weight: 700;
-      font-size: clamp(17px, 3vw, 40px);
+      font-size: clamp(18px, 2.4vw, 35px);
+      span {
+        font-size: clamp(24px, 3.3vw, 48px);
+      }
       @include min-q(800px) {
-        width: 40%;
+        width: 60%;
+        margin-right: 300px;
+      }
+      @include max-q(799px) {
+           text-align: center;
       }
     }
     .col2 {
       display: flex;
       justify-content: flex-end;
       @include min-q(800px) {
-        width: 50%;
+        width: 40%;
       }
       .email {
           margin-top: clamp(18px, 2vw, 22px);
         background-color: $white;
-        width: fit-content;
-        border-radius: 5px;
+        width: clamp(192px,33.15vw,478px);
+        border-radius: clamp(3px, 0.48vw, 7px);
         padding: clamp(3px, 0.4vw,5px);
-        @include disp;
+        display: flex;
+        align-items: center;
+            justify-content:space-between;
         input {
           color: rgba(0, 0, 0, 0.49);
-             font-size: clamp(12px, 1.3vw, 14px);
+             font-size: clamp(9px, 1.2vw, 18px);
           border: transparent;
           box-sizing: border-box;
+         display: flex;
+         align-items: center;
           outline: none;
         }
         button {
           background-color: $purple;
           color: $white;
           border: none;
-          width: clamp(100px, 12vw, 156px);
-          height: clamp(30px, 3.2vw, 40px);
-          border-radius: 5px;
-          font-size: clamp(12px, 1.3vw, 14px);
+          width: clamp(62px, 10.8vw, 156px);
+          height: clamp(19px, 3.2vw, 47px);
+          border-radius: clamp(3px, 0.48vw,7px);
+          font-size: clamp(9px, 1.3vw, 18px);
           text-align: center;
           cursor: pointer;
           font-weight: bold;
