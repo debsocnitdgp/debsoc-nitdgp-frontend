@@ -6,35 +6,37 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  padding-top: clamp(25px, 4.5vw, 60px);
-    padding-bottom: clamp(25px, 4.5vw, 60px);
+  padding-top: clamp(26px, 4.4vw, 64px);
+    padding-bottom: clamp(26px, 4.4vw, 60px);
   @include max-q(800px) {
     display: block;
   }
 
   .col {
-      margin: 0 clamp(25px,6.5vw,100px);
-        @include max-q(800px) {
+      @include min-q(800px) {
+            margin: 0 clamp(50px, 7.5vw, 120px);
+      }
+        @include max-q(799px) {
             margin: 18px 0;
         }
    
     img {
-      width: clamp(20px, 2.2vw, 25px);
-      height: clamp(20px, 2.2vw, 25px);
+      width: clamp(17px, 1.7vw, 25px);
+      height: clamp(17px, 1.7vw, 25px);
       margin: clamp(5px, 0.6vw, 7px);
-      margin-top: 0;
+      margin-top: clamp(7px, 1vw, 15px);
        cursor: pointer;
     }
     .Items {
        cursor: pointer;
       font-weight: 500;
       margin: clamp(5px,0.6vw,7px);
-      font-size: clamp(15px,1.8vw,20px);
+      font-size: clamp(10px,1.38vw,20px);
     }
     .head {
       font-weight: 700;
-      margin: clamp(7px, 1vw, 13px);
-      font-size: clamp(18px, 2.1vw, 24px);
+      // margin: clamp(7px, 1vw, 13px);
+      font-size: clamp(18px, 1.65vw, 24px);
     }
   }
 }
@@ -43,5 +45,5 @@
     color: $white;
     text-align: center;
     padding: 15px;
-    font-size: clamp(13px,1.5vw,18px);
+    font-size: clamp(9px,1.2vw,18px);
 }
