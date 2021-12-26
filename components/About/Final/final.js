@@ -8,7 +8,7 @@ export default function Final() {
         <div className={styles.col1}>
           <img src="Images/GettyImage.png" alt="" />
           <div className={styles.col2}>
-            <div className={styles.head1}>Image</div>
+            <div className={styles.head1}>Rishav Kumar Rathore</div>
             <div className={styles.head2}>President</div>
             <div className={styles.links}>
               <Link href="#">
@@ -44,7 +44,7 @@ export default function Final() {
         <div className={styles.col1}>
           <img src="Images/GettyImage.png" alt="" />
           <div className={styles.col2}>
-            <div className={styles.head1}>Image</div>
+            <div className={styles.head1}>Vishesh Vedanta</div>
             <div className={styles.head2}>Treasurer</div>
             <div className={styles.links}>
               <Link href="#">

@@ -8,7 +8,7 @@ export default function Nine() {
         <div className={styles.col1}>
           <img src="Images/GettyImage.png" alt="" />
           <div className={styles.col2}>
-            <div className={styles.head1}>Image</div>
+            <div className={styles.head1}>Image image</div>
             <div className={styles.head2}>Member</div>
             <div className={styles.links}>
               <Link href="#">

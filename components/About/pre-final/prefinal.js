@@ -8,7 +8,7 @@ export default function PreFinal() {
         <div className={styles.col1}>
           <img src="Images/GettyImage.png" alt="" />
           <div className={styles.col2}>
-            <div className={styles.head1}>Image</div>
+            <div className={styles.head1}>kaustav kanchan chattopadhay</div>
             <div className={styles.head2}>Senior Member</div>
             <div className={styles.links}>
               <Link href="#">
@@ -26,7 +26,7 @@ export default function PreFinal() {
         <div className={styles.col1}>
           <img src="Images/GettyImage.png" alt="" />
           <div className={styles.col2}>
-            <div className={styles.head1}>Image</div>
+            <div className={styles.head1}>Tanushree Bhattacharya</div>
             <div className={styles.head2}>Senior Member</div>
             <div className={styles.links}>
               <Link href="#">

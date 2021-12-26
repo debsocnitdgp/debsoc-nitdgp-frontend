@@ -8,7 +8,7 @@ export default function Sophomore() {
         <div className={styles.col1}>
           <img src="Images/GettyImage.png" alt="" />
           <div className={styles.col2}>
-            <div className={styles.head1}>Image</div>
+            <div className={styles.head1}>Apurva Jyoti Paul</div>
             <div className={styles.head2}>Junior Member</div>
             <div className={styles.links}>
               <Link href="#">
@@ -26,7 +26,7 @@ export default function Sophomore() {
         <div className={styles.col1}>
           <img src="Images/GettyImage.png" alt="" />
           <div className={styles.col2}>
-            <div className={styles.head1}>Image</div>
+            <div className={styles.head1}>Shubham Shantam Raju</div>
             <div className={styles.head2}>Junior Member</div>
             <div className={styles.links}>
               <Link href="#">
