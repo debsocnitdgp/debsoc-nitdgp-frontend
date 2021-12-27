@@ -36,7 +36,7 @@ export default function About() {
           <div className={styles.head2}>ALUMNI</div>
         </div>
         <div className={styles.content}>
-          We are delighted to introduce our alumni, who have established themselves as successful individuals in virtually every aspect of their lives. Our alumni have raised our institution's reputation to such heights as they now work for some of the most coveted corporations in the world.
+          We are delighted to introduce our alumni, who have established themselves as successful individuals in virtually every aspect of their lives. Our alumni have raised our institution&apos;s reputation to such heights as they now work for some of the most coveted corporations in the world.
         </div>
         <div className={styles.col3}>
           <div

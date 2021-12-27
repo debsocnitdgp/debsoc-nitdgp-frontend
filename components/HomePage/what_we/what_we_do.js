@@ -25,7 +25,7 @@ export default function What() {
               <img src="Images/workshop.png" alt="" />
               <div className={styles.head}>Speaking Workshops</div>
               <div className={styles.body}>
-              As a club, we realize that public speaking may not be everyone’s cup of tea. It can be a frightening experience, which is why we host workshops every year. If you have a voice, we are here to help you amplify it.
+              As a club, we realize that public speaking may not be everyone&apos;s cup of tea. It can be a frightening experience, which is why we host workshops every year. If you have a voice, we are here to help you amplify it.
               </div>
             </div>
             <div className={styles.listItems}>
@@ -39,7 +39,7 @@ export default function What() {
               <img src="Images/events.png" alt="" />
               <div className={styles.head}>Fun Events</div>
               <div className={styles.body}>
-              Even if debating is not quite your speed, we have numerous other events that let you try out debating without all its intricacies. With events like Take DeBait that let you play the detective, and IceBreaker, where you can finally tell the world about that niche interest of yours that’s come up in an unconventional topic, there is something for everyone.
+              Even if debating is not quite your speed, we have numerous other events that let you try out debating without all its intricacies. With events like Take DeBait that let you play the detective, and IceBreaker, where you can finally tell the world about that niche interest of yours that&apos;s come up in an unconventional topic, there is something for everyone.
               </div>
             </div>
           </div>
