@@ -51,7 +51,7 @@ function Navbar({ page }) {
           <div className={styles.drawerOpener} onClick={drawerOpenHandler}>
             <img src="Images/navIcon.png" alt="navbar icon" />
           </div>
-          {sidebarOpen ? <Sidebar state={true} /> : <Sidebar state={false} />}
+          {sidebarOpen ? <Sidebar state={true} closeHandler={backdropClickHandler}/> : <Sidebar state={false} />}
           {sidebarOpen ? (
             <Backdrop closeHandler={backdropClickHandler} />
           ) : (

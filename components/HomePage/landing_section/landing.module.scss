@@ -63,7 +63,7 @@
       .body {
         margin-top: 15px;
       width: clamp(500px,40.3vw,580px);
-        line-height: 1.25;
+        line-height: 1.4;
         font-weight: 400;
         @include max-q(758px) {
           display: none;
@@ -94,6 +94,7 @@
     margin: 0 auto;
     margin-top: 15px;
     text-align: center;
+    line-height: 1.4;
     font-weight: 400;
     .smallButton {
       margin-top: 15px;

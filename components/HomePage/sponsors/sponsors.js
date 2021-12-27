@@ -9,9 +9,7 @@ export default function Sponsors() {
           <div className={styles.head2}>OUR PREVIOUS SPONSORS</div>
         </div>
         <div className={styles.content}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna Ut enim minim
-          veniam, quis nostrud exercitation ullamco laboris nisi
+        We’re proud and thankful to be able to appreciate our generous sponsors who have helped make our events successful, and look forward to more such collaborations in the future.
         </div>
         <div className={styles.logos}>
           <img src="Images/loziczap.png" alt="" />

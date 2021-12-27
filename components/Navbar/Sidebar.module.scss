@@ -26,12 +26,21 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-
+    .cross {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: clamp(240px,19.4vw,280px);
+      img {
+          margin-top: 20px;
+          cursor: pointer;
+      }
+    }
     .menuList {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        margin-top: 60px;
+        margin-top: 30px;
 
         .menuListItem {
             margin: 15px 30px;

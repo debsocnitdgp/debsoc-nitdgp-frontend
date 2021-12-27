@@ -3,12 +3,12 @@
 .sponsors {
     max-width: 1440px;
     margin: 0 auto;
-    margin-top: 550px;
+    margin-top: 720px;
      flex-direction: column;
            @include disp;
      background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
-        @include min-q(1000px) {
-                margin-top: 600px;
+        @include min-q(1380px) {
+                margin-top: 650px;
         }
    .col1 {
            @include disp;

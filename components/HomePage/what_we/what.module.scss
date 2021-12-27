@@ -23,7 +23,7 @@
     .head2{
         font-weight: 700;
             z-index: 50;
-        padding-top: clamp(140px, 19.5vw, 290px);
+        padding-top: clamp(150px, 19.3vw, 278px);
          color: $white;
            font-size: clamp(18px, 3.3vw, 50px);
     }
@@ -32,11 +32,11 @@
     text-align: center;
     margin: 0 auto;
         margin-top: 18px;
-    width: clamp(230px,40vw,610px);
+    width: clamp(250px,47vw,700px);
     color: $white;
     font-size: clamp(12px,1.1vw,18px);
     line-height: 1.4;
-          padding-bottom: clamp(28px, 4.5vw, 68px);
+          padding-bottom: clamp(28px, 2.05vw, 30px);
 }
 .col2 {
         display: flex;
@@ -49,7 +49,7 @@
     width: clamp(330px, 94vw, 1353px);
     color: $white;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         flex-wrap: wrap;
         margin-bottom: clamp(40px, 4.5vw, 50px);
@@ -70,11 +70,13 @@
                   font-size: clamp(15px, 2.05vw, 30px);
                   max-width: 206px;
                   font-weight: 700;
+                  height: clamp(36px,4.85vw,70px);
+                  @include disp;
                     margin-bottom: clamp(10px, 1.1vw, 12px);
              }
         .body{
                 font-size: clamp(12px, 1.1vw, 18px);
-                width: clamp(120px,16.9vw,250px);
+                width: clamp(140px,17.3vw,250px);
                 line-height: 1.4;
         }
     }

@@ -36,12 +36,11 @@ export default function About() {
           <div className={styles.head2}>ABOUT US</div>
         </div>
         <div className={styles.content}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna Ut enim minim
-          veniam, quis nostrud exercitation ullamco laboris nisi Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna Ut enim minim veniam, quis
-          nostrud exercitation ullamco laboris nisi
+          Established in 2015, the official Debating Club of NIT Durgapur has
+          steadily risen to the reputable presence we are today in the eastern
+          debating circuit. Going strong with 38 members, we are slowly
+          realizing our mission through promoting debates and public speaking in
+          college.
         </div>
         <div className={styles.col2}>
           <div className={styles.head1}>OUR TEAM</div>

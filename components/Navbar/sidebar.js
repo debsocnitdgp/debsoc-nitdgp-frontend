@@ -4,10 +4,13 @@ import Link from "next/link";
 
 import styles from "./Sidebar.module.scss";
 
-function Sidebar({ state }) {
+function Sidebar({ state, closeHandler }) {
   return (
     <div className={`${styles.sidebar} ${state ? styles.open : ""}`}>
       <div className={styles.sidebarDrawer}>
+        <div className={styles.cross}>
+          <img src="Images/cross.png" alt="" onClick={closeHandler} />
+        </div>
         <div className={styles.menuList}>
           <div className={styles.menuListItem}>
             <Link href="/">HOME</Link>

@@ -18,9 +18,7 @@ export default function Landing() {
             <div className={styles.line}></div>
             <div className={styles.head3}>NIT DURGAPUR</div>
             <div className={styles.body}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna Ut enim minim
-              veniam, quis nostrud exercitation ullamco laboris nisi
+             We, the official Debating Club of NIT Durgapur, believe every voice matters and are dedicated to creating an accessible space for debaters, public speakers, and the like to be able to participate in constructive discussion and build new ideologies.
             </div>
              <Link href="/about">
             <button className={styles.bigButton}>Know More</button></Link>
@@ -28,9 +26,7 @@ export default function Landing() {
         </div>
         <div className={styles.body2}>
           <div className="">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna Ut enim minim
-            veniam, quis nostrud exercitation ullamco
+                        We, the official Debating Club of NIT Durgapur, believe every voice matters and are dedicated to creating an accessible space for debaters, public speakers, and the like to be able to participate in constructive discussion and build new ideologies.
           </div>
             <Link href="/about">
           <button className={styles.smallButton}>Know More</button></Link>
