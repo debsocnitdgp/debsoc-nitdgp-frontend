@@ -1,75 +1,35 @@
 import styles from "./past.module.scss";
+import { useState, useEffect, useCallback } from "react";
 
 export default function PastEvents() {
+  const url = "data/events/previous.json";
+  const [data, setData] = useState([]);
+
+  const getData = useCallback(async () => {
+    const response = await fetch(url);
+    const past = await response.json();
+    setData(past);
+  }, [url]);
+
+  useEffect(() => {
+    getData();
+  }, [url, getData]);
   return (
     <>
       <div className={styles.past}>
-        <div className={styles.col1}>
-          <div className={styles.col2}>
-            <img src="Images/apd.png" alt="" />
-            <div className={styles.head}>Asian Parliamentary Debate</div>
-            <div className={styles.content}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna Ut enim minim
-              veniam, quis nostrud exercitation ullamco laboris nisi
+        {data.map((pass) => (
+          <div className={styles.col1} key={pass.id}>
+            <div className={styles.col2}>
+              <img src={pass.img} alt="" key={pass.id} />
+              <div className={styles.head} key={pass.name}>
+                {pass.name}
+              </div>
+              <div className={styles.content} key={pass.desc}>
+                {pass.desc}
+              </div>
             </div>
           </div>
-        </div>
-        <div className={styles.col1}>
-          <div className={styles.col2}>
-            <img src="Images/incipio.png" alt="" />
-            <div className={styles.head}>INCIPIO</div>
-            <div className={styles.content}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna Ut enim minim
-              veniam, quis nostrud exercitation ullamco laboris nisi
-            </div>
-          </div>
-        </div>
-        <div className={styles.col1}>
-          <div className={styles.col2}>
-            <img src="Images/apd.png" alt="" />
-            <div className={styles.head}>Asian Parliamentary Debate</div>
-            <div className={styles.content}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna Ut enim minim
-              veniam, quis nostrud exercitation ullamco laboris nisi
-            </div>
-          </div>
-        </div>
-        <div className={styles.col1}>
-          <div className={styles.col2}>
-            <img src="Images/apd.png" alt="" />
-            <div className={styles.head}>Asian Parliamentary Debate</div>
-            <div className={styles.content}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna Ut enim minim
-              veniam, quis nostrud exercitation ullamco laboris nisi
-            </div>
-          </div>
-        </div>
-        <div className={styles.col1}>
-          <div className={styles.col2}>
-            <img src="Images/apd.png" alt="" />
-            <div className={styles.head}>Asian Parliamentary Debate</div>
-            <div className={styles.content}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna Ut enim minim
-              veniam, quis nostrud exercitation ullamco laboris nisi
-            </div>
-          </div>
-        </div>
-        <div className={styles.col1}>
-          <div className={styles.col2}>
-            <img src="Images/apd.png" alt="" />
-            <div className={styles.head}>Asian Parliamentary Debate</div>
-            <div className={styles.content}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna Ut enim minim
-              veniam, quis nostrud exercitation ullamco laboris nisi
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </>
   );

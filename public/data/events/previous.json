@@ -1,0 +1,44 @@
+[
+    {
+		"id":1,
+	"name" : "Oxford Union Debate",
+	"desc" : "If you, as the debater, have ever wondered just how much you can sway the audience, the Oxford Union Debate is just the competition for you. It is a 1v1 debate; each debater prepares a stance assigned by the OC. Once the debaters have completed their speeches, the audience plays a crucial role and asks questions about the speeches and votes for the side which they think has the upper hand. With more than 70 participants, this is just one of our hugely packed events.",
+	"img" : "Images/previousevents/oud.jpg"
+}, 
+{
+	"id":2,
+"name" : "Asian Parliamentary Debate",
+	"desc" : "The Asian Parliamentary Debate is our flagship, fest-scale event conducted on an international level. With a higher team cap, quality core adjudication panel, and even higher prize money, the competition got even better to bring out the best in the pan-India participants, fighting for the top spot over three days. This APD saw 180+ participants; ranging from the prestigious Delhi Debating Circuits to International Invited Adjudicators. It is the largest of its kind in Eastern India.",
+	"img" : "Images/previousevents/apd.png"
+},
+{
+	"id":3,
+"name" : "Incipio",
+	"desc" : "Rome wasn’t built in a day, and neither was our love for debating. It takes time and skill to cultivate the critical thinking skills debating requires, and to help with that, Incipio is a workshop hosted by The Debating Society, NIT Durgapur. We believe in starting early, so the workshop is usually open to students from school as well as college. It was conducted online last year, with massive appreciation from participants.",
+	"img" : "Images/previousevents/incipio.png"
+},
+{
+	"id":4,
+"name" : "Take Debait",
+	"desc" : "An event packed with mystery and rife with danger, teams are assigned characters in a murder mystery plot. Each team works to find out who the killer is, while also defending themselves from suspicion. Teams are given clues every round to help them get to the bottom of the mystery, as they are simultaneously led astray by the false constructive of the other teams. The event was held virtually this year and saw 100+ participation.",
+	"img" : "Images/previousevents/Takedebait.jpg"
+},
+{
+	"id":5,
+"name" : "Interface",
+	"desc" : "The Debating Society does not stop at just public speaking events. As a well rounded society, last year, we hosted a panel discussion that helps college students with placement interviews, with a panel consisting of the established alumni of the college. The first day consisted of a panel discussion, wherein the alumni spoke about the skills necessary for an interview. On the second day, interested students were able to sit in a one-on-one mock interview, held by the members of the panel.",
+	"img" : "Images/previousevents/interface.jpg"
+},
+{
+	"id":6,
+"name" : "Reverberate",
+	"desc" : "We all know how it feels to have to present your ideas, only to find the right words aren’t available. A public speaking workshop, generally conducted at the start of the academic session here helps you overcome all those bouts of stuttering and gives us the confidence boost we all require. The workshop sees massive participation every year, and collects a lot of positive applause as well.",
+	"img" : "Images/previousevents/Reverberate.jpg"
+},
+{
+	"id":7,
+"name" : "KillCode",
+	"desc" : "One of the most interesting, and adrenaline filled events of the year is Kill Code by The Debating Society. The premise is that there's been a murder, and it looks like there will be more! The participants, as detectives, have to find out the killer and pattern in his string of his killings. However, unless you solve his cryptic puzzles, he is going to take another life. The participants must catch him and not let the killer get away!",
+	"img" : "Images/previousevents/killcode.jpg"
+}
+]

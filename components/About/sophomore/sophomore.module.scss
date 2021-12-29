@@ -21,6 +21,7 @@
          0 0 clamp(12px, 1.31vw, 19px);
          width:clamp(145px,15vw,216px);
      height:clamp(145px, 15vw, 216px);
+     object-fit: cover;
     }
     .col2 {
          margin: clamp(8px, 1.7vw, 20px);

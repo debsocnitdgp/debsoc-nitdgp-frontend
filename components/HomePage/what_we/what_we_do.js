@@ -39,7 +39,7 @@ export default function What() {
               <img src="Images/events.png" alt="" />
               <div className={styles.head}>Fun Events</div>
               <div className={styles.body}>
-              Even if debating is not quite your speed, we have numerous other events that let you try out debating without all its intricacies. With events like Take DeBait that let you play the detective, and IceBreaker, where you can finally tell the world about that niche interest of yours that&apos;s come up in an unconventional topic, there is something for everyone.
+             Even if debating is not quite your speed, we have numerous other events that let you try out debating without all its intricacies. With events like Take DeBait and IceBreaker, there is something for everyone.
               </div>
             </div>
           </div>

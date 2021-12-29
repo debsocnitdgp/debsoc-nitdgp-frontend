@@ -1,0 +1,106 @@
+[
+    {
+		"id":1,
+	"name" : "Shruti Singh",
+    "insta" : "https://www.instagram.com/__s__h_r_u__/",
+    "fb" : "https://www.facebook.com/profile.php?id=100058551763288",
+    "linkedin" : "https://www.linkedin.com/in/shruti-singh-86657b202/",
+	"img" : "Images/sophomore/shruti.jpg"
+}, 
+   {
+		"id":2,
+	"name" : "Epshita Chakravarty",
+    "insta" : "https://www.instagram.com/ec.was.here/",
+    "fb" : "https://www.facebook.com/epshita.chakravarty.31/",
+    "linkedin" : "http://www.linkedin.com/in/epshitachakravarty",
+	"img" : "Images/sophomore/EC.jpeg"
+}, 
+   {
+		"id":3,
+	"name" : "Satyam Yogendra",
+    "insta" : "",
+    "fb" : "https://www.facebook.com/satyam.yogendra.50",
+    "linkedin" : "",
+	"img" : "Images/sophomore/satyam.jpg"
+}, 
+   {
+		"id":4,
+	"name" : "Mehulee Patra",
+    "insta" : "https://www.instagram.com/mehuleepatra/",
+    "fb" : "https://www.facebook.com/mehulee.patra/",
+    "linkedin" : "https://www.linkedin.com/in/mehulee-patra-879862207/",
+	"img" : "Images/sophomore/Mehulee.jpeg"
+}, 
+   {
+		"id":5,
+	"name" : "Kumkum Ray",
+    "insta" : "https://www.instagram.com/rakms_talkies/",
+    "fb" : "",
+    "linkedin" : "https://www.linkedin.com/in/kumkum-ray-169208208",
+	"img" : "Images/sophomore/Kumkum.jpg"
+}
+, 
+   {
+		"id":6,
+	"name" : "Venu Choudhary",
+    "insta" : "https://www.instagram.com/venu.choudhary_/",
+    "fb" : "https://www.facebook.com/venu.choudhary.79",
+    "linkedin" : "https://www.linkedin.com/in/venu-choudhary-1284421b9/",
+	"img" : "Images/sophomore/venu.jpg"
+}, 
+   {
+		"id":7,
+	"name" : "Purvi Binani",
+    "insta" : "https://www.instagram.com/petrichor_24_/",
+    "fb" : "https://www.facebook.com/poorvi.binani",
+    "linkedin" : "https://www.linkedin.com/in/purvi-binani-9a746a203/",
+	"img" : "Images/sophomore/purvi.jpg"
+}, 
+   {
+		"id":8,
+	"name" : "Romasha Guin",
+    "insta" : "https://www.instagram.com/rxmashaaa/",
+    "fb" :"https://m.facebook.com/romasha.guin.3?ref=bookmarks",
+    "linkedin" : "",
+	"img" : "Images/sophomore/Romasha.JPG"
+},
+  {
+		"id":9,
+	"name" : "Vamsi Dath",
+    "insta" : "https://www.instagram.com/the_who._/",
+    "fb" :"https://www.facebook.com/VamsiDath",
+    "linkedin" : "https://www.linkedin.com/in/vamsi-dath",
+	"img" : "Images/sophomore/Vamsi.jpg"
+},
+  {
+		"id":10,
+	"name" : "Manjari jha",
+    "insta" : "https://www.instagram.com/_mj1002/",
+    "fb" :"https://www.facebook.com/manjari.jha.1420/",
+    "linkedin" : "https://www.linkedin.com/in/manjari-jha-95820a208/",
+	"img" : "Images/sophomore/manjari.PNG"
+},
+  {
+		"id":11,
+	"name" : "Swaroop Bhanja",
+    "insta" : "https://www.instagram.com/swaroopbhanja19/",
+    "fb" :"https://www.facebook.com/swaroop.bhanja.5",
+    "linkedin" : "https://www.linkedin.com/in/swaroop-bhanja-800652200/",
+	"img" : "Images/sophomore/SB.jpg"
+},
+  {
+		"id":12,
+	"name" : "Anagha Nagarajan",
+    "insta" : "https://instagram.com/anaghanagarajan?utm_medium=copy_link",
+    "fb" :"https://m.facebook.com/anagha.nagarajan.3",
+    "linkedin" : "https://www.linkedin.com/mwlite/in/anagha-nagarajan-271150207",
+	"img" : "Images/sophomore/anagha.jpg"
+}, {
+		"id":13,
+	"name" : "Apurva Jyoti Paul",
+    "insta" :"",
+    "fb" :"",
+    "linkedin" : "",
+	"img" : "Images/sophomore/ajp.jpg"
+}
+]

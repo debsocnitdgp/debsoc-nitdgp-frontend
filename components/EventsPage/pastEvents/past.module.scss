@@ -4,6 +4,7 @@
     max-width: 1353px;
     margin: 0 auto;
     @include disp;
+    align-items: flex-start;
     flex-wrap: wrap;
      margin-bottom : clamp(30px, 3.5vw, 40px);
     .col1 {
@@ -22,6 +23,7 @@
                 img {
                     width: clamp(217px, 23.6vw,340px);
                     height: clamp(154px,16.7vw,241px);
+                    object-fit: cover;
                 }
                 .head {
                     margin: 7px 0;
@@ -33,6 +35,8 @@
                 }
                 .content {
                     width: clamp(217px, 23.6vw,340px);
+                    padding: 0 clamp(3px, 0.5vw, 7px);
+                    height: clamp(236px,24.5vw,353px);
                     font-size: clamp(12px,1.4vw,18px);
                     line-height: 1.4;
                 }

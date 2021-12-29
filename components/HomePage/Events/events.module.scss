@@ -34,10 +34,11 @@
   .posters {
     display: flex;
     overflow-x: scroll;
-    width: 80%;
+    width: 100%;
     max-width: 1440px;
-    margin-left: clamp(34px,10.3vw,149px);
+    // margin-left: clamp(34px,10.3vw,149px);
     img {
+      cursor: pointer;
       border-radius:clamp(5.5px,0.67vw,10px);
       margin: clamp(3.5px,0.45vw,6.5px);
       height: clamp(177px,21.35vw,308px);
