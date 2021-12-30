@@ -11,9 +11,9 @@
       .col1 {
           background-color: $white;
           color: $black;
+           border-radius: clamp(10px, 1.38vw, 20px);
           width: clamp(240px, 25.2vw, 363px);
           margin: clamp(15px, 1.7vw, 20px) clamp(20px, 2.76vw,40px);
-          border-radius: clamp(3px, 0.5vw, 7px);
           box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.25);
           @include disp;
 
@@ -24,6 +24,7 @@
               padding: clamp(10px, 1.5vw, 20px);
 
               img {
+                   border-radius: clamp(7px, 1vw, 15px);
                   width: clamp(217px, 23.6vw, 340px);
                     height: clamp(154px, 16.7vw, 241px);
                         object-fit: cover;
@@ -41,7 +42,7 @@
               .content {
                   width: clamp(217px, 23.6vw, 340px);
                      padding: 0 clamp(3px, 0.5vw, 7px);;
-                    height: clamp(236px,24.5vw,353px);
+                    height: clamp(245px,24.5vw,353px);
                   font-size: clamp(12px, 1.4vw, 18px);
                   line-height: 1.4;
               }

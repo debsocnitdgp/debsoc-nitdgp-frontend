@@ -7,56 +7,55 @@
   flex-wrap: wrap;
   margin-bottom: clamp(30px, 3.5vw, 40px);
   .col1 {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
     background-color: $white;
     color: $black;
-    width: clamp(281px,28.5vw,411px);
-     height:clamp(145px, 15vw, 216px);
-    margin: clamp(10px, 1.7vw,20px);
+    width: clamp(281px, 28.5vw, 411px);
+    height: clamp(145px, 15vw, 216px);
+    margin: clamp(10px, 1.7vw, 20px);
     border-radius: clamp(12px, 1.31vw, 19px);
-    img{
-         border-radius: clamp(12px, 1.31vw, 19px)
-         0 0 clamp(12px, 1.31vw, 19px);
-         width:clamp(145px,15vw,216px);
-     height:clamp(145px, 15vw, 216px);
-     object-fit: cover;
+    .photo {
+      border-radius: clamp(12px, 1.31vw, 19px) 0 0 clamp(12px, 1.31vw, 19px);
+      min-width: clamp(145px, 15vw, 216px);
+      max-width: clamp(145px, 15vw, 216px);
+      height: clamp(145px, 15vw, 216px);
+      object-fit: cover;
     }
     .col2 {
-         margin: clamp(8px, 1.7vw, 20px);
-        .head1 {
-            font-weight: 700;
-            font-size: clamp(17px,1.6vw,23px);
-        }
-        .head2 {
-               margin: clamp(6px, 0.75vw, 10px) 0px;
-               font-size: clamp(15px, 1.25vw, 18px);
-            //    width: clamp(60px,10vw,137px);
-        }
-    img {
+      margin: clamp(8px, 1.7vw, 20px);
+      .head1 {
+        font-weight: 700;
+        font-size: clamp(17px, 1.6vw, 23px);
+      }
+      .head2 {
+        margin: clamp(6px, 0.75vw, 10px) 0px;
+        font-size: clamp(15px, 1.25vw, 18px);
+        //    width: clamp(60px,10vw,137px);
+      }
+      img {
         border-radius: 0;
         filter: invert(80%);
-               width: clamp(18px, 1.45vw, 26px);
-               height: clamp(18px, 1.45vw, 26px);
-               margin: 0px clamp(4px, 0.48vw, 7px);
-               cursor: pointer;
-              
-    }
+        width: clamp(18px, 1.45vw, 26px);
+        height: clamp(18px, 1.45vw, 26px);
+        margin: 0px clamp(4px, 0.48vw, 7px);
+        cursor: pointer;
+      }
     }
   }
-    .col1:hover {
-        background-color: $purple;
-        color: $white;
-        cursor: pointer;
-        box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.25);
-        .col2 {
-            img {
-                  filter: invert(0%);
-            }
-               img:hover {
-                   filter: invert(30%);
-               }
-        }
+  .col1:hover {
+    background-color: $purple;
+    color: $white;
+    cursor: pointer;
+    box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.25);
+    .col2 {
+      img {
+        filter: invert(0%);
+      }
+      img:hover {
+        filter: invert(30%);
+      }
     }
+  }
 }

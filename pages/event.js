@@ -49,14 +49,14 @@ export default function EVENT() {
           >
             PAST EVENTS
           </div>
-          <div
+          {/* <div
             className={
               isTrue && !isActive ? `${styles.head1}` : `${styles.head2}`
             }
             onClick={add2}
           >
             UPCOMING EVENTS
-          </div>
+          </div> */}
           <div
             className={
               isActive && !isTrue ? `${styles.head1}` : `${styles.head2}`

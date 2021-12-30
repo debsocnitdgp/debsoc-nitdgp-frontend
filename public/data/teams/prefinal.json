@@ -1,0 +1,51 @@
+[
+    {
+		"id":1,
+	"name" : "Rishav Raj Kumar",
+    "insta" : "http://instagram.com/rajkumar_rishav/",
+    "fb" : "https://www.facebook.com/rishav.rajkumar.35",
+    "linkedin" : "https://www.linkedin.com/in/rishav4101/",
+	"img" : "Images/prefinal/rishav.jpeg"
+}, 
+   {
+		"id":2,
+	"name" : "Shashwat Gupta",
+    "insta" : "https://www.instagram.com/shashwat_gupta._/?hl=en",
+    "fb" : "https://www.facebook.com/shashwat.gupta.5496683",
+    "linkedin" : "https://www.linkedin.com/in/shashwat-gupta-bb388a1b3",
+	"img" : "Images/prefinal/Shaswat.jpg"
+}, 
+   {
+		"id":3,
+	"name" : "Animesh Ghosh",
+    "insta" : "https://www.instagram.com/animesh__52/",
+    "fb" : "https://www.facebook.com/animesh.ghosh.908579",
+    "linkedin" : "",
+	"img" : "Images/prefinal/animesh.jpg"
+}, 
+   {
+		"id":4,
+	"name" : "Ansh Jha",
+    "insta" : "https://www.instagram.com/_anshj._/",
+    "fb" : "",
+    "linkedin" : "https://www.linkedin.com/in/ansh-jha-7359751b3",
+	"img" : "Images/prefinal/Ansh .jpg"
+}, 
+   {
+		"id":5,
+	"name" : "Ayush Chaudhary",
+    "insta" : "https://www.instagram.com/ayush_bing/",
+    "fb" : "https://www.facebook.com/profile.php?id=100039962778642",
+    "linkedin" : "https://www.linkedin.com/in/ayush-chaudhary-b26b4597",
+	"img" : "Images/prefinal/ayush.jpg"
+}
+, 
+   {
+		"id":6,
+	"name" : "Praveen Kumar",
+    "insta" : "",
+    "fb" : "",
+    "linkedin" : "",
+	"img" : "Images/prefinal/Coco.jpg"
+}
+]

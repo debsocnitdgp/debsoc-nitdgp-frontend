@@ -17,11 +17,11 @@
 }, 
    {
 		"id":3,
-	"name" : "Satyam Yogendra",
-    "insta" : "",
-    "fb" : "https://www.facebook.com/satyam.yogendra.50",
-    "linkedin" : "",
-	"img" : "Images/sophomore/satyam.jpg"
+	"name" : "Shubham Shantam Raju",
+    "insta" : "https://www.instagram.com/lazy_bugger_19/",
+    "fb" : "https://www.facebook.com/profile.php?id=100009885432645",
+    "linkedin" : "https://www.linkedin.com/in/shubham-shantam-raju-4942641bb/",
+	"img" : "Images/sophomore/shubham.jpg"
 }, 
    {
 		"id":4,
@@ -46,7 +46,7 @@
     "insta" : "https://www.instagram.com/venu.choudhary_/",
     "fb" : "https://www.facebook.com/venu.choudhary.79",
     "linkedin" : "https://www.linkedin.com/in/venu-choudhary-1284421b9/",
-	"img" : "Images/sophomore/venu.jpg"
+	"img" : "Images/sophomore/venu.jpeg"
 }, 
    {
 		"id":7,
@@ -102,5 +102,12 @@
     "fb" :"",
     "linkedin" : "",
 	"img" : "Images/sophomore/ajp.jpg"
+}, {
+		"id":14,
+	"name" : "Soumajjal Kundu",
+    "insta" :"https://www.instagram.com/soumajjal/",
+    "fb" :"",
+    "linkedin" : "https://www.linkedin.com/in/soumajjal-kundu-755583207/",
+	"img" : "Images/sophomore/soumajjal.jpeg"
 }
 ]

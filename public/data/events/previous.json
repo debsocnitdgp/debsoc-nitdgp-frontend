@@ -40,5 +40,22 @@
 "name" : "KillCode",
 	"desc" : "One of the most interesting, and adrenaline filled events of the year is Kill Code by The Debating Society. The premise is that there's been a murder, and it looks like there will be more! The participants, as detectives, have to find out the killer and pattern in his string of his killings. However, unless you solve his cryptic puzzles, he is going to take another life. The participants must catch him and not let the killer get away!",
 	"img" : "Images/previousevents/killcode.jpg"
+},  {
+		"id":8,
+	"name" : "Ice Breaker",
+	"desc" : "Ice Breaker was our first event to initiate a conversation and to give first years an opportunity to think differently on a bit out-of-the-league topics. Participants were asked to send us their arguments either in support or in opposition, which were posted if they abided by the policies of Facebook. The participants with the maximum likes, comments, and shares plus considering OC’s views were chosen to be the winners.We received more than 120 responses and a lot of positive applause from the first years.",
+	"img" : "Images/upcoming/icebreaker.jpg"
+}, 
+{
+	"id":9,
+"name" : "Renegado",
+	"desc" : "Renegado is a Turncoat debate, in its essence, where you betray your very own stance; that too, in the same breath. A debater is asked to prepare for both sides on a topic and switch their stance in between while speaking. It's an enthralling debate format that is often touted to be a critical assessment of a debater, wherein his/her arguments and rebuttals need to be equally balanced to furnish a great speech.",
+	"img" : "Images/upcoming/rene.jpg"
+},
+{
+	"id":10,
+"name" : "Fictionary",
+	"desc" : "A quiz event based on series, novels, films, and characters that find a special corner in our hearts. Fictionary gives us a breather from all the debating events in our repertoire. Participants have to be quick and witty to make the cut. Last year, Fictionary gathered over 500 participants. Performances were seen from every year, be it first, second, third, or the final year. We got to see a brilliant display of fast thinkers.",
+	"img" : "Images/upcoming/fictionary.jpg"
 }
 ]

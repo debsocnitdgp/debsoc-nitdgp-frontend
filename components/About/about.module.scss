@@ -4,7 +4,7 @@
     max-width: 1440px;
     margin: 0 auto;
     flex-direction: column;
-     margin-top: 50px;
+     margin-top: clamp(80px,13vw,180px);
               background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
     @include disp;
     .col1 {
@@ -41,7 +41,7 @@
            @include disp;
            flex-direction: column;
     margin-bottom: clamp(50px, 6.5vw, 80px);
-        margin-top: clamp(65px, 8vw, 120px);
+        margin-top: clamp(105px, 13.8vw, 200px);
     background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
            .head1 {
                color: $white;
