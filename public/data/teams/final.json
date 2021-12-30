@@ -1,0 +1,57 @@
+[
+    {
+		"id":1,
+	"name" : "Rishav Kumar Rathore",
+    "position" : "President",
+    "insta" : "https://www.instagram.com/psychic_rathore",
+    "fb" :"https://www.facebook.com/profile.php?id=100009448563919",
+    "linkedin" : "http://www.linkedin.com/in/rishavrathore",
+	"img" : "Images/final/RKR.jpg"
+}, 
+   {
+		"id":2,
+	"name" : "V Vishesh",
+    "position" : "Treasurer",
+    "insta" : "https://www.instagram.com/vishesh.vedanavatla/",
+    "fb" : "https://www.facebook.com/vishesh.vedhanavatla",
+    "linkedin" : "https://www.linkedin.com/in/vishesh-vedanavatla-5851531aa",
+	"img" : "Images/final/vv.jpg"
+}, 
+   {
+		"id":3,
+	"name" : "Urvashi",
+    "position" :"Event Head",
+    "insta" : "https://www.instagram.com/urvashi__2001/",
+    "fb" : "",
+    "linkedin" : "",
+	"img" : "Images/final/urvashi.jpg"
+}, 
+   {
+		"id":4,
+	"name" : "Khushi Bansal",
+    "position" : "Vice President",
+    "insta" : "",
+    "fb" : "",
+    "linkedin" : "",
+	"img" : "Images/final/Khushi.jpg"
+}, 
+   {
+		"id":5,
+	"name" : "Nipun Kr. Mehta",
+    "position" : "Debate Head",
+    "insta" : "hhttps://www.instagram.com/the_nipunism/",
+    "fb" : "https://www.facebook.com/nipunkumar.mehta",
+    "linkedin" : "https://www.linkedin.com/in/nipunkumarnitd",
+	"img" : "Images/final/Nipunism.jpg"
+}
+, 
+   {
+		"id":6,
+	"name" : "Jovin Litto",
+    "position" : "Convenor & Sponsorship Head",
+    "insta" : "https://www.instagram.com/jovinlitto/",
+    "fb" : "https://www.facebook.com/jovin.l.jose",
+    "linkedin" : "https://www.linkedin.com/in/jovin-litto-8a81b51b5/",
+	"img" : "Images/final/jovin.jpeg"
+}
+]
