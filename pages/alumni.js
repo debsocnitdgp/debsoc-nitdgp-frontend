@@ -45,9 +45,9 @@ export default function About() {
             }
             onClick={add3}
           >
-           2018
+           2017 - 2021
           </div>
-          <div
+          {/* <div
             className={
               isTrue && !isActive ? `${styles.head1}` : `${styles.head2}`
             }
@@ -62,7 +62,7 @@ export default function About() {
             onClick={add}
           >
             2020
-          </div>
+          </div> */}
         </div>
         {!isActive && !isTrue ?  <Eight /> : <></>}
         {!isActive && isTrue ? <Nine /> : <></>}

@@ -1,0 +1,42 @@
+[
+    {
+		"id":1,
+	"name" : "Mahima Kriti",
+    "insta" : "https://www.instagram.com/the_arana_/",
+    "fb" : "https://www.facebook.com/mahima.kriti",
+    "linkedin" : "https://www.linkedin.com/in/mahima-kriti/",
+	"img" : "Images/alumni/mahima.jpg"
+}, 
+   {
+		"id":2,
+	"name" : "Kartick Kumar Ghosh",
+    "insta" : "https://www.instagram.com/lolwhoocaress/",
+    "fb" : "",
+    "linkedin" : "https://www.linkedin.com/in/kartick-kumar-ghosh-779679190/",
+	"img" : "Images/alumni/kartick.jpg"
+}, 
+   {
+		"id":3,
+	"name" : "Sudeepta Gorai",
+    "insta" : "https://www.instagram.com/sudeepta_gorai/",
+    "fb" : "https://www.facebook.com/profile.php?id=100008628999716",
+    "linkedin" : "https://www.linkedin.com/in/sudeepta-gorai-358b18147/",
+	"img" : "Images/alumni/sudeepta.png"
+}, 
+   {
+		"id":4,
+	"name" : "Sarah Baitullah",
+    "insta" : "https://www.linkedin.com/in/sarah-baitullah/",
+    "fb" : "https://www.facebook.com/profile.php?id=100020946188153",
+    "linkedin" : "https://www.linkedin.com/in/sarah-baitullah/",
+	"img" : "Images/alumni/sarah.jpg"
+}, 
+   {
+		"id":5,
+	"name" : "Sneha Singh",
+    "insta" : "https://www.instagram.com/snehahahahaha.___/",
+    "fb" : "https://www.facebook.com/profile.php?id=100005717432107",
+    "linkedin" : "https://www.linkedin.com/in/sneha-singh15/",
+	"img" : "Images/alumni/sneha.jpg"
+}
+]
