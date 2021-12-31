@@ -3,8 +3,9 @@ import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 
 export default function Events() {
-    const url = "data/events/previous.json";
+  const url = "data/events/previous.json";
   const [data, setData] = useState([]);
+  const [email, setEmail] = useState([""]);
 
   const getData = useCallback(async () => {
     const response = await fetch(url);
@@ -15,6 +16,15 @@ export default function Events() {
   useEffect(() => {
     getData();
   }, [url, getData]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Your Email is submitted");
+    setEmail("");
+  };
+  const handleChange = (e) => {
+    e.preventDefault();
+    setEmail(e.target.value);
+  };
   return (
     <>
       <div className={styles.wrapper}>
@@ -27,13 +37,18 @@ export default function Events() {
           events, including some of the biggest debating events in the eastern
           circuit, drawing national as well as international participation.
         </div>
-       
+
         <div className={styles.posters}>
-           {data.map((pass) => ( 
-             
-            <img src={pass.img} alt="" key={pass.id} onClick={() => (window.location.href = "/event")}/>     ))}
+          {data.map((pass) => (
+            <img
+              src={pass.img}
+              alt=""
+              key={pass.id}
+              onClick={() => (window.location.href = "/event")}
+            />
+          ))}
         </div>
-     
+
         <Link href="/event">
           <button className={styles.bigButton}>Know More</button>
         </Link>
@@ -52,11 +67,13 @@ export default function Events() {
               <div className={styles.drop}>
                 <input
                   type="email"
-                  name="name"
+                  name="email"
                   placeholder="DROP YOUR EMAIL ID"
+                  value={email}
+                  onChange={handleChange}
                 />
               </div>
-              <button>SUBMIT</button>
+              <button onClick={handleSubmit}>SUBMIT</button>
             </div>
           </div>
         </div>
