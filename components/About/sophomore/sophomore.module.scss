@@ -34,14 +34,17 @@
         font-size: clamp(15px, 1.25vw, 18px);
         //    width: clamp(60px,10vw,137px);
       }
+      .links {
+        margin-left : clamp(-4px, -0.48vw, -7px);
       img {
         border-radius: 0;
         filter: invert(80%);
         width: clamp(18px, 1.45vw, 26px);
         height: clamp(18px, 1.45vw, 26px);
-        margin: 0px clamp(4px, 0.48vw, 7px);
+        margin: clamp(2px,0.34vw,5px) clamp(4px, 0.48vw, 7px);
         cursor: pointer;
       }
+    }
     }
   }
   .col1:hover {

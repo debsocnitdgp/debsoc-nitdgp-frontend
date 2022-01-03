@@ -47,5 +47,22 @@
     "fb" : "",
     "linkedin" : "",
 	"img" : "Images/prefinal/Coco.jpg"
+}, 
+   {
+		"id":7,
+	"name" : "Tanushree Bhattacharya",
+    "insta" : "https://www.instagram.com/tanuu.exe/",
+    "fb" : "https://m.facebook.com/100042338234457/",
+    "linkedin" : "https://www.linkedin.com/mwlite/in/tanushree-bhattacharya-682a911a5",
+	"img" : "Images/prefinal/Tanushree.jpeg"
+}
+, 
+   {
+		"id":8,
+	"name" : "Aditya Mitra",
+    "insta" : "https://instagram.com/_mitraditya?utm_medium=copy_link",
+    "fb" : "https://www.facebook.com/adityamitra1911",
+    "linkedin" : "https://www.linkedin.com/in/aditya-mitra-3505801b1",
+	"img" : "Images/prefinal/aditya.jpeg"
 }
 ]

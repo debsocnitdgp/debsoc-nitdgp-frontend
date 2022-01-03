@@ -1,9 +1,49 @@
 import styles from "./footer.module.scss";
 import Link from "next/link";
+import { useState, useEffect, useCallback } from "react";
 
 export default function Footer() {
+  const [email, setEmail] = useState([""]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    window.location.reload(false);
+    setEmail("");
+  };
+  const handleChange = (e) => {
+    e.preventDefault();
+    setEmail(e.target.value);
+  };
   return (
     <>
+      <div className={styles.future}>
+        <div className={styles.left}>
+          <img src="Images/leftBubbles.png" alt="" />
+        </div>
+        <div className={styles.futureWrapper}>
+          <div className={styles.head}>
+            Get latest Updates on <br />
+            <span>FUTURE EVENTS</span>
+          </div>
+          <div className={styles.col2}>
+            <div className={styles.email}>
+              <div className={styles.drop}>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Drop your email id"
+                  value={email}
+                  onChange={handleChange}
+                />
+              </div>
+              <button onClick={handleSubmit}>SUBMIT</button>
+            </div>
+          </div>
+        </div>
+        <div className={styles.right}>
+          <img src="Images/rightBubbles.png" alt="" />
+        </div>
+      </div>
       <div className={styles.footer}>
         <div className={styles.col}>
           <div className={styles.head}>FIND US HERE</div>

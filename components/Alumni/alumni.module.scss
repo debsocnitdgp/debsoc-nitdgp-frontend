@@ -6,6 +6,7 @@
     flex-direction: column;
      margin-top: 50px;
      text-align: center;
+         margin-top: clamp(70px, 6.94vw, 100px);
     @include disp;
      background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
     .col1 {

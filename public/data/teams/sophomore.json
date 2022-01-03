@@ -109,5 +109,12 @@
     "fb" :"",
     "linkedin" : "https://www.linkedin.com/in/soumajjal-kundu-755583207/",
 	"img" : "Images/sophomore/soumajjal.jpeg"
+}, {
+		"id":15,
+	"name" : "Satyam Yogendra",
+    "insta" :"https://www.instagram.com/satyamyogendra_/",
+    "fb" :"https://www.facebook.com/satyam.yogendra.50",
+    "linkedin" : "https://www.linkedin.com/in/satyam-yogendra-121209208",
+	"img" : "Images/sophomore/satyam.jpeg"
 }
 ]
