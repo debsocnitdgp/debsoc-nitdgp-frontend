@@ -38,8 +38,15 @@
         width: clamp(217px, 23.6vw, 340px);
         padding: 0 clamp(3px, 0.5vw, 7px);
         height: clamp(245px, 24.5vw, 353px);
-        font-size: clamp(12px, 1.4vw, 18px);
+        font-size: clamp(12px, 1.39vw, 18px);
         line-height: 1.4;
+            @include max-q(1380px) {
+         height: clamp(370px,26.2vw,377px);
+            }
+          @include max-q(930px) {
+            height: 260px;
+          }
+
       }
     }
   }

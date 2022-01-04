@@ -35,11 +35,11 @@ export default function Landing() {
       <div className={styles.bannerItems}>
         <div className={styles.banner}>
           <div className={styles.item}>
-            <img src="Images/partypopper.png" alt="party" />
+            <img src="Images/magicwand.png" alt="party" />
             <div className="">Design</div>
           </div>
           <div className={styles.item}>
-            <img src="Images/partypopper.png" alt="party" />
+            <img src="Images/cup.png" alt="party" />
             <div className="">Debate</div>
           </div>
           <div className={styles.item}>

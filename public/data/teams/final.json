@@ -53,5 +53,32 @@
     "fb" : "https://www.facebook.com/jovin.l.jose",
     "linkedin" : "https://www.linkedin.com/in/jovin-litto-8a81b51b5/",
 	"img" : "Images/final/jovin.jpeg"
+}, 
+   {
+		"id":7,
+	"name" : "Shrimoyee Ghosh",
+    "position" : "Content Head",
+    "insta" : "",
+    "fb" : "",
+    "linkedin" : "",
+	"img" : "Images/final/shrimoyee.jpeg"
+}, 
+   {
+		"id":8,
+	"name" : "Hemanth Koppadi",
+    "position" : "Publicity & Social Media Head",
+    "insta" : "",
+    "fb" : "",
+    "linkedin" : "",
+	"img" : "Images/final/hemanth.jpeg"
+}, 
+   {
+		"id":9,
+	"name" : "Dolly Raj",
+    "position" : "Logistics Head",
+    "insta" : "",
+    "fb" : "",
+    "linkedin" : "",
+	"img" : "Images/final/dolly.jpeg"
 }
 ]
