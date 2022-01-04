@@ -64,5 +64,13 @@
     "fb" : "https://www.facebook.com/adityamitra1911",
     "linkedin" : "https://www.linkedin.com/in/aditya-mitra-3505801b1",
 	"img" : "Images/prefinal/aditya.jpeg"
+}, 
+   {
+		"id":9,
+	"name" : "Kaustuv Kanchan Chattopadhyay",
+    "insta" : "https://www.instagram.com/a.k.a_kkc/",
+    "fb" : "https://www.facebook.com/kaustuv249/",
+    "linkedin" : "https://www.linkedin.com/in/kaustuv942/",
+	"img" : "Images/prefinal/kkc.jpeg"
 }
 ]

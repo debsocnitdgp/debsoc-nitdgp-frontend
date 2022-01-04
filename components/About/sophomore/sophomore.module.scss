@@ -12,7 +12,7 @@
     align-items: center;
     background-color: $white;
     color: $black;
-    width: clamp(281px, 28.5vw, 411px);
+    width: clamp(295px, 28.5vw, 411px);
     height: clamp(145px, 15vw, 216px);
     margin: clamp(10px, 1.7vw, 20px);
     border-radius: clamp(12px, 1.31vw, 19px);
@@ -27,7 +27,7 @@
       margin: clamp(8px, 1.7vw, 20px);
       .head1 {
         font-weight: 700;
-        font-size: clamp(17px, 1.6vw, 23px);
+        font-size: clamp(16px, 1.5vw, 22px);
       }
       .head2 {
         margin: clamp(6px, 0.75vw, 10px) 0px;
