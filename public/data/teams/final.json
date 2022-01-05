@@ -30,9 +30,9 @@
 		"id":4,
 	"name" : "Khushi Bansal",
     "position" : "Vice President",
-    "insta" : "",
-    "fb" : "",
-    "linkedin" : "",
+    "insta" : "https://www.instagram.com/plethora_of_thoughts/",
+    "fb" : "https://www.facebook.com/khushi.bansal.756",
+    "linkedin" : "https://www.linkedin.com/in/khushi-bansal-298849177",
 	"img" : "Images/final/Khushi.jpg"
 }, 
    {
@@ -53,9 +53,33 @@
     "fb" : "https://www.facebook.com/jovin.l.jose",
     "linkedin" : "https://www.linkedin.com/in/jovin-litto-8a81b51b5/",
 	"img" : "Images/final/jovin.jpeg"
-}, 
-   {
+},   {
 		"id":7,
+	"name" : "Kiran P Abraham",
+    "position" : "General Secretary",
+    "insta" : "",
+    "fb" : "",
+    "linkedin" : "",
+	"img" : "Images/final/Kiran.jpg"
+},  {
+		"id":8,
+	"name" : "Sakshi Paswan",
+    "position" : "Outreach & Collaboration Head",
+    "insta" : "",
+    "fb" : "https://www.facebook.com/sakshi.paswan.1",
+    "linkedin" : "https://www.linkedin.com/in/sakshi-paswan-76123717b/",
+	"img" : "Images/final/Sakshi.jpeg"
+},  {
+		"id":9,
+	"name" : "Akash Manna",
+    "position" : "Tech Head",
+    "insta" : "https://www.instagram.com/aka_s_h/",
+    "fb" : "https://www.facebook.com/akashmanna2099",
+    "linkedin" : "https://www.linkedin.com/in/akash2099/",
+	"img" : "Images/final/Akash_Manna_Square.png"
+},
+   {
+		"id":10,
 	"name" : "Shrimoyee Ghosh",
     "position" : "Content Head",
     "insta" : "",
@@ -64,7 +88,7 @@
 	"img" : "Images/final/shrimoyee.jpeg"
 }, 
    {
-		"id":8,
+		"id":11,
 	"name" : "Hemanth Koppadi",
     "position" : "Publicity & Social Media Head",
     "insta" : "",
@@ -73,7 +97,7 @@
 	"img" : "Images/final/hemanth.jpeg"
 }, 
    {
-		"id":9,
+		"id":12,
 	"name" : "Dolly Raj",
     "position" : "Logistics Head",
     "insta" : "",
