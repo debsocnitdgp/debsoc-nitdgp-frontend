@@ -72,5 +72,13 @@
     "fb" : "https://www.facebook.com/kaustuv249/",
     "linkedin" : "https://www.linkedin.com/in/kaustuv942/",
 	"img" : "Images/prefinal/kkc.jpeg"
+}, 
+   {
+		"id":10,
+	"name" : "Sriram Dayalan",
+    "insta" : "https://www.instagram.com/sriram_dayalan/?utm_medium=copy_link",
+    "fb" : "",
+    "linkedin" : "https://www.linkedin.com/in/sriram-dayalan-a8a5ab195/",
+	"img" : "Images/prefinal/sriram.jpg"
 }
 ]
