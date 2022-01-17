@@ -36,11 +36,33 @@ export default function About() {
           <div className={styles.head2}>ABOUT US</div>
         </div>
         <div className={styles.content}>
-          Established in 2015, the official Debating Club of NIT Durgapur has
-          steadily risen to the reputable presence we are today in the eastern
-          debating circuit. Going strong with 38 members, we are slowly
-          realizing our mission through promoting debates and public speaking in
-          college.
+          The Debating Society is the official debating club of NIT Durgapur. At
+          its core, this club is an ideological interest group that aims to
+          promote the culture of debating on campus and remove the phobia
+          associated with public speaking. We distinguish ourselves from most
+          other debate clubs at a variety of institutions across the country by
+          emphasizing the use of technology in our practices.
+          <br /> <br /> <br />
+          <ul>
+            <h3>Our mission?</h3>
+            <li>
+              To encourage young people to become actively involved in social
+              concerns and uprisings.
+            </li>
+            <li>
+              To aid students in the formation and articulation of their ideas
+              in a logical and coherent manner.
+            </li>
+            <li>
+              To assist students in developing the confidence to express
+              themselves on a larger scale.
+            </li>
+            <li>
+              To raise NIT Durgapur's profile in elocution by competing in
+              various debating and public speaking competitions held across the
+              country
+            </li>
+          </ul>
         </div>
         <div className={styles.col2}>
           <div className={styles.head1}>OUR TEAM</div>

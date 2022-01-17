@@ -63,7 +63,7 @@ export default function EVENT() {
             }
             onClick={add}
           >
-            ONGOING EVENT
+            UPCOMING EVENTS
           </div>
         </div>
         {!isActive && !isTrue ? <PastEvent /> : <></>}

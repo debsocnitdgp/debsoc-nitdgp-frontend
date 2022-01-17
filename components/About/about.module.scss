@@ -1,96 +1,124 @@
 @import "styles/variables.scss";
 
 .about {
-    max-width: 1440px;
-    margin: 0 auto;
-    flex-direction: column;
-     margin-top: clamp(80px,13vw,180px);
-              background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
+  max-width: 1440px;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-top: clamp(80px, 13vw, 180px);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(116, 68, 253, 0.12) 0%,
+    rgba(116, 68, 253, 0.0012) 100%
+  );
+  @include disp;
+  .col1 {
     @include disp;
-    .col1 {
-        @include disp;
-        flex-direction: column;
-         background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
-        .head1 {
-            color: $white;
-            font-size: clamp(50px, 10vw, 144px);
-            font-weight: 700;
-            position: absolute;
-            z-index: 0;
-                     background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
-        }
-
-        .head2 {
-            color: $black;
-            z-index: 50;
-            margin-top: clamp(28px, 4vw, 60px);
-            font-size: clamp(20px, 3.5vw, 48px);
-            font-weight: 700;
-        }
+    flex-direction: column;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(116, 68, 253, 0.12) 0%,
+      rgba(116, 68, 253, 0.0012) 100%
+    );
+    .head1 {
+      color: $white;
+      font-size: clamp(50px, 10vw, 144px);
+      font-weight: 700;
+      position: absolute;
+      z-index: 0;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(116, 68, 253, 0.12) 0%,
+        rgba(116, 68, 253, 0.0012) 100%
+      );
     }
 
-    .content {
+    .head2 {
+      color: $black;
+      z-index: 50;
+      margin-top: clamp(28px, 4vw, 60px);
+      font-size: clamp(20px, 3.5vw, 48px);
+      font-weight: 700;
+    }
+  }
+
+  .content {
+    text-align: center;
+    width: clamp(206px, 55vw, 856px);
+    margin-top: clamp(15px, 1.8vw, 20px);
+    font-size: clamp(12px, 1.1vw, 18px);
+    line-height: 1.4;
+    margin-bottom: clamp(15px, 1.8vw, 20px);
+    ul{
+         width: clamp(206px, 40vw, 600px);
+         margin: 0 auto;
+            padding-inline-start: 0px !important;
+    }
+    h3 {
         text-align: center;
-        width: clamp(206px, 55vw, 856px);
-        margin-top: clamp(15px, 1.8vw, 20px);
-        font-size: clamp(12px, 1.1vw, 18px);
-        line-height: 1.4;
-        margin-bottom: clamp(15px, 1.8vw, 20px);
     }
-       .col2 {
-           @include disp;
-           flex-direction: column;
+    li {
+        text-align: left;
+     
+    }
+  }
+  .col2 {
+    @include disp;
+    flex-direction: column;
     margin-bottom: clamp(50px, 6.5vw, 80px);
-        margin-top: clamp(105px, 13.8vw, 200px);
-    background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
-           .head1 {
-               color: $white;
-               font-size: clamp(50px, 10vw, 144px);
-               font-weight: 700;
-               position: absolute;
-               z-index: 0;
-           }
+    margin-top: clamp(105px, 13.8vw, 200px);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(116, 68, 253, 0.12) 0%,
+      rgba(116, 68, 253, 0.0012) 100%
+    );
+    .head1 {
+      color: $white;
+      font-size: clamp(50px, 10vw, 144px);
+      font-weight: 700;
+      position: absolute;
+      z-index: 0;
+    }
 
-           .head2 {
-               color: $black;
-               z-index: 50;
-               margin-top: clamp(28px, 4vw, 60px);
-               font-size: clamp(20px, 3.5vw, 48px);
-               font-weight: 700;
-           }
-       }
-          .col3 {
-              @include disp;
-              margin-bottom: clamp(35px, 5.2vw, 70px);
+    .head2 {
+      color: $black;
+      z-index: 50;
+      margin-top: clamp(28px, 4vw, 60px);
+      font-size: clamp(20px, 3.5vw, 48px);
+      font-weight: 700;
+    }
+  }
+  .col3 {
+    @include disp;
+    margin-bottom: clamp(35px, 5.2vw, 70px);
 
-              .head1 {
-                  margin: 0px clamp(25px, 6.5vw, 150px);
-                  font-size: clamp(12px, 1.9vw, 24px);
-                  font-weight: 700;
-                  background-color: $purple;
-                  padding: clamp(10px, 1.2vw, 15px) clamp(12px, 2vw, 32px);
-                 border-radius: clamp(3px, 0.48vw, 7px);
-                  cursor: pointer;
-                  color: $white;
+    .head1 {
+      margin: 0px clamp(25px, 6.5vw, 150px);
+      font-size: clamp(12px, 1.9vw, 24px);
+      font-weight: 700;
+      background-color: $purple;
+      padding: clamp(10px, 1.2vw, 15px) clamp(12px, 2vw, 32px);
+      border-radius: clamp(3px, 0.48vw, 7px);
+      cursor: pointer;
+      color: $white;
 
-                  @include max-q(600px) {
-                      margin: clamp(9px, 2vw, 30px);
-                  }
-              }
+      @include max-q(600px) {
+        margin: clamp(9px, 2vw, 30px);
+      }
+    }
 
-              .head2 {
-                  margin: 0px clamp(25px, 6.5vw, 150px);
-                  cursor: pointer;
-                  font-size: clamp(12px, 1.9vw, 24px);
-                  font-weight: 700;
+    .head2 {
+      margin: 0px clamp(25px, 6.5vw, 150px);
+      cursor: pointer;
+      font-size: clamp(12px, 1.9vw, 24px);
+      font-weight: 700;
 
-                  @include max-q(600px) {
-                      margin: clamp(9px, 2vw, 30px);
-                  }
-              }
+      @include max-q(600px) {
+        margin: clamp(9px, 2vw, 30px);
+      }
+    }
 
-              .head2:hover {
-                  color: $purple;
-              }
-          }
+    .head2:hover {
+      color: $purple;
+    }
+  }
 }
