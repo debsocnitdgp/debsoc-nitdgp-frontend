@@ -58,7 +58,7 @@ export default function About() {
               themselves on a larger scale.
             </li>
             <li>
-              To raise NIT Durgapur's profile in elocution by competing in
+              To raise NIT Durgapur&apos;s profile in elocution by competing in
               various debating and public speaking competitions held across the
               country
             </li>
