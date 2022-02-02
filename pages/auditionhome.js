@@ -67,7 +67,7 @@ export default function Audition() {
           </div>
           {msg && <div className={style.msg}>{msg}</div>}
           <GoogleLogin
-            clientId="602987753487-ur9fhtj1dd02pgh16ldfor9ck52md6s7.apps.googleusercontent.com"
+            clientId="802793895572-n8412ckocsn2mq487j61r2akcqn9ef14.apps.googleusercontent.com"
             render={(renderProps) => (
               <div
                 className={style.gButton}
