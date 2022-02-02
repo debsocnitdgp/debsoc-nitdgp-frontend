@@ -83,7 +83,7 @@ export default function Audition() {
           />
 
           <div className={style.content}>
-            DEBSOC is not just any cultural club, it's a culture in itself.
+            DEBSOC is not just any cultural club, it&apos;s a culture in itself.
           </div>
         </div>
       </div>

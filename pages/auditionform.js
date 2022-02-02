@@ -347,7 +347,7 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q17. What's your personal theme song?
+                Q17. What&apos;s your personal theme song?
               </div>
               <textarea
                 type="text"
