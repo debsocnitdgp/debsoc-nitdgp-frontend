@@ -28,7 +28,7 @@ export default function Audition() {
     rolepref: "",
     q1ans: "",
     q2ans: "",
-    q3ans: "",
+    q3ans: "NA",
     q4ans: "",
     q5ans: "",
     q6ans: "",
@@ -93,7 +93,7 @@ export default function Audition() {
       rolepref: "",
       q1ans: "",
       q2ans: "",
-      q3ans: "",
+      q3ans: "NA",
       q4ans: "",
       q5ans: "",
       q6ans: "",
@@ -250,22 +250,7 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q10. In the backdrop of the online scenario, what initiatives
-                will you take to ensure that the desired amount of time is
-                devoted to bonding among your club year mates?
-              </div>
-              <textarea
-                type="text"
-                value={data.q3ans}
-                placeholder="Enter your answer"
-                onChange={(e) => {
-                  setData({ ...data, q3ans: e.target.value });
-                }}
-              />
-            </div>
-            <div className={style.inputGrp}>
-              <div className={style.question}>
-                Q11. Where would you rate yourself on a scale of 10 in, and why
+                Q10. Where would you rate yourself on a scale of 10 in, and why
                 in the following: Hardwork, Ego, Disciplined, Confidence,
                 Creativity, Time management, Understanding others(empathy)
               </div>
@@ -280,7 +265,7 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q12. What qualities do you admire most about yourself?
+                Q11. What qualities do you admire most about yourself?
               </div>
               <textarea
                 type="text"
@@ -293,7 +278,7 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q13. Where will you be standing at a club party?
+                Q12. What will you be probably doing at a club party?
               </div>
               <textarea
                 type="text"
@@ -306,7 +291,7 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q14. What are the 10 things you could do with a pencil other
+                Q13. What are the 10 things you could do with a pencil other
                 than writing?
               </div>
               <textarea
@@ -320,7 +305,7 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q15. What will you do if you feel strongly about an idea but the
+                Q14. What will you do if you feel strongly about an idea but the
                 club decides against it?
               </div>
               <textarea
@@ -334,7 +319,7 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q16. If you are pretty sick but the club has an important event
+                Q15. If you are pretty sick but the club has an important event
                 coming up this week what would you do?
               </div>
               <textarea
@@ -348,7 +333,7 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q17. What&apos;s your personal theme song?
+                Q16. What&apos;s your personal theme song?
               </div>
               <textarea
                 type="text"
