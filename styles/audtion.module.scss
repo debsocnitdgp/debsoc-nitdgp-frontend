@@ -1,0 +1,159 @@
+@import "styles/variables.scss";
+
+.col {
+  background-color: $white;
+  color: $black;
+  width: clamp(280px, 52.5vw, 756px);
+  margin: 100px auto;
+  border-radius: clamp(10px, 1.38vw, 20px);
+  box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.25);
+  @include disp;
+
+  .col2 {
+    @include disp;
+    flex-direction: column;
+    text-align: center;
+    padding: clamp(10px, 1.5vw, 20px);
+
+    img {
+      border-radius: clamp(7px, 1vw, 15px);
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .head {
+      margin: 30px 0;
+      font-weight: 700;
+      width: 80%;
+      @include disp;
+      font-size: clamp(24px, 2.5vw, 36px);
+    }
+
+    .gButton {
+      @include disp;
+      gap: 10px;
+      width: clamp(250px, 24.3vw, 350px);
+      height: 60px;
+      border-radius: 8px;
+      border: 3px solid #4086f4;
+      font-weight: 600;
+      font-size: clamp(16px, 1.65vw, 24px);
+      cursor: pointer;
+      img {
+        height: 30px;
+        width: auto;
+      }
+    }
+
+    .content {
+      padding: 30px clamp(3px, 0.5vw, 7px);
+      font-size: clamp(16px, 1.65vw, 24px);
+      line-height: 1.4;
+    }
+  }
+}
+
+.formWrap {
+  @include disp;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1000px;
+  margin: 100px auto;
+  .profileImage {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    border: 3px solid $black;
+    box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.25);
+  }
+  .name {
+    margin: 20px auto;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-size: clamp(36px, 3.78vw, 54px);
+  }
+  .inputGrp {
+    margin: 25px auto;
+    width: 100%;
+    .question {
+      font-size: clamp(18px, 1.87vw, 27px);
+      font-weight: 600;
+      text-align: left;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    input {
+      width: 100%;
+      outline: none;
+      background-color: $white;
+      border: 2px solid $black;
+      font-size: clamp(16px, 1.65vw, 24px);
+      border-radius: 8px;
+      height: 60px;
+      padding: 15px;
+      &:focus {
+        border: 2px solid $purple;
+      }
+    }
+    textarea {
+      width: 100%;
+      outline: none;
+      font-size: clamp(16px, 1.65vw, 24px);
+      background-color: $white;
+      border: 2px solid $black;
+      border-radius: 8px;
+      height: 160px;
+      padding: 15px;
+      resize: none;
+      &:focus {
+        border: 2px solid $purple;
+      }
+    }
+  }
+  .loading {
+    font-weight: 700;
+    margin: 20px auto;
+    font-size: clamp(18px, 1.87vw, 27px);
+    text-align: center;
+  }
+  .msg {
+    font-weight: 700;
+    margin: 20px auto;
+    text-align: center;
+    font-size: clamp(16px, 1.65vw, 24px);
+    color: red;
+  }
+  .submitted {
+    text-align: center;
+    font-weight: 700;
+    margin: 20px auto;
+       margin-bottom: 40px;
+       width: 60%;
+    font-size: clamp(24px, 2.5vw, 36px);
+    text-align: center;
+  }
+  .bigButton {
+    background-color: $purple;
+    color: $white;
+    border: none;
+    width: clamp(250px, 24.3vw, 350px);
+    height: 60px;
+    border-radius: 9px;
+    font-size: clamp(16px, 1.6vw, 22px);
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    &:hover {
+      background-color: $black;
+    }
+  }
+}
+.msg {
+  font-weight: 700;
+  margin: 20px auto;
+  font-size: clamp(16px, 1.65vw, 24px);
+  color: red;
+  text-align: center;
+}

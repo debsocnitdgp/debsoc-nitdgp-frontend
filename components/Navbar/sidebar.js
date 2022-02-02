@@ -27,6 +27,10 @@ function Sidebar({ state, closeHandler }) {
           <div className={styles.menuListItem}>
             <Link href="/alumni">ALUMNI</Link>
           </div>
+
+          <div className={styles.menuListItem}>
+            <Link href="/auditionhome">AUDITION</Link>
+          </div>
         </div>
       </div>
     </div>
