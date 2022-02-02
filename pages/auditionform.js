@@ -113,11 +113,12 @@ export default function Audition() {
           <div className={styles.head2}>AUDITIONS &apos;22</div>
         </div>
         <div className={styles.content}>
-          We are delighted to introduce our alumni, who have established
-          themselves as successful individuals in virtually every aspect of
-          their lives. Our alumni have raised our institution&apos;s reputation
-          to such heights as they now work for some of the most coveted
-          corporations in the world.
+          Being a club that believes in coherence and clarity, we relish a
+          healthy discussion on any topic under the sun. But that's not all.
+          we've got a plethora of events covering every possible field as we
+          believe in exploring and learning by experience. We, the Debating
+          Society, proudly present to you, Auditions 2022. We are excited to
+          join forces with the chosen few to create the dream team.
         </div>
       </div>
       <div className={style.formWrap}>
@@ -140,7 +141,7 @@ export default function Audition() {
               />
             </div>
             <div className={style.inputGrp}>
-              <div className={style.question}>Q2. Enter Email ID again</div>
+              <div className={style.question}>Q2. Enter Email ID</div>
               <input
                 type="text"
                 value={data.email}

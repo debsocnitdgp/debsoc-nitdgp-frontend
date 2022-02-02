@@ -13,8 +13,9 @@ export default function Audition() {
   }, []);
 
   const [msg, setMsg] = useState("");
+  const [loading, setLoading] = useState("");
   const responseGoogle = async (response) => {
-    console.log(response);
+    setLoading("Logging You In");
     localStorage.setItem("nm", response.profileObj.givenName);
     localStorage.setItem("purl", response.profileObj.imageUrl);
 
@@ -31,7 +32,7 @@ export default function Audition() {
       }
     );
     const resp = await res.json();
-    console.log(resp);
+
     if (resp.token && resp.token !== "" && resp.token != null) {
       localStorage.setItem("tk", resp.token);
       localStorage.setItem("sub", resp.submit);
@@ -50,11 +51,12 @@ export default function Audition() {
           <div className={styles.head2}>AUDITIONS &apos;22</div>
         </div>
         <div className={styles.content}>
-          We are delighted to introduce our alumni, who have established
-          themselves as successful individuals in virtually every aspect of
-          their lives. Our alumni have raised our institution&apos;s reputation
-          to such heights as they now work for some of the most coveted
-          corporations in the world.
+          Being a club that believes in coherence and clarity, we relish a
+          healthy discussion on any topic under the sun. But that's not all.
+          we've got a plethora of events covering every possible field as we
+          believe in exploring and learning by experience. We, the Debating
+          Society, proudly present to you, Auditions 2022. We are excited to
+          join forces with the chosen few to create the dream team.
         </div>
       </div>
       <div className={style.col}>
@@ -81,7 +83,7 @@ export default function Audition() {
             onFailure={responseGoogle}
             cookiePolicy={"single_host_origin"}
           />
-
+          <div className={style.load}>{loading}</div>
           <div className={style.content}>
             DEBSOC is not just any cultural club, it&apos;s a culture in itself.
           </div>
