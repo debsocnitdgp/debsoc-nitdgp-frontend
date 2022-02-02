@@ -1,21 +1,3 @@
 [
   
-    {
-		"id":1,
-	"name" : "KILLCODE II",
-	"desc" : "A body here, an end of the story there. How many stories are you willing to relive? Irrespective of whichever side you choose,Beware of the murderer(s) on the loose.Can you decipher the Kill Code before he/she/they come(s) for you, too? Eight for heaven, night for a hell;Ten to the devil where ever he may dwell. KILLCODE II Coming soon.",
-	"img" : "Images/upcoming/killcode.jpg"
-}, 
-{
-	"id":2,
-"name" : "Reverberate '22",
-	"desc" : "Words are the most powerful and impactful weapon that every human carries. To put forth our thoughts, ideas or even share our feelings, communication is the key.However, we all know that trying to convey yourself verbally isn't always easy. This is where we come in! We, the Debating Society, NIT Durgapur bring to you Reverberate '22, a fun and engaging workshop to help you improve your communication skills, enhance your critical thinking abilities, establish cohesive arguments.",
-	"img" : "Images/upcoming/reverberate.jpg"
-},
-{
-	"id":3,
-"name" : "What If?",
-	"desc" : "What if the world as you knew it, changed suddenly? How do you fare with unexpected situations and curveballs that life might throw your way in an alternate universe? We, the Debating Society, NIT Durgapur, bring to you What if?, an event that is sure to get you revved up. All you have to do is send us your video entries on the topics we provide you with. Accept the challenge and set the stage ablaze if you dare! ",
-	"img" : "Images/upcoming/whatif.jpg"
-}
 ]
