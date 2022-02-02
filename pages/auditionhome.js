@@ -52,11 +52,11 @@ export default function Audition() {
         </div>
         <div className={styles.content}>
           Being a club that believes in coherence and clarity, we relish a
-          healthy discussion on any topic under the sun. But that's not all.
-          we've got a plethora of events covering every possible field as we
-          believe in exploring and learning by experience. We, the Debating
-          Society, proudly present to you, Auditions 2022. We are excited to
-          join forces with the chosen few to create the dream team.
+          healthy discussion on any topic under the sun. But that&apos;s not
+          all. we&apos;ve got a plethora of events covering every possible field
+          as we believe in exploring and learning by experience. We, the
+          Debating Society, proudly present to you, Auditions 2022. We are
+          excited to join forces with the chosen few to create the dream team.
         </div>
       </div>
       <div className={style.col}>

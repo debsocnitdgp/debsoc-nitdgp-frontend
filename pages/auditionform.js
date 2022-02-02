@@ -114,11 +114,11 @@ export default function Audition() {
         </div>
         <div className={styles.content}>
           Being a club that believes in coherence and clarity, we relish a
-          healthy discussion on any topic under the sun. But that's not all.
-          we've got a plethora of events covering every possible field as we
-          believe in exploring and learning by experience. We, the Debating
-          Society, proudly present to you, Auditions 2022. We are excited to
-          join forces with the chosen few to create the dream team.
+          healthy discussion on any topic under the sun. But that&apos;s not
+          all. we&apos;ve got a plethora of events covering every possible field
+          as we believe in exploring and learning by experience. We, the
+          Debating Society, proudly present to you, Auditions 2022. We are
+          excited to join forces with the chosen few to create the dream team.
         </div>
       </div>
       <div className={style.formWrap}>
@@ -197,7 +197,7 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q6. Club preference (in order 1 2 3 ...)
+                Q6. Club preference (eg:- 1.ClubOne 2.ClubTwo 3.ClubThree)
               </div>
               <input
                 type="text"
