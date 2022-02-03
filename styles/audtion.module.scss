@@ -40,6 +40,9 @@
       font-weight: 600;
       font-size: clamp(16px, 1.65vw, 24px);
       cursor: pointer;
+      &:hover{
+        background-color: #a4c7ff;
+      } 
       img {
         height: 30px;
         width: auto;
