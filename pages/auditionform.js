@@ -28,7 +28,7 @@ export default function Audition() {
     rolepref: "",
     q1ans: "",
     q2ans: "",
-    q3ans: "NA",
+    q3ans: "",
     q4ans: "",
     q5ans: "",
     q6ans: "",
@@ -93,7 +93,7 @@ export default function Audition() {
       rolepref: "",
       q1ans: "",
       q2ans: "",
-      q3ans: "NA",
+      q3ans: "",
       q4ans: "",
       q5ans: "",
       q6ans: "",
@@ -250,7 +250,21 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q10. Where would you rate yourself on a scale of 10 in, and why
+                Q10. If you could know the absolute and total truth to one
+                question, what question would you ask?
+              </div>
+              <textarea
+                type="text"
+                value={data.q3ans}
+                placeholder="Enter your answer"
+                onChange={(e) => {
+                  setData({ ...data, q3ans: e.target.value });
+                }}
+              />
+            </div>
+            <div className={style.inputGrp}>
+              <div className={style.question}>
+                Q11. Where would you rate yourself on a scale of 10 in, and why
                 in the following: Hardwork, Ego, Disciplined, Confidence,
                 Creativity, Time management, Understanding others(empathy)
               </div>
@@ -265,7 +279,7 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q11. What qualities do you admire most about yourself?
+                Q12. What qualities do you admire most about yourself?
               </div>
               <textarea
                 type="text"
@@ -278,7 +292,7 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q12. What will you be probably doing at a club party?
+                Q13. What will you be probably doing at a club party?
               </div>
               <textarea
                 type="text"
@@ -291,7 +305,7 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q13. What are the 10 things you could do with a pencil other
+                Q14. What are the 10 things you could do with a pencil other
                 than writing?
               </div>
               <textarea
@@ -305,7 +319,7 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q14. What will you do if you feel strongly about an idea but the
+                Q15. What will you do if you feel strongly about an idea but the
                 club decides against it?
               </div>
               <textarea
@@ -319,8 +333,8 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q15. If you are pretty sick but the club has an important event
-                coming up this week what would you do?
+                Q16. Given one day to commit any crime and break free of the
+                punishment, which crime would you gladly commit and why?
               </div>
               <textarea
                 type="text"
@@ -333,7 +347,8 @@ export default function Audition() {
             </div>
             <div className={style.inputGrp}>
               <div className={style.question}>
-                Q16. What&apos;s your personal theme song?
+                Q17. If you got to choose a song that would play every time you
+                entered a room, what song would you pick, and why?
               </div>
               <textarea
                 type="text"
