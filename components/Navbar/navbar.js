@@ -46,9 +46,9 @@ function Navbar({ page }) {
             <div className={styles.menuListItem}>
               <Link href="/alumni">ALUMNI</Link>
             </div>
-                        <div className={styles.menuListItem}>
+                        {/* <div className={styles.menuListItem}>
               <Link href="/auditionhome">AUDITION</Link>
-            </div>
+            </div> */}
           </div>
 
           <div className={styles.drawerOpener} onClick={drawerOpenHandler}>

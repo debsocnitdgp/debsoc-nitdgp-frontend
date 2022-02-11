@@ -66,7 +66,7 @@ export default function Audition() {
             &#8220; The Debsoc Fam awaits you! &#8221;
           </div>
           {msg && <div className={style.msg}>{msg}</div>}
-          <GoogleLogin
+          {/* <GoogleLogin
             clientId="802793895572-n8412ckocsn2mq487j61r2akcqn9ef14.apps.googleusercontent.com"
             render={(renderProps) => (
               <div
@@ -82,8 +82,9 @@ export default function Audition() {
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
             cookiePolicy={"single_host_origin"}
-          />
+          /> */}
           <div className={style.load}>{loading}</div>
+          <div className={style.load}>Audition Form is closed!</div>
           <div className={style.content}>
             DEBSOC is not just any cultural club, it&apos;s a culture in itself.
           </div>
