@@ -47,6 +47,14 @@ export default function About() {
           >
            2017 - 2021
           </div>
+          <div
+            className={
+              isTrue && !isActive ? `${styles.head1}` : `${styles.head2}`
+            }
+            onClick={add2} 
+          >
+            2018 - 2022
+          </div>
         </div>
         {!isActive && !isTrue ?  <Eight /> : <></>}
         {!isActive && isTrue ? <Nine /> : <></>}

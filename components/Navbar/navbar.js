@@ -37,7 +37,7 @@ function Navbar({ page }) {
             </div>
 
             <div className={styles.menuListItem}>
-              <Link href="/event">EVENT</Link>
+              <Link href="/event">EVENTS</Link>
             </div>
 
             <div className={styles.menuListItem}>

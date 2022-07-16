@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar/navbar";
 import Footer from "../components/Footer/footer";
-import OngoingEvents from "../components/EventsPage/Ongoing/ongoing";
+//import OngoingEvents from "../components/EventsPage/Ongoing/ongoing";
 import PastEvent from "../components/EventsPage/pastEvents/past";
 import UpcomingEvents from "../components/EventsPage/Upcoming/upcoming";
 import styles from "../components/EventsPage/events.module.scss";
@@ -9,7 +9,7 @@ import styles from "../components/EventsPage/events.module.scss";
 export default function EVENT() {
   const [isActive, setActive] = useState(false);
   const [isTrue, setTrue] = useState(false);
-  const add = () => {
+  const add = () => { 
     setActive(true);
     setTrue(false);
   };
@@ -47,28 +47,28 @@ export default function EVENT() {
             }
             onClick={add3}
           >
-            PAST EVENTS
+            ALL EVENTS
           </div>
-          {/* <div
+          <div
             className={
               isTrue && !isActive ? `${styles.head1}` : `${styles.head2}`
             }
             onClick={add2}
           >
             UPCOMING EVENTS
-          </div> */}
-          <div
+          </div>
+          {/* <div
             className={
               isActive && !isTrue ? `${styles.head1}` : `${styles.head2}`
             }
             onClick={add}
           >
             UPCOMING EVENTS
-          </div>
+          </div> */}
         </div>
         {!isActive && !isTrue ? <PastEvent /> : <></>}
         {!isActive && isTrue ? <UpcomingEvents /> : <></>}
-        {isActive && !isTrue ? <OngoingEvents /> : <></>}
+        {/* {isActive && !isTrue ? <OngoingEvents /> : <></>} */}
       </div>
       <Footer />
     </>
