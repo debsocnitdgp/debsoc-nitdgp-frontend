@@ -1,18 +1,32 @@
 import styles from "./footer.module.scss";
 import Link from "next/link";
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 
 export default function Footer() {
-  const [email, setEmail] = useState([""]);
+  const [email, setEmail] = useState('');
+  const url = "https://debsoc-website.herokuapp.com/main/api/drop-email/";
+
+  const storeEmail = async () => {
+    const response = await fetch(url,{
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: JSON.stringify({email: email})
+    })
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     window.location.reload(false);
+    storeEmail()
     setEmail("");
   };
+
   const handleChange = (e) => {
-    e.preventDefault();
-    setEmail(e.target.value);
+    e.preventDefault();  
+    setEmail(e.target.value);  
   };
   return (
     <>
