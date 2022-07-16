@@ -15,11 +15,12 @@ export default function Footer() {
       method: "POST",
       body: JSON.stringify({email: email})
     })
+    console.log('sent')
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.location.reload(false);
+    console.log(email)
     storeEmail()
     setEmail("");
   };
