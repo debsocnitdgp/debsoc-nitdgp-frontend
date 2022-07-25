@@ -1,18 +1,33 @@
 import styles from "./footer.module.scss";
 import Link from "next/link";
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 
 export default function Footer() {
-  const [email, setEmail] = useState([""]);
+  const [email, setEmail] = useState('');
+  const url = "https://debsoc-website.herokuapp.com/main/api/drop-email/";
+
+  const storeEmail = async () => {
+    const response = await fetch(url,{
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: JSON.stringify({email: email})
+    })
+    console.log('sent')
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    window.location.reload(false);
+    console.log(email)
+    storeEmail()
     setEmail("");
   };
+
   const handleChange = (e) => {
-    e.preventDefault();
-    setEmail(e.target.value);
+    e.preventDefault();  
+    setEmail(e.target.value);  
   };
   return (
     <>
@@ -61,10 +76,10 @@ export default function Footer() {
           <div className={styles.head}>CONTACT INFO</div>
 
           <div className={styles.Items}>
-            President - +91 8981610561 (Rishav)
+            President - +91 8617028221 (Rishav)
           </div>
           <div className={styles.Items}>
-            Sponsorship Head - +91 8001631634 (Jovin)
+            Sponsorship Head - +91 9382748755 (Animesh)
           </div>
           <div className={styles.Items}>debatingsociety.nitdgp@gmail.com</div>
         </div>
