@@ -3,8 +3,8 @@ import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 
 export default function Sophomore() {
-  const dpurl = 'https://debsoc-website.herokuapp.com'
-  const url = "https://debsoc-website.herokuapp.com/main/api/members";
+  const dpurl = process.env.NEXT_PUBLIC_IMG_URL
+  const url = process.env.NEXT_PUBLIC_MEMBERS_URL;
   const [data, setData] = useState([]);
 
   const getData = useCallback(async () => {

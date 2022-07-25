@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function Footer() {
   const [email, setEmail] = useState('');
-  const url = "https://debsoc-website.herokuapp.com/main/api/drop-email/";
+  const url = process.env.NEXT_PUBLIC_EMAIL_DROP_URL;
 
   const storeEmail = async () => {
     const response = await fetch(url,{

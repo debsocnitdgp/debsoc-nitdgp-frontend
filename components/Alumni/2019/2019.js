@@ -3,8 +3,8 @@ import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 
 export default function Nine() {
-  const dpurl = 'https://debsoc-website.herokuapp.com'
-  const url = "https://debsoc-website.herokuapp.com/main/api/alumni";
+  const dpurl = process.env.NEXT_PUBLIC_IMG_URL
+  const url = process.env.NEXT_PUBLIC_ALUMNI_URL;
   const [data, setData] = useState([]);
 
   const getData = useCallback(async () => {
