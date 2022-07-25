@@ -2,8 +2,8 @@ import styles from "./past.module.scss";
 import { useState, useEffect, useCallback } from "react";
 
 export default function PastEvents() {
-  const posterurl = 'https://debsoc-website.herokuapp.com'
-  const url = "https://debsoc-website.herokuapp.com/main/api/events";
+  const posterurl = process.env.NEXT_PUBLIC_IMG_URL
+  const url = process.env.NEXT_PUBLIC_EVENT_URL;
   const [data, setData] = useState([]);
 
   const getData = useCallback(async () => {

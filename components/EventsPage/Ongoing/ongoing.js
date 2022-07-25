@@ -13,7 +13,7 @@ export default function OngoingEvents() {
 
   useEffect(() => {
     getData();
-  }, [url, getData]);
+  }, [url, getData]); 
   return (
     <>
       <div className={styles.upcoming}>
