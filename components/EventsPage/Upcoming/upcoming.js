@@ -12,7 +12,7 @@ export default function UpcomingEvents() {
     const events = upComing.upcoming
     setData(events);
   }, [url]);
-
+ 
   useEffect(() => {
     getData();
   }, [url, getData]);
