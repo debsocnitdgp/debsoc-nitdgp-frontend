@@ -30,7 +30,13 @@ class MyApp extends App {
         {({ store }) => (
           <PersistGate
             persistor={store.__PERSISTOR}
-            loading={<div>Loading</div>}
+            loading={
+              <div className="loaderContainer">
+                <div className="loaderWrapper">
+                  <span className="loaderSpinner" />
+                </div>
+              </div>
+            }
           >
             <Component {...pageProps} />
           </PersistGate>
