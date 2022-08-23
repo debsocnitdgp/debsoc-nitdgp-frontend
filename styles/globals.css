@@ -18,3 +18,37 @@ a {
 * {
   box-sizing: border-box;
 }
+.loaderContainer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: yellowgreen;
+}
+
+.loaderWrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loaderSpinner {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border: 6px solid #6e6e6e;
+  border-left: 6px solid #6f57ff;
+  border-radius: 50%;
+  animation: loadingAnimation 1s infinite linear;
+}
+
+@keyframes loadingAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

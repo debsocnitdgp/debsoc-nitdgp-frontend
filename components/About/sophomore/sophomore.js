@@ -6,12 +6,18 @@ export default function Sophomore() {
   const dpurl = process.env.NEXT_PUBLIC_IMG_URL
   const url = process.env.NEXT_PUBLIC_MEMBERS_URL;
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
 
   const getData = useCallback(async () => {
+    setLoading(true);
+
     const response = await fetch(url);
     const past = await response.json();
     const sophomore = past["2"]
     setData(sophomore);
+    setLoading(false);
+
   }, [url]);
 
   useEffect(() => {
@@ -21,6 +27,7 @@ export default function Sophomore() {
   return (
     <>
       <div className={styles.sopho}>
+      {loading && <span className={styles.loaderSpinner} />}
         {data?.map((pass) => (
           <div className={styles.col1} key={pass.id}>
             <img src={dpurl+pass.dp} alt="" key={pass.id} className={styles.photo} />

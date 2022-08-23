@@ -6,12 +6,18 @@ export default function Nine() {
   const dpurl = process.env.NEXT_PUBLIC_IMG_URL
   const url = process.env.NEXT_PUBLIC_ALUMNI_URL;
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
 
   const getData = useCallback(async () => {
+    setLoading(true);
+
     const response = await fetch(url);
     const past = await response.json();
     const nine = past[2022]
     setData(nine);
+    setLoading(false);
+
   }, [url]);
 
   useEffect(() => {
@@ -20,6 +26,7 @@ export default function Nine() {
   return (
     <>
       <div className={styles.sopho}>
+      {loading && <span className={styles.loaderSpinner} />}
         {data?.map((pass) => (
           <div className={styles.col1} key={pass.id}>
             <img src={dpurl+pass.dp} alt="" key={pass.id} className={styles.photo} />

@@ -6,6 +6,17 @@
   @include disp;
   flex-wrap: wrap;
   margin-bottom: clamp(30px, 3.5vw, 40px);
+  min-height: 60vh;
+
+  .loaderSpinner {
+    display: block;
+    width: 64px;
+    height: 64px;
+    border: 6px solid #6e6e6e;
+    border-left: 6px solid #6f57ff;
+    border-radius: 50%;
+    animation: loadingAnimation 1s infinite linear;
+  }
   .col1 {
     display: flex;
     // justify-content: space-between;
