@@ -17,6 +17,14 @@
     border-radius: 50%;
     animation: loadingAnimation 1s infinite linear;
   }
+  @keyframes loadingAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
   .col1 {
     display: flex;
     // justify-content: space-between;

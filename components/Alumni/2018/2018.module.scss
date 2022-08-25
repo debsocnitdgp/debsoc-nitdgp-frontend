@@ -5,8 +5,9 @@
     margin: 0 auto;
     @include disp;
     flex-wrap: wrap;
+    align-items: flex-start;
     margin-bottom: clamp(30px, 3.5vw, 40px);
-    min-height: 70vh;
+    min-height: 60vh;
     
     .loaderSpinner {
         display: block;
@@ -16,6 +17,14 @@
         border-left: 6px solid #6f57ff;
         border-radius: 50%;
         animation: loadingAnimation 1s infinite linear;
+      }
+      @keyframes loadingAnimation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
       }
 
     .col1 {
