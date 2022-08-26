@@ -2,13 +2,19 @@ import styles from "../Upcoming/upcoming.module.scss";
 import { useState, useEffect, useCallback } from "react";
 
 export default function OngoingEvents() {
-    const url = "data/events/ongoing.json";
+  const url = "data/events/ongoing.json";
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
 
   const getData = useCallback(async () => {
+    setLoading(true);
+
     const response = await fetch(url);
     const ongoing = await response.json();
     setData(ongoing);
+    setLoading(false);
+
   }, [url]);
 
   useEffect(() => {
@@ -17,6 +23,7 @@ export default function OngoingEvents() {
   return (
     <>
       <div className={styles.upcoming}>
+      {loading && <span className={styles.loaderSpinner} />}
            {data.map((pass) => (
           <div className={styles.col1} key={pass.id}>
             <div className={styles.col2}>

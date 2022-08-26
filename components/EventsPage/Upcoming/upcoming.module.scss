@@ -1,51 +1,116 @@
 @import "styles/variables.scss";
 
 .upcoming {
-    max-width: 1353px;
-    margin: 0 auto;
+  max-width: 1353px;
+  margin: 0 auto;
+  @include disp;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: clamp(30px, 3.5vw, 40px);
+  min-height: 60vh;
+
+  .loaderSpinner {
+    display: block;
+    width: 64px;
+    height: 64px;
+    border: 6px solid #6e6e6e;
+    border-left: 6px solid #6f57ff;
+    border-radius: 50%;
+    animation: loadingAnimation 1s infinite linear;
+  }
+  @keyframes loadingAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .col1 {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    color: $black;
+    border-radius: clamp(10px, 1.38vw, 20px);
+    width: clamp(240px, 25.2vw, 363px);
+    margin: clamp(15px, 1.7vw, 20px) clamp(20px, 2.76vw, 40px);
+    box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.25);
     @include disp;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-bottom: clamp(30px, 3.5vw, 40px);
 
-      .col1 {
-          background-color: $white;
-          color: $black;
-           border-radius: clamp(10px, 1.38vw, 20px);
-          width: clamp(240px, 25.2vw, 363px);
-          margin: clamp(15px, 1.7vw, 20px) clamp(20px, 2.76vw,40px);
-          box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.25);
-          @include disp;
+    .btn {
+      background-color: $purple;
+      color: $white;
+      border: none;
+      margin: 20px;
+      width: clamp(120px, 14vw, 176px);
+      height: clamp(40px, 4.2vw, 57px);
+      border-radius: 5px;
+      font-size: clamp(12px, 1.3vw, 14px);
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      
+    }
+    .col2 {
+      @include disp;
+      flex-direction: column;
+      text-align: center;
+      padding: clamp(10px, 1.5vw, 20px);
 
-          .col2 {
-              @include disp;
-              flex-direction: column;
-              text-align: center;
-              padding: clamp(10px, 1.5vw, 20px);
-
-              img {
-                   border-radius: clamp(7px, 1vw, 15px);
-                  width: clamp(217px, 23.6vw, 340px);
-                    height: clamp(154px, 16.7vw, 241px);
-                        object-fit: cover;
-              }
-
-              .head {
-                  margin: 7px 0;
-                  font-weight: 700;
-                  height: clamp(28px, 4.3vw, 62px);
-                  @include disp;
-                  font-size: clamp(12px, 1.6vw, 20px);
-                  width: clamp(200px, 17.9vw, 258px);
-              }
-
-              .content {
-                  width: clamp(217px, 23.6vw, 340px);
-                     padding: 0 clamp(3px, 0.5vw, 7px);;
-                    height: clamp(245px,24.5vw,353px);
-                  font-size: clamp(12px, 1.4vw, 18px);
-                  line-height: 1.4;
-              }
-          }
+      img {
+        border-radius: clamp(7px, 1vw, 15px);
+        width: clamp(217px, 23.6vw, 340px);
+        height: clamp(154px, 16.7vw, 241px);
+        object-fit: cover;
       }
+
+      .head {
+        margin: 7px 0;
+        font-weight: 700;
+        height: clamp(28px, 4.3vw, 62px);
+        @include disp;
+        font-size: clamp(12px, 1.6vw, 20px);
+        width: clamp(200px, 17.9vw, 258px);
+      }
+
+      .content {
+        width: clamp(217px, 23.6vw, 340px);
+        padding: 0 clamp(3px, 0.5vw, 7px);
+        height: clamp(245px, 24.5vw, 353px);
+        font-size: clamp(12px, 1.4vw, 18px);
+        line-height: 1.4;
+      }
+    }
+    .cols2 {
+      @include disp;
+      flex-direction: column;
+      text-align: center;
+      padding: clamp(10px, 1.5vw, 20px);
+
+      img {
+        border-radius: clamp(7px, 1vw, 15px);
+        width: clamp(217px, 23.6vw, 340px);
+        height: clamp(154px, 16.7vw, 241px);
+        object-fit: cover;
+      }
+
+      .head {
+        margin: 7px 0;
+        font-weight: 700;
+        height: clamp(28px, 4.3vw, 62px);
+        @include disp;
+        font-size: clamp(12px, 1.6vw, 20px);
+        width: clamp(200px, 17.9vw, 258px);
+      }
+
+      .content {
+        width: clamp(217px, 23.6vw, 340px);
+        padding: 0 clamp(3px, 0.5vw, 7px);
+        height: clamp(200px, 24.5vw, 312px);
+        font-size: clamp(12px, 1.4vw, 18px);
+        line-height: 1.4;
+      }
+    }
+  }
 }

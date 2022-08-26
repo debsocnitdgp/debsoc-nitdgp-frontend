@@ -18,6 +18,15 @@ export default function Sponsors() {
           <img src="Images/tech.png" alt="" />
           <img src="Images/SBI.png" alt="" />
           <img src="Images/cppsecrets.png" alt="" />
+          <img src='Images/citiresi.png' alt=''/>
+          <img src='Images/TimeCoding.png' alt=''/>
+          <img src='Images/ADR.png' alt=''/>
+          <img src='Images/chemacad.png' alt=''/>
+          <img src='Images/lemongrass.png' alt=''/>
+          <img src='Images/friendsFm.png' alt=''/>
+          <img src='Images/unscool.png' alt=''/>
+          <img src='Images/popStore.png' alt=''/>
+
         </div>
       </div>
     </>

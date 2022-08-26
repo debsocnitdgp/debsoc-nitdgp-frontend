@@ -39,6 +39,13 @@
       font-size: clamp(20px, 3.5vw, 48px);
       font-weight: 700;
     }
+    .heads2 {
+      color: $black;
+      z-index: 50;
+      margin-top: clamp(28px, 4vw, 60px);
+      font-size: clamp(20px, 3.5vw, 55px);
+      font-weight: 800;
+    }
   }
 
   .content {
@@ -48,6 +55,28 @@
     font-size: clamp(12px, 1.1vw, 18px);
     line-height: 1.4;
     margin-bottom: clamp(15px, 1.8vw, 20px);
+    
+    ul{
+         width: clamp(206px, 40vw, 600px);
+         margin: 0 auto;
+            padding-inline-start: 0px !important;
+    }
+    h3 {
+        text-align: center;
+    }
+    li {
+        text-align: left;
+     
+    }
+  }
+  .contents {
+    text-align: center;
+    width: clamp(206px, 55vw, 856px);
+    margin-top: clamp(15px, 1.8vw, 20px);
+    font-size: clamp(16px, 1.1vw, 18px);
+    line-height: 1.4;
+    margin-bottom: clamp(15px, 1.8vw, 20px);
+    
     ul{
          width: clamp(206px, 40vw, 600px);
          margin: 0 auto;
