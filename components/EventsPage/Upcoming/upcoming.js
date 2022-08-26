@@ -6,7 +6,11 @@ export default function UpcomingEvents() {
   const url = process.env.NEXT_PUBLIC_EVENT_URL;
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  
+
+  const registerHandler = () => {
+    window.location.href = "/takedebait";
+  };
+
   const getData = useCallback(async () => {
     setLoading(true);
     const response = await fetch(url);
@@ -25,7 +29,7 @@ export default function UpcomingEvents() {
         {loading && <span className={styles.loaderSpinner} />}
         {data.map((pass) => (
           <div className={styles.col1} key={pass.id}>
-            <div className={styles.col2}>
+            <div className={styles.cols2}>
               <img src={posterurl + pass.poster} alt="" key={pass.id} />
               <div className={styles.head} key={pass.event_name}>
                 {pass.event_name}
@@ -33,6 +37,9 @@ export default function UpcomingEvents() {
               <div className={styles.content} key={pass.event_description}>
                 {pass.event_description}
               </div>
+            </div>
+            <div>
+              <button className={styles.btn} onClick={registerHandler}>REGISTER NOW!</button>
             </div>
           </div>
         ))}

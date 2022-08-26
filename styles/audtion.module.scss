@@ -25,20 +25,20 @@
     .head {
       margin: 30px 0;
       font-weight: 700;
-      width: 80%;
+      width: 85%;
       @include disp;
-      font-size: clamp(24px, 2.5vw, 36px);
+      font-size: clamp(20px, 2.5vw, 36px);
     }
 
     .gButton {
       @include disp;
       gap: 10px;
-      width: clamp(250px, 24.3vw, 350px);
+      width: clamp(210px, 24.3vw, 350px);
       height: 60px;
       border-radius: 8px;
       border: 3px solid #4086f4;
       font-weight: 600;
-      font-size: clamp(16px, 1.65vw, 24px);
+      font-size: clamp(13px, 1.65vw, 24px);
       cursor: pointer;
       &:hover{
         background-color: #a4c7ff;
