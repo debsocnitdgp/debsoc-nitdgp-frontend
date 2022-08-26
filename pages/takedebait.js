@@ -93,7 +93,7 @@ export default function Audition() {
           <div className={style.load}>{loading}</div>
           
           <div className={style.content}>
-          &#8220; Knives are Sharp and Gleam so Pretty,<br/> Poison's Slow Which is a Pity...&#8220;
+          &#8220; Knives are Sharp and Gleam so Pretty,<br/> Poison&apos;s Slow Which is a Pity...&#8220;
           </div>
         </div>
       </div>

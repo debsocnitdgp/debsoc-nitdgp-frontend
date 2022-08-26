@@ -166,6 +166,7 @@ export default function Audition() {
             <div className={style.inputGrp}>
               <div className={style.question}>Member 2: Phone no</div>
               <input
+                
                 type="text"
                 value={data.member_2_number}
                 placeholder="Enter your answer"
