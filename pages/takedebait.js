@@ -67,7 +67,7 @@ export default function Audition() {
       </div>
       <div className={style.col}>
         <div className={style.col2}>
-          <img src="Images/takedebait.jpg" alt="" />
+          <img src="Images/final_poster.png" alt="" />
           <div className={style.head}>
              Do You Think You Can Catch Us? <br/> Give it a Try! 
           </div>
