@@ -67,7 +67,7 @@ export default function Audition() {
       </div>
       <div className={style.col}>
         <div className={style.col2}>
-          <img src="Images/takedebait.jpg" alt="" />
+          <img src="Images/final_poster.png" alt="" />
           <div className={style.head}>
              Do You Think You Can Catch Us? <br/> Give it a Try! 
           </div>
@@ -93,7 +93,7 @@ export default function Audition() {
           <div className={style.load}>{loading}</div>
           
           <div className={style.content}>
-          &#8220; Knives are Sharp and Gleam so Pretty,<br/> Poison&apos;s Slow Which is a Pity...&#8220;
+          &#8220; Fire is festive, drowing&apos;s slow <br/> Hanging&apos;s a ropy way to go...&#8220;
           </div>
         </div>
       </div>
