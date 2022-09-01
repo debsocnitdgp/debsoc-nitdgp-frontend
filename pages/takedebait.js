@@ -2,47 +2,47 @@ import styles from "../components/About/about.module.scss";
 import Navbar from "../components/Navbar/navbar";
 import Footer from "../components/Footer/footer";
 import style from "../styles/audtion.module.scss";
-import { useState } from "react";
-import { GoogleLogin } from "react-google-login";
+// import { useState } from "react";
+// import { GoogleLogin } from "react-google-login";
 
 export default function Audition() {
-  useState(() => {
-    if (localStorage.getItem("tk") && localStorage.getItem("tk") !== "") {
-      window.location.href = "/takedebaitform";
-    }
-  }, []);
+  // useState(() => {
+  //   if (localStorage.getItem("tk") && localStorage.getItem("tk") !== "") {
+  //     window.location.href = "/takedebaitform";
+  //   }
+  // }, []);
 
-  const [msg, setMsg] = useState("");
-  const [loading, setLoading] = useState("");
+  // const [msg, setMsg] = useState("");
+  // const [loading, setLoading] = useState("");
 
-  const responseGoogle = async (response) => { 
-    setLoading("Logging You In");
-    localStorage.setItem("nm", response.profileObj.givenName);
-    localStorage.setItem("purl", response.profileObj.imageUrl);
-    console.log(response.profileObj.imageUrl)
+  // const responseGoogle = async (response) => { 
+  //   setLoading("Logging You In");
+  //   localStorage.setItem("nm", response.profileObj.givenName);
+  //   localStorage.setItem("purl", response.profileObj.imageUrl);
+  //   console.log(response.profileObj.imageUrl)
 
-    localStorage.setItem("tk", response.tokenId);
+  //   localStorage.setItem("tk", response.tokenId);
     
-    const res = await fetch(
-      process.env.NEXT_PUBLIC_CHECK_EMAIL +
-        "?email=" +
-        response.profileObj.email
-    );
+  //   const res = await fetch(
+  //     process.env.NEXT_PUBLIC_CHECK_EMAIL +
+  //       "?email=" +
+  //       response.profileObj.email
+  //   );
     
-    const resp = await res.json();
+  //   const resp = await res.json();
 
-    if (resp.success) {
-      console.log(response);
-      console.log(resp);
-      localStorage.setItem("registered", !resp.success);
-      localStorage.setItem("email", response.profileObj.email);
-      window.location.href = "/takedebaitform";
-    } else {
-      setLoading("")
-      setMsg("You have already registered!");
-    }
+  //   if (resp.success) {
+  //     console.log(response);
+  //     console.log(resp);
+  //     localStorage.setItem("registered", !resp.success);
+  //     localStorage.setItem("email", response.profileObj.email);
+  //     window.location.href = "/takedebaitform";
+  //   } else {
+  //     setLoading("")
+  //     setMsg("You have already registered!");
+  //   }
 
-  };
+  // };
 
   return (
     <>
@@ -69,9 +69,11 @@ export default function Audition() {
         <div className={style.col2}>
           <img src="Images/final_poster.png" alt="" />
           <div className={style.head}>
-             Do You Think You Can Catch Us? <br/> Give it a Try! 
+             {/* Do You Think You Can Catch Us? <br/> Give it a Try!  */}
+             Sorry, registrations are closed!
           </div>
-          {msg && <div className={style.msg}>{msg}</div>}
+          <div className={style.content}>See you later in the next edition!</div>
+          {/* {msg && <div className={style.msg}>{msg}</div>}
 
           <GoogleLogin
             clientId="802793895572-n8412ckocsn2mq487j61r2akcqn9ef14.apps.googleusercontent.com"
@@ -94,7 +96,7 @@ export default function Audition() {
           
           <div className={style.content}>
           &#8220; Fire is festive, drowing&apos;s slow <br/> Hanging&apos;s a ropy way to go...&#8220;
-          </div>
+          </div> */}
         </div>
       </div>
 
