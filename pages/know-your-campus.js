@@ -1,7 +1,11 @@
 import styles from "../styles/kyc.module.scss";
-import MainGate from "../public/Images/MAINGATE.png";
-import NAB from "../public/Images/NAB.png";
-import MAB from "../public/Images/MAB.png";
+import MainGate from "../public/kyc/main-gate.webp";
+import NAB from "../public/kyc/nab.webp";
+import MAB from "../public/kyc/mab.webp";
+import DurgaMandap from "../public/kyc/durga-mandap.webp";
+import Hall14 from "../public/kyc/hall-14.webp";
+import Nescafe from "../public/kyc/nescafe.webp";
+import Ovals from "../public/kyc/ovals.webp";
 import debsoclogo from "../public/kyc/1/ds-logo.png";
 import Link from "next/link";
 import Head from "next/head";
@@ -38,21 +42,36 @@ const Advert = () => (
 
 export default function Audition() {
   const [loaded, setLoaded] = useState(false);
+  const images = [
+    [MainGate, "main-gate"],
+    [MAB, "mab"],
+    [NAB, "nab"],
+    [Ovals, "ovals"],
+    [Nescafe, "nescafe"],
+    [Hall14, "mu"],
+    [DurgaMandap, "durgamandap"],
+  ];
   useEffect(() => {
-    const images = [MainGate, NAB, MAB];
     const loaders = {};
     for (var i = 0; i < images.length; i++) {
-      loaders[images[i].src] = false;
+      loaders[images[i][0].src] = false;
       const img = new Image();
-      img.setAttribute("src", images[i].src);
+      img.setAttribute("src", images[i][0].src);
       img.addEventListener("load", (ev) => {
         loaders[ev.target.getAttribute("src")] = true;
         if (Object.values(loaders).indexOf(false) === -1) {
           setLoaded(true);
+          if (window.location.hash !== "") {
+            setTimeout(() => {
+              const elem = document.querySelector(window.location.hash);
+              elem && window.scrollTo(0, elem.getBoundingClientRect().top);
+            }, 300);
+          }
         }
       });
     }
   }, []);
+
   return (
     <>
       <Head>
@@ -62,17 +81,20 @@ export default function Audition() {
         {loaded ? (
           <>
             {" "}
-            <img
-              src={MainGate.src}
-              alt=""
-              id="main-gate"
-              className={styles.image}
-            />
-            <Advert />
-            <img src={NAB.src} alt="" id="nab" className={styles.image} />
-            <Advert />
-            <img src={MAB.src} alt="" id="mab" className={styles.image} />
-            <Advert />
+            {images.map((elem, index) => {
+              console.log("loaded");
+              return (
+                <>
+                  <img
+                    src={elem[0].src}
+                    alt=""
+                    id={elem[1]}
+                    className={styles.image}
+                  />
+                  <Advert />
+                </>
+              );
+            })}
           </>
         ) : (
           <div className={styles.loader}>
