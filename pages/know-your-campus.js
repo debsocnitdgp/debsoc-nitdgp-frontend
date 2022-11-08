@@ -10,41 +10,40 @@ import debsoclogo from "../public/kyc/1/ds-logo.png";
 import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import Footer from "../components/Footer/footer";
 
 const Advert = () => (
   <div className={styles.advert}>
-    <ul className={styles.circles}>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-
     <div className={styles.logos}>
       <img src={debsoclogo.src} alt="" />
       <span>The Debating Society</span>
     </div>
     <div className={styles.content}>
-      Some great and catchy Line About DebSocSome great and catchy Line About
-      DebSoc
+      To know more about us, visit our website
     </div>
     <Link href="/">
       <button className={styles.button}>Visit Now</button>
     </Link>
+    <ul className={styles.circles}>
+      <li />
+      <li />
+      <li />
+      <li />
+      <li />
+      <li />
+      <li />
+      <li />
+      <li />
+      <li />
+    </ul>
   </div>
 );
 
-const Marquee = ({ children }) => (
-  <div className={styles.marquee}>
+const Marquee = ({ children, id }) => (
+  <div id={id} className={styles.marquee}>
     <span>{children}</span>
   </div>
-)
+);
 
 export default function Audition() {
   const [loaded, setLoaded] = useState(false);
@@ -55,7 +54,11 @@ export default function Audition() {
     [Ovals, "ovals", "Ovals and Wonders         "],
     [Nescafe, "nescafe", "nescafe, chandu's and biotech department         "],
     [Hall14, "mu", "Hall 14, techno and medical unit         "],
-    [DurgaMandap, "durgamandap", "durgamandap, girls hostels, duck pond         "],
+    [
+      DurgaMandap,
+      "durgamandap",
+      "durgamandap, girls hostels, duck pond         ",
+    ],
   ];
   useEffect(() => {
     const loaders = {};
@@ -99,28 +102,17 @@ export default function Audition() {
               <h1>The Debating Society</h1>
             </div>
             {images.map((elem, index) => {
-              console.log("loaded");
               return (
                 <>
-                <Marquee>
-                  {elem[2].repeat(8)}
-                </Marquee>
-                  <img
-                    src={elem[0].src}
-                    alt=""
-                    id={elem[1]}
-                    className={styles.image}
-                  />
+                  <Marquee id={elem[1]}>{elem[2].repeat(8)}</Marquee>
+                  <img src={elem[0].src} alt="" className={styles.image} />
                   <Advert />
                 </>
               );
             })}
 
             <div className={styles.footer}>
-              <span>&copy; The Debating Society, 2022</span>
-              <span>
-                <Link href="/">debsocnitdgp.in</Link>
-              </span>
+              <Footer />
             </div>
           </>
         ) : (
@@ -137,15 +129,6 @@ export default function Audition() {
               <div className={styles.loaderOutside}>
                 <div className={styles.loaderContainer}></div>
               </div>
-            </div>
-            <div
-              className={styles.footer}
-              style={{ position: "fixed", bottom: 0 }}
-            >
-              <span>&copy; The Debating Society, 2022</span>
-              <span>
-                <Link href="/">debsocnitdgp.in</Link>
-              </span>
             </div>
           </>
         )}
