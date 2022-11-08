@@ -52,7 +52,15 @@ export default function Audition() {
             setTimeout(() => {
               const elem = document.querySelector(window.location.hash);
               elem && window.scrollTo(0, elem.getBoundingClientRect().top);
-            }, 300);
+              const observer = new IntersectionObserver((entries) => {
+                elem.classList.toggle(
+                  styles.fadeInNow,
+                  entries[0].isIntersecting
+                );
+              });
+
+              observer.observe(elem);
+            }, 500);
           }
         }
       });
@@ -67,7 +75,10 @@ export default function Audition() {
       <div className={styles.container}>
         {loaded ? (
           <>
-            {" "}
+            <div className={styles.navbar}>
+              <img src={debsoclogo.src} />
+              <h1>The Debating Society</h1>
+            </div>
             {images.map((elem, index) => {
               console.log("loaded");
               return (
@@ -82,14 +93,39 @@ export default function Audition() {
                 </>
               );
             })}
+
+            <div className={styles.footer}>
+              <span>&copy; The Debating Society, 2022</span>
+              <span>
+                <Link href="/">debsocnitdgp.in</Link>
+              </span>
+            </div>
           </>
         ) : (
-          <div className={styles.loader}>
-            <h1>Loading</h1>
-            <div className={styles.loaderOutside}>
-              <div className={styles.loaderContainer}></div>
+          <>
+            <div
+              className={styles.navbar}
+              style={{ position: "fixed", top: 0 }}
+            >
+              <img src={debsoclogo.src} />
+              <h1>The Debating Society</h1>
             </div>
-          </div>
+            <div className={styles.loader}>
+              <h1>Loading</h1>
+              <div className={styles.loaderOutside}>
+                <div className={styles.loaderContainer}></div>
+              </div>
+            </div>
+            <div
+              className={styles.footer}
+              style={{ position: "fixed", bottom: 0 }}
+            >
+              <span>&copy; The Debating Society, 2022</span>
+              <span>
+                <Link href="/">debsocnitdgp.in</Link>
+              </span>
+            </div>
+          </>
         )}
       </div>
     </>
