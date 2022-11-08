@@ -43,8 +43,6 @@
 
 .footer {
   padding: 12px 24px;
-  width: 90vw;
-  max-width: 800px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,6 +52,45 @@
 
 .fadeInNow {
   animation: fadeIn linear 300ms forwards;
+}
+
+.marquee {
+  overflow: hidden;
+  width: 90vw;
+  max-width: 800px;
+  border-top: 6px double rgba(0, 0, 0, 0.5);
+  border-bottom: 6px double rgba(0, 0, 0, 0.5);
+  border-left: none;
+  border-right: none;
+  margin: 24px 0;
+  padding: 24px 0;
+}
+
+.marquee span {
+  display: flex;
+  font-family: "WBB";
+  font-size: calc(max(6vw, 48px));
+  text-transform: uppercase;
+  width: max-content;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  padding-left: 100%;
+  animation: scroll-left 40s linear infinite;
+}
+
+.marquee span:nth-child(2) {
+  animation-delay: 30s;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .container {
@@ -163,8 +200,14 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20%); }
-  to { opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media screen and (max-width: 500px) {

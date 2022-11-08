@@ -27,16 +27,22 @@ const Advert = () => (
   </div>
 );
 
+const Marquee = ({ children }) => (
+  <div className={styles.marquee}>
+    <span>{children}</span>
+  </div>
+)
+
 export default function Audition() {
   const [loaded, setLoaded] = useState(false);
   const images = [
-    [MainGate, "main-gate"],
-    [MAB, "mab"],
-    [NAB, "nab"],
-    [Ovals, "ovals"],
-    [Nescafe, "nescafe"],
-    [Hall14, "mu"],
-    [DurgaMandap, "durgamandap"],
+    [MainGate, "main-gate", "Main Gate, Lords, Jhoops         "],
+    [MAB, "mab", "Main Academic Building         "],
+    [NAB, "nab", "New Academic Building         "],
+    [Ovals, "ovals", "Ovals and Wonders         "],
+    [Nescafe, "nescafe", "nescafe, chandu's and biotech department         "],
+    [Hall14, "mu", "Hall 14, techno and medical unit         "],
+    [DurgaMandap, "durgamandap", "durgamandap, girls hostels, duck pond         "],
   ];
   useEffect(() => {
     const loaders = {};
@@ -83,6 +89,9 @@ export default function Audition() {
               console.log("loaded");
               return (
                 <>
+                <Marquee>
+                  {elem[2].repeat(8)}
+                </Marquee>
                   <img
                     src={elem[0].src}
                     alt=""
