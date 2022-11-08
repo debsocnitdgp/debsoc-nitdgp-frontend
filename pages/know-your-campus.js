@@ -13,6 +13,19 @@ import { useEffect, useState } from "react";
 
 const Advert = () => (
   <div className={styles.advert}>
+    <ul className={styles.circles}>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
     <div className={styles.logos}>
       <img src={debsoclogo.src} alt="" />
       <span>The Debating Society</span>
@@ -27,16 +40,22 @@ const Advert = () => (
   </div>
 );
 
+const Marquee = ({ children }) => (
+  <div className={styles.marquee}>
+    <span>{children}</span>
+  </div>
+)
+
 export default function Audition() {
   const [loaded, setLoaded] = useState(false);
   const images = [
-    [MainGate, "main-gate"],
-    [MAB, "mab"],
-    [NAB, "nab"],
-    [Ovals, "ovals"],
-    [Nescafe, "nescafe"],
-    [Hall14, "mu"],
-    [DurgaMandap, "durgamandap"],
+    [MainGate, "main-gate", "Main Gate, Lords, Jhoops         "],
+    [MAB, "mab", "Main Academic Building         "],
+    [NAB, "nab", "New Academic Building         "],
+    [Ovals, "ovals", "Ovals and Wonders         "],
+    [Nescafe, "nescafe", "nescafe, chandu's and biotech department         "],
+    [Hall14, "mu", "Hall 14, techno and medical unit         "],
+    [DurgaMandap, "durgamandap", "durgamandap, girls hostels, duck pond         "],
   ];
   useEffect(() => {
     const loaders = {};
@@ -52,7 +71,15 @@ export default function Audition() {
             setTimeout(() => {
               const elem = document.querySelector(window.location.hash);
               elem && window.scrollTo(0, elem.getBoundingClientRect().top);
-            }, 300);
+              const observer = new IntersectionObserver((entries) => {
+                elem.classList.toggle(
+                  styles.fadeInNow,
+                  entries[0].isIntersecting
+                );
+              });
+
+              observer.observe(elem);
+            }, 500);
           }
         }
       });
@@ -67,11 +94,17 @@ export default function Audition() {
       <div className={styles.container}>
         {loaded ? (
           <>
-            {" "}
+            <div className={styles.navbar}>
+              <img src={debsoclogo.src} />
+              <h1>The Debating Society</h1>
+            </div>
             {images.map((elem, index) => {
               console.log("loaded");
               return (
                 <>
+                <Marquee>
+                  {elem[2].repeat(8)}
+                </Marquee>
                   <img
                     src={elem[0].src}
                     alt=""
@@ -82,14 +115,39 @@ export default function Audition() {
                 </>
               );
             })}
+
+            <div className={styles.footer}>
+              <span>&copy; The Debating Society, 2022</span>
+              <span>
+                <Link href="/">debsocnitdgp.in</Link>
+              </span>
+            </div>
           </>
         ) : (
-          <div className={styles.loader}>
-            <h1>Loading</h1>
-            <div className={styles.loaderOutside}>
-              <div className={styles.loaderContainer}></div>
+          <>
+            <div
+              className={styles.navbar}
+              style={{ position: "fixed", top: 0 }}
+            >
+              <img src={debsoclogo.src} />
+              <h1>The Debating Society</h1>
             </div>
-          </div>
+            <div className={styles.loader}>
+              <h1>Loading</h1>
+              <div className={styles.loaderOutside}>
+                <div className={styles.loaderContainer}></div>
+              </div>
+            </div>
+            <div
+              className={styles.footer}
+              style={{ position: "fixed", bottom: 0 }}
+            >
+              <span>&copy; The Debating Society, 2022</span>
+              <span>
+                <Link href="/">debsocnitdgp.in</Link>
+              </span>
+            </div>
+          </>
         )}
       </div>
     </>
