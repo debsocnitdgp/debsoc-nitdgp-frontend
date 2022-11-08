@@ -13,6 +13,19 @@ import { useEffect, useState } from "react";
 
 const Advert = () => (
   <div className={styles.advert}>
+    <ul className={styles.circles}>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
     <div className={styles.logos}>
       <img src={debsoclogo.src} alt="" />
       <span>The Debating Society</span>
