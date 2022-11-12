@@ -25,7 +25,7 @@ function Navbar({ page }) {
     setSidebarOpen(false);
   };
   return (
-    <div className={`${styles.header} ${top ? styles.navShadow : ""}`}>
+    <div className={`${styles.header} ${top ? styles.navShadow : ""}`} id="navbar">
       <div className={styles.headerContainer}>
         <div className={styles.headerLeft}>
           <div className={`${styles.debsoc}`}>DEBSOC</div>

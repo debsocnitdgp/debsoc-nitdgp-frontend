@@ -11,6 +11,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer/footer";
+import Navbar from "../components/Navbar/navbar";
 
 const Advert = () => (
   <div className={styles.advert}>
@@ -94,6 +95,9 @@ export default function Audition() {
       <Head>
         <title>Know Your Campus</title>
       </Head>
+      <div className={styles.navbar2}>
+        <Navbar />
+      </div>
       <div className={styles.container}>
         {loaded ? (
           <>
