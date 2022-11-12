@@ -1,9 +1,11 @@
+/* eslint-disable react/no-unescaped-entities */
 import "../styles/globals.css";
 import React from "react";
 import App from "next/app";
 import { wrapper } from "../redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 import { ReactReduxContext } from "react-redux";
+import Script from "next/script";
 
 class MyApp extends App {
   constructor(props) {
@@ -39,6 +41,20 @@ class MyApp extends App {
             }
           >
             <Component {...pageProps} />
+
+            <Script
+              async
+              src="https://www.googletagmanager.com/gtag/js?id=G-CB7EBMGB0B"
+            ></Script>
+            <Script>
+              {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CB7EBMGB0B');
+  `}
+            </Script>
           </PersistGate>
         )}
       </ReactReduxContext.Consumer>
