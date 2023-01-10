@@ -115,7 +115,7 @@ export default function Audition() {
                   <img src={elem[0].src} alt="" className={styles.image} />
                   {index % 2 === 0 ? (
                     <Advert
-                      content="Answer a thought provoking questions on our story to win exciting prizes!"
+                      content="Answer thought provoking questions on our story to win exciting prizes!"
                       link="http://debsoc-website.herokuapp.com/main/creatives/current"
                     />
                   ) : (
