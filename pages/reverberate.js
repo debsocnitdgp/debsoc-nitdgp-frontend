@@ -3,9 +3,9 @@ import Navbar from "../components/Navbar/navbar";
 import Footer from "../components/Footer/footer";
 import style from "../styles/audtion.module.scss";
 import { useEffect, useState } from "react";
-import { GoogleLogin } from "react-google-login";
 import Reverberate from "../components/reverberate";
 import WhatIf from "../components/whatif";
+import { useGoogleLogin } from "@react-oauth/google";
 
 export default function Audition() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -21,6 +21,30 @@ export default function Audition() {
   }, []);
   const [loading, setLoading] = useState("");
 
+  const handleGoogleLogin = useGoogleLogin({
+    onSuccess: (tokenResponse) => {
+      // setMessage("Fetching your information from Google...");
+      fetch(
+        "https://www.googleapis.com/oauth2/v3/userinfo?access_token=" +
+          tokenResponse.access_token
+      )
+        .then((json) => json.json())
+        .then((response) => {
+          setLoading("Signing you in...");
+          console.log(response)
+          localStorage.setItem("rev_nm", response.name);
+          localStorage.setItem("rev_purl", response.picture);
+          localStorage.setItem("rev_tk", tokenResponse.access_token);
+          localStorage.setItem("rev_email", response.email);
+
+          refresh_register_status();
+        });
+    },
+    onFailure: (error) => {
+      console.log(error);
+    },
+  });
+
   const refresh_register_status = async () => {
     const res = await fetch(
       process.env.NEXT_PUBLIC_CHECK_EMAIL_REV +
@@ -32,15 +56,6 @@ export default function Audition() {
     setLoading("");
     setLoggedIn(true);
     setRegistered(resp.data);
-  };
-
-  const responseGoogle = async (response) => {
-    localStorage.setItem("rev_nm", response.profileObj.givenName);
-    localStorage.setItem("rev_purl", response.profileObj.imageUrl);
-    localStorage.setItem("rev_tk", response.tokenId);
-    localStorage.setItem("rev_email", response.profileObj.email);
-
-    refresh_register_status();
   };
 
   const handleLogout = async (e) => {
@@ -81,23 +96,13 @@ export default function Audition() {
             </div>
             {/* <div className={style.content}>See you later in the next edition!</div> */}
 
-            <GoogleLogin
-              clientId="802793895572-n8412ckocsn2mq487j61r2akcqn9ef14.apps.googleusercontent.com"
-              render={(renderProps) => (
                 <div
                   className={style.gButton}
-                  onClick={renderProps.onClick}
-                  disabled={renderProps.disabled}
+                  onClick={handleGoogleLogin}
                 >
                   <img src="Images/Google.png" alt="" />
                   Sign in with Google
                 </div>
-              )}
-              buttonText="Login"
-              onSuccess={responseGoogle}
-              onFailure={responseGoogle}
-              cookiePolicy={"single_host_origin"}
-            />
             <div className={style.load}>{loading}</div>
 
             <div className={style.content}>

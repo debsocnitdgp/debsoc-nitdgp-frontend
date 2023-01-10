@@ -6,6 +6,7 @@ import { wrapper } from "../redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 import { ReactReduxContext } from "react-redux";
 import Script from "next/script";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 class MyApp extends App {
   constructor(props) {
@@ -40,7 +41,9 @@ class MyApp extends App {
               </div>
             }
           >
-            <Component {...pageProps} />
+            <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT}>
+              <Component {...pageProps} />
+            </GoogleOAuthProvider>
 
             <Script
               async
