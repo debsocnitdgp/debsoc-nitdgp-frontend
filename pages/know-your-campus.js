@@ -11,33 +11,37 @@ import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer/footer";
+import Navbar from "../components/Navbar/navbar";
 
-const Advert = () => (
-  <div className={styles.advert}>
-    <div className={styles.logos}>
-      <img src={debsoclogo.src} alt="" />
-      <span>The Debating Society</span>
+const Advert = ({ content, link, linkText }) => {
+  content = content || "To know more about us, visit our website";
+  link = link || "/";
+  linkText = linkText || "Visit Now";
+  return (
+    <div className={styles.advert}>
+      <div className={styles.logos}>
+        <img src={debsoclogo.src} alt="" />
+        <span>The Debating Society</span>
+      </div>
+      <div className={styles.content}>{content}</div>
+      <Link href={link}>
+        <button className={styles.button}>{linkText}</button>
+      </Link>
+      <ul className={styles.circles}>
+        <li />
+        <li />
+        <li />
+        <li />
+        <li />
+        <li />
+        <li />
+        <li />
+        <li />
+        <li />
+      </ul>
     </div>
-    <div className={styles.content}>
-      To know more about us, visit our website
-    </div>
-    <Link href="/">
-      <button className={styles.button}>Visit Now</button>
-    </Link>
-    <ul className={styles.circles}>
-      <li />
-      <li />
-      <li />
-      <li />
-      <li />
-      <li />
-      <li />
-      <li />
-      <li />
-      <li />
-    </ul>
-  </div>
-);
+  );
+};
 
 const Marquee = ({ children, id }) => (
   <div id={id} className={styles.marquee}>
@@ -94,6 +98,9 @@ export default function Audition() {
       <Head>
         <title>Know Your Campus</title>
       </Head>
+      <div className={styles.navbar2}>
+        <Navbar />
+      </div>
       <div className={styles.container}>
         {loaded ? (
           <>
@@ -106,7 +113,14 @@ export default function Audition() {
                 <>
                   <Marquee id={elem[1]}>{elem[2].repeat(8)}</Marquee>
                   <img src={elem[0].src} alt="" className={styles.image} />
-                  <Advert />
+                  {index % 2 === 0 ? (
+                    <Advert
+                      content="Answer thought provoking questions on our story to win exciting prizes!"
+                      link="http://debsoc-website.herokuapp.com/main/creatives/current"
+                    />
+                  ) : (
+                    <Advert />
+                  )}
                 </>
               );
             })}

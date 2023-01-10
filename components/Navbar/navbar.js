@@ -25,13 +25,16 @@ function Navbar({ page }) {
     setSidebarOpen(false);
   };
   return (
-    <div className={`${styles.header} ${top ? styles.navShadow : ""}`}>
+    <div className={`${styles.header} ${top ? styles.navShadow : ""}`} id="navbar">
       <div className={styles.headerContainer}>
         <div className={styles.headerLeft}>
           <div className={`${styles.debsoc}`}>DEBSOC</div>
         </div>
         <div className={styles.headerRight}>
           <div className={styles.menuList}>
+            <div className={styles.menuListItem}>
+              <Link href="/reverberate">REVERBERATE</Link>
+            </div>
             <div className={styles.menuListItem}>
               <Link href="/">HOME</Link>
             </div>
