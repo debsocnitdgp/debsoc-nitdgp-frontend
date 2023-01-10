@@ -41,7 +41,7 @@ class MyApp extends App {
               </div>
             }
           >
-            <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT}>
+            <GoogleOAuthProvider clientId="251988766101-s9iaqkrca96jmloioji5iksorf49vrou.apps.googleusercontent.com">
               <Component {...pageProps} />
             </GoogleOAuthProvider>
 
