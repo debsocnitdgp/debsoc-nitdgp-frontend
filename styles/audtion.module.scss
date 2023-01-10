@@ -15,13 +15,6 @@
     text-align: center;
     padding: clamp(10px, 1.5vw, 20px);
 
-    img {
-      border-radius: clamp(7px, 1vw, 15px);
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
     .head {
       margin: 30px 0;
       font-weight: 700;
@@ -165,4 +158,25 @@
   font-size: clamp(16px, 1.65vw, 24px);
   color: red;
   text-align: center;
+}
+
+.images {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  img {
+    border-radius: clamp(7px, 1vw, 15px);
+    width: clamp(140px, 25vw, 350px);
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1000px) {
+  .images {
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+  }
 }

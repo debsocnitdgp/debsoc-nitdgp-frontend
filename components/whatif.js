@@ -16,7 +16,6 @@ export default function WhatIf(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(data);
     setLoading(true);
     for (const key in data) {
       if (data.hasOwnProperty(key)) {

@@ -2,7 +2,6 @@ import style from "../styles/audtion.module.scss";
 import { useState } from "react";
 
 export default function Reverberate(props) {
-    console.log(props)
   const [msg, setMsg] = useState("");
   const [loading, setLoading] = useState(false);
   const name = localStorage.getItem("rev_nm");
@@ -18,7 +17,6 @@ export default function Reverberate(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(data);
     setLoading(true);
     for (const key in data) {
       if (data.hasOwnProperty(key)) {
