@@ -71,7 +71,7 @@ export default function Audition() {
       {!loggedIn ? (
         <div className={style.col}>
           <div className={style.col2}>
-            <img src="Images/final_poster.png" alt="" />
+            <img src="Images/rev.webp" alt="" />
             <div className={style.head}>
               Register Now!
               {/* Sorry, registrations are closed! */}

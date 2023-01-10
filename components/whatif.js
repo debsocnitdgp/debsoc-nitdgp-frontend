@@ -11,6 +11,7 @@ export default function WhatIf(props) {
     number: "",
     roll_no: "",
     section: "",
+    teamname: ""
   });
 
   const handleSubmit = async (e) => {
@@ -19,7 +20,7 @@ export default function WhatIf(props) {
     setLoading(true);
     for (const key in data) {
       if (data.hasOwnProperty(key)) {
-        if (data[key] === "") {
+        if (data[key] === "" && key != "teamname") {
           setMsg("Please fill all the answers");
           setLoading(false);
           return;
@@ -46,6 +47,7 @@ export default function WhatIf(props) {
       number: "",
       roll_no: "",
       section: "",
+      teamname: ""
     });
   };
   return (
@@ -127,7 +129,7 @@ export default function WhatIf(props) {
               </div>
               <input
                 type="text"
-                value={data.section}
+                value={data.teamname}
                 placeholder="Enter your answer"
                 onChange={(e) => {
                   setData({ ...data, teamname: e.target.value });
