@@ -73,7 +73,7 @@ export default function Audition() {
           <div className={style.col2}>
             <div className={style.images}>
               <img src="Images/rev.webp" alt="" />
-              <img src="Images/rev.webp" alt="" />
+              <img src="Images/whatif.webp" alt="" />
             </div>
             <div className={style.head}>
               Register Now!
