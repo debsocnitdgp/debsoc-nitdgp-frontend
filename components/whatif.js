@@ -11,7 +11,8 @@ export default function WhatIf(props) {
     number: "",
     roll_no: "",
     section: "",
-    teamname: ""
+    hallno: "",
+    teamname: "",
   });
 
   const handleSubmit = async (e) => {
@@ -46,7 +47,8 @@ export default function WhatIf(props) {
       number: "",
       roll_no: "",
       section: "",
-      teamname: ""
+      hallno: "",
+      teamname: "",
     });
   };
   return (
@@ -116,13 +118,24 @@ export default function WhatIf(props) {
               />
             </div>
             <div className={style.inputGrp}>
+              <div className={style.question}>Hall No.</div>
+              <input
+                type="text"
+                value={data.hallno}
+                placeholder="Enter your answer"
+                onChange={(e) => {
+                  setData({ ...data, hallno: e.target.value });
+                }}
+              />
+            </div>
+            <div className={style.inputGrp}>
               <div className={style.question}>Team Name</div>
-              <div style={{marginTop: 8, marginLeft: 8, fontWeight: 700}}>
+              <div style={{ marginTop: 8, marginLeft: 8, fontWeight: 700 }}>
                 This is a team event. You can make a team of 3-5 people. Every
                 team member will have to register seperately, just keep the team
                 names same.
               </div>
-              <div style={{margin: 8, color: "#4caf50", fontWeight: 700}}>
+              <div style={{ margin: 8, color: "#4caf50", fontWeight: 700 }}>
                 If you don&apos;t have a team, you can register individually as
                 well. We will get you a team later on.
               </div>

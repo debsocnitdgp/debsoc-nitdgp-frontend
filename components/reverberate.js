@@ -12,6 +12,7 @@ export default function Reverberate(props) {
     name: "",
     number: "",
     roll_no: "",
+    hallno: "",
     section: "",
   });
 
@@ -47,6 +48,7 @@ export default function Reverberate(props) {
       number: "",
       roll_no: "",
       section: "",
+      hallno: ""
     });
   };
   return (
@@ -99,6 +101,17 @@ export default function Reverberate(props) {
                 placeholder="Enter your answer"
                 onChange={(e) => {
                   setData({ ...data, section: e.target.value });
+                }}
+              />
+            </div>
+            <div className={style.inputGrp}>
+              <div className={style.question}>Hall No.</div>
+              <input
+                type="text"
+                value={data.hallno}
+                placeholder="Enter your answer"
+                onChange={(e) => {
+                  setData({ ...data, hallno: e.target.value });
                 }}
               />
             </div>
