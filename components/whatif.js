@@ -59,12 +59,8 @@ export default function WhatIf(props) {
           <div className={styles.heads2}>WHAT IF 2.0</div>
         </div>
         <div className={styles.contents}>
-          We all know how it feels to have to present your ideas, only to find
-          the right words aren&apos;t available. A public speaking workshop,
-          generally conducted at the start of the academic session here helps
-          you overcome all those bouts of stuttering and gives us the confidence
-          boost we all require. The workshop sees massive participation every
-          year, and collects a lot of positive applause as well.
+          What if is our first debating event of the year. It is our hands on workshop magnificently designed to make you learn through experience. 
+          So, regardless of whether you are a newbie or a seasoned debater, join us on Saturday to reinstall the speaker that lies within you. 
         </div>
       </div>
       <div className={style.formWrap}>
