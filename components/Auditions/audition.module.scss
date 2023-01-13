@@ -1,6 +1,11 @@
 @font-face {
-  font-family: "comic";
-  src: url(/fonts/comic-1.ttf);
+  font-family: "canopee";
+  src: url(/fonts/Canopee-Regular.ttf);
+}
+
+@font-face {
+  font-family: "playfair";
+  src: url(/fonts/playfair.ttf);
 }
 
 @font-face {
@@ -9,22 +14,23 @@
 }
 
 .buttonWrapper {
+  background-color: #fefae0;
+  color: black;
+  border: 3px solid #000;
+  min-width: 200px;
+  padding: 24px 30px;
+  width: max-content;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: large;
+  cursor: pointer;
+  margin-bottom: 32px;
+  transition: 150ms all ease-in-out;
+}
+.buttonWrapper:hover {
   background-color: #000;
-  width: min-content;
-  margin: 24px;
-  button {
-    background-color: #fff;
-    border: 3px solid #000;
-    transform: translate(-8px, -8px);
-    min-width: 200px;
-    padding: 24px 30px;
-    width: max-content;
-    text-transform: uppercase;
-    font-family: "Montserrat";
-    font-weight: 600;
-    font-size: x-large;
-    cursor: pointer;
-  }
 }
 
 .navbarWrapper {
@@ -42,11 +48,18 @@
 }
 
 .section1 {
-  font-family: "comic";
-  background-color: #fff;
+  font-family: "canopee";
+  background-color: #fefae0;
   h1 {
-    font-size: 7vw;
+    font-size: 10vw;
     color: black;
+    margin: 0;
+  }
+  p {
+    font-family: "playfair";
+    font-size: 24px;
+    max-width: 30vw;
+    text-align: center;
   }
 }
 

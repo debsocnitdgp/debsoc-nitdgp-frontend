@@ -2,10 +2,10 @@ import styles from "./audition.module.scss"
 
 export default function Button(props){
     return (
-        <div className={styles.buttonWrapper}>
-            <button>
+        // <div >
+            <button className={styles.buttonWrapper}>
                 {props.children}
             </button>
-        </div>
+        // </div>
     )
 }
