@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "comic";
+  src: url(/fonts/comic-1.ttf);
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url(/fonts/montserrat.ttf);
+}
+
+.buttonWrapper {
+  background-color: #000;
+  width: min-content;
+  margin: 24px;
+  button {
+    background-color: #fff;
+    border: 3px solid #000;
+    transform: translate(-8px, -8px);
+    min-width: 200px;
+    padding: 24px 30px;
+    width: max-content;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: x-large;
+    cursor: pointer;
+  }
+}
+
+.navbarWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.centred {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section1 {
+  font-family: "comic";
+  background-color: #fff;
+  h1 {
+    font-size: 7vw;
+    color: black;
+  }
+}
+
+.section1 > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
