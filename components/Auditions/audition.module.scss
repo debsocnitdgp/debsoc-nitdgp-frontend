@@ -14,8 +14,8 @@
 }
 
 .buttonWrapper {
-  background-color: #fff;
-  color: black;
+  background-color: #000;
+  color: white;
   border: 3px solid #000;
   min-width: 200px;
   padding: 24px 30px;
@@ -27,6 +27,7 @@
   font-size: large;
   cursor: pointer;
   margin-bottom: 32px;
+  box-shadow: 0 0 32px #000;
   transition: 150ms all ease-in-out;
 }
 .buttonWrapper:hover {
@@ -51,13 +52,18 @@
   font-family: "canopee";
   background-color: #fff;
   flex-direction: column;
-  h1, h2 {
+  width: 100vw;
+  height: 100vh;
+  h1, h2, h3 {
     font-size: 10vw;
     color: black;
     margin: 0;
   }
   h2 {
     font-size: 6vw;
+  }
+  h3 {
+    font-size: 4vw;
   }
   p {
     font-family: "playfair";
@@ -72,6 +78,7 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   .section {
     width: 100vw;
     height: 100vh;
@@ -100,21 +107,60 @@
     font-family: "canopee";
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     transform: none;
     color: #fff;
     width: 100vw;
     height: 100vh;
+    gap: 8px;
     h1 {
       font-size: 10vw;
       margin: 0;
     }
-    p {
+    p, ul {
       font-family: "montserrat";
       font-size: 24px;
-      max-width: 60vw;
+      max-width: 50vw;
       text-align: center;
     }
   }
+}
+
+.whyCard {
+  font-family: "playfair";
+  font-size: 2vw;
+  color: white;
+  width: clamp(200px, 30vw, 400px);
+  animation: 0.3s enter linear forwards;
+  transition: all 150ms ease-out;
+  img {
+    width: clamp(200px, 30vw, 400px);
+    height: 250px;
+    object-fit: cover;
+    z-index: 0;
+    border-radius: 12px;
+  }
+  h2 {
+    z-index: 100;
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 0;
+  }
+}
+
+.imageGallery {
+  display: flex;
+  gap: 5vw;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  height: 128px;
+  width: 128px;
+  border-radius: 50%;
+  border: 4px solid black;
 }

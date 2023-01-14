@@ -6,7 +6,7 @@ import Footer from "../components/Footer/footer";
 import styles from "../components/Auditions/audition.module.scss"
 
 export default function Audition() {
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   return (
     <>
       <div className={styles.navbarWrapper}>

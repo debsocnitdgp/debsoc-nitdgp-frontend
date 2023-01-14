@@ -2,6 +2,22 @@ import Button from "./Button";
 import styles from "./audition.module.scss";
 import { useLayoutEffect, useRef, useState } from "react";
 
+function WhyDSCard({ src, text }) {
+  return (
+    <div className={styles.whyCard}>
+      <img src={src} />
+      <h2>{text}</h2>
+    </div>
+  );
+}
+
+function Section4() {
+  return (
+    <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
+      <h1>Roles we recruit for</h1>
+    </div>
+  );
+}
 function Section3() {
   return (
     <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
@@ -16,7 +32,7 @@ function Section2() {
   const ref2 = useRef(null);
   useLayoutEffect(() => {
     ref.current.style.top = window.innerHeight - 60 + "px";
-    window.addEventListener("scroll", (evt) => {
+    const onScroll = (evt) => {
       var ratio = window.scrollY / window.innerHeight;
       if (ratio >= 3) {
         return;
@@ -66,22 +82,39 @@ function Section2() {
         }px) translateY(-${ratio * 50}%)`;
         ref2.current.style.opacity = ratio;
       }
-    });
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
     <div className={styles.section2}>
       <div className={styles.ball} ref={ref}>
         <div className={styles.content} ref={ref2}>
+          <div className={styles.imageGallery}>
+            <WhyDSCard
+              src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
+              text="because we are the best"
+            />
+            <WhyDSCard
+              src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
+              text="because we are the best"
+            />
+          </div>
           <h1>Why DEBSOC?</h1>
-          <p>
-            The Debating Society, NIT Durgapur, hosts some of the biggest
-            debating events in the eastern circuit. Over the years, we have
-            built a platform for talented and inquisitive students to voice
-            their opinions. We aim to promote the culture of debating on campus
-            and help encourage budding public speakers to overcome their fear
-            and express themselves freely. We stay on par in the technical realm
-            too by emphasizing the use of technology in our practices.
-          </p>
+          {/* <p>
+              cbery oiyggeor vpqi3grovy evpigr oergf qhefoqi3 egfygf efq gfo
+              qeyug oegy rfq efiqgeir ervgoeg rig uyer gaheroibeor eugigrvwerioh
+            </p> */}
+          <div className={styles.imageGallery}>
+            <WhyDSCard
+              src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
+              text="because we are the best"
+            />
+            <WhyDSCard
+              src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
+              text="because we are the best"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -105,6 +138,7 @@ export default function AuditionLanding() {
       <Section1 />
       <Section2 />
       <Section3 />
+      <Section4 />
     </div>
   );
 }
