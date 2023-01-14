@@ -2,6 +2,11 @@ import Button from "./Button";
 import styles from "./audition.module.scss";
 import { useLayoutEffect, useRef, useState } from "react";
 
+import contentwriting from "../contentwriting.gif";
+import webdev from "../webdev.gif"
+import videoedit from "../videoedit.gif"
+import debating from "../debating.gif"
+
 function WhyDSCard({ src, text }) {
   return (
     <div className={styles.whyCard}>
@@ -11,13 +16,6 @@ function WhyDSCard({ src, text }) {
   );
 }
 
-function Section4() {
-  return (
-    <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
-      <h1>Roles we recruit for</h1>
-    </div>
-  );
-}
 function Section3() {
   return (
     <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
@@ -128,6 +126,34 @@ function Section1() {
       <h1>2023</h1>
       <p>Some great one liner about debatying society to get everyone hooked</p>
       <Button>Register Now!</Button>
+    </div>
+  );
+}
+
+function Section4() {
+  return (
+    <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
+      <h1>Opportunities For You!</h1>
+      <div className={styles.card}>
+        <div className={styles.section1}>
+          <img className={styles.img1} src={webdev.src} />
+          <h1 className={styles.celldiv}>Web D</h1>
+        </div>
+        <div className={styles.section1}>
+          <img className={styles.img1} src={contentwriting.src} />
+          <h1 className={styles.celldiv}>Content</h1>
+        </div>
+      </div>
+      <div className={styles.card}>
+        <div className={styles.section1}>
+          <img className={styles.img2} src={videoedit.src} />
+          <h1 className={styles.celldiv}>Graphic</h1>
+        </div>
+        <div className={styles.section1}>
+          <img className={styles.img2} src={debating.src} />
+          <h1 className={styles.celldiv}>Debating</h1>
+        </div>
+      </div>
     </div>
   );
 }
