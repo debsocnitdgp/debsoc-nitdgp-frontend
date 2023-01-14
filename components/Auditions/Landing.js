@@ -1,7 +1,10 @@
 import Button from "./Button";
 import styles from "./audition.module.scss";
 import { useLayoutEffect, useRef, useState } from "react";
-
+import contentwriting from "../contentwriting.gif";
+import webdev from "../webdev.gif"
+import videoedit from "../videoedit.gif"
+import debating from "../debating.gif"
 function Section3() {
   return (
     <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
@@ -99,12 +102,41 @@ function Section1() {
   );
 }
 
+function Section4() {
+  return (
+    <div className={styles.cells}>
+      <h1 className={styles.head1}>Opportunities For You !!</h1>
+      <div className={styles.card}>
+        <div className={styles.section1}>
+          <img className={styles.img1} src={webdev.src} />
+          <h1 className={styles.celldiv}>Web D</h1>
+        </div>
+        <div className={styles.section1}>
+          <img className={styles.img1} src={contentwriting.src} />
+          <h1 className={styles.celldiv}>Content</h1>
+        </div>
+      </div>
+      <div className={styles.card}>
+        <div className={styles.section1}>
+          <img className={styles.img2} src={videoedit.src} />
+          <h1 className={styles.celldiv}>Graphic</h1>
+        </div>
+        <div className={styles.section1}>
+          <img className={styles.img2} src={debating.src} />
+          <h1 className={styles.celldiv}>Debating</h1>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function AuditionLanding() {
   return (
     <div className={`${styles.container} ${styles.fixed}`}>
       <Section1 />
       <Section2 />
       <Section3 />
+      <Section4 />
     </div>
   );
 }

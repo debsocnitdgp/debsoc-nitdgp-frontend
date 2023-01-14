@@ -51,7 +51,8 @@
   font-family: "canopee";
   background-color: #fff;
   flex-direction: column;
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 10vw;
     color: black;
     margin: 0;
@@ -117,4 +118,49 @@
       text-align: center;
     }
   }
+}
+
+.img1 {
+  width: 21rem;
+  height: 16rem;
+  border-radius: 8px;
+  filter: grayscale(1);
+  // margin: 16px 32px;
+}
+.img2{
+ width: 21rem;
+  height: 16rem;
+  border-radius: 8px;
+  filter: grayscale(1);
+
+}
+.celldiv {
+  margin: 16px 0px;
+}
+.card {
+  display: flex;
+  margin: 16px 32px;
+  padding: 32px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  max-width: 100%;
+}
+.section1 {
+  margin-left: 64px;
+  max-width: 100%;
+}
+.celldiv {
+  font-size: 4vw !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.head1 {
+  font-size: 8vw;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "canopee";
 }
