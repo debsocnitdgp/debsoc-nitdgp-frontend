@@ -14,7 +14,7 @@
 }
 
 .buttonWrapper {
-  background-color: #fefae0;
+  background-color: #fff;
   color: black;
   border: 3px solid #000;
   min-width: 200px;
@@ -49,11 +49,15 @@
 
 .section1 {
   font-family: "canopee";
-  background-color: #fefae0;
-  h1 {
+  background-color: #fff;
+  flex-direction: column;
+  h1, h2 {
     font-size: 10vw;
     color: black;
     margin: 0;
+  }
+  h2 {
+    font-size: 6vw;
   }
   p {
     font-family: "playfair";
@@ -63,9 +67,54 @@
   }
 }
 
-.section1 > div {
+.container {
+  height: 600vh;
+  width: 100vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  .section {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.section2 {
+  position: relative;
+  width: 100vw;
+  height: 200vh;
+  background-color: #fff;
+  .ball {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    left: 48px;
+    transform: translateX(-50%);
+    background-color: #000;
+    border-radius: 24px;
+    overflow: clip;
+  }
+  .content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: "canopee";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: none;
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    h1 {
+      font-size: 10vw;
+      margin: 0;
+    }
+    p {
+      font-family: "montserrat";
+      font-size: 24px;
+      max-width: 60vw;
+      text-align: center;
+    }
+  }
 }
