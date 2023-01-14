@@ -22,7 +22,7 @@ function Section2() {
   return (
     <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
       <h3>Personal Details</h3>
-      <form>
+      <form className={styles.form}>
         <div className={styles.inputGroup}>
           <div className={styles.inputLabel}>Name</div>
           <input type="text" />
@@ -44,7 +44,8 @@ function Section2() {
           <input type="text" />
         </div>
       </form>
-      <Button>Get started</Button>
+      <Button>Save & Next</Button>
+      <Button>Previous</Button>
     </div>
   );
 }
