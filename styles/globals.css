@@ -9,6 +9,7 @@ body {
   font-family: 'Raleway',
   sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
