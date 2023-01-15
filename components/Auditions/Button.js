@@ -1,11 +1,16 @@
-import styles from "./audition.module.scss"
+import styles from "./audition.module.scss";
 
-export default function Button(props){
-    return (
-        // <div >
-            <button className={styles.buttonWrapper}>
-                {props.children}
-            </button>
-        // </div>
-    )
+export default function Button(props) {
+  return (
+    // <div >
+    <button
+      className={`${styles.buttonWrapper} ${
+        props.secondary ? styles.secondaryButton : ""
+      }`}
+      {...props}
+    >
+      {props.children}
+    </button>
+    // </div>
+  );
 }
