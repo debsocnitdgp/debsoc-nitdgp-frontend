@@ -351,7 +351,7 @@
       color: white;
       margin: 0;
       width: 80%;
-      font-size: clamp(24px, 4vw, 80px);
+      font-size: clamp(20px, 4vw, 80px);
     }
   }
 }
@@ -416,6 +416,7 @@
     font-family: "montserrat";
     font-size: 16px;
     min-width: 40vw;
+    resize: none;
   }
   input:focus {
     outline: none;
