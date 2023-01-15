@@ -57,3 +57,7 @@ a {
 .fp-watermark {
   display: none;
 }
+
+.fp-section {
+  background-color: #fff;
+}

@@ -130,19 +130,19 @@ function Section2() {
               />
               <WhyDSCard
                 src={work.src}
-                text="creative people"
+                text="Unforgettable experiences & moments"
                 rotate={{ x: ratio > 1 ? 15 * (ratio - 1) : 15, y: -15 }}
               />
             </div>
             <div className={styles.imageGalleryRow}>
               <WhyDSCard
                 src={all.src}
-                text=" that work and"
+                text="Voice your Thoughts n Opinions"
                 rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: 15 }}
               />
               <WhyDSCard
                 src={party.src}
-                text="  have fun together."
+                text="Moments to cherish"
                 rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: -15 }}
               />
             </div>

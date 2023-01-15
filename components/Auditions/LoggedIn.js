@@ -130,7 +130,7 @@ export default function LoggedIn(props) {
       <FullPage
         render={({ state, fullpageApi }) => {
           return (
-            <FullPage.Wrapper>
+            <FullPage.Wrapper style={{background: "#fff"}}>
               <div className="section">
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
