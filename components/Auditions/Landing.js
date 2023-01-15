@@ -173,7 +173,7 @@ function Section4() {
 
         <div className={styles.section3}>
           <img className={styles.img2} src={videoedit.src} />
-          <h1 className={styles.celldiv}>Graphic</h1>
+          <h1 className={styles.celldiv}>Graphic & Video</h1>
         </div>
         <div className={styles.section3}>
           <img className={styles.img2} src={event.src} />
