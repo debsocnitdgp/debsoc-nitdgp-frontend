@@ -81,7 +81,9 @@ export default function Audition() {
           registered={registered}
         />
       )}
-      <Footer />
+      <div style={{ filter: "grayscale(1)" }}>
+        <Footer />
+      </div>
     </>
   );
 }

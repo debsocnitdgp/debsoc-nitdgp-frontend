@@ -13,11 +13,14 @@
   src: url(/fonts/montserrat.ttf);
 }
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.line{
-   
+.line {
   animation: fadeIn 3s;
 }
 
@@ -98,16 +101,19 @@
 }
 
 @keyframes pulse {
-  0% { transform: scale(0); }
-  100% { transform: scale(1); }
-  
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes modal-open {
   0% {
     opacity: 0;
     width: 0;
-    height: 0
+    height: 0;
   }
   0.1% {
     width: 100vw;
@@ -482,4 +488,18 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.website {
+  font-family: "montserrat";
+  font-size: x-large;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: #fff;
+  flex-direction: column;
+  width: 100vw;
+  padding: 10vh 0;
+  h5 {
+    max-width: Max(300px, 50vw);
+  } 
 }
