@@ -36,8 +36,8 @@ function WhyDSCard({ src, text, rotate }) {
 function Section3() {
   return (
     <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
-      <h2>Ready to be the</h2>
-      <h1>Next Generation?</h1>
+      <h2 className={styles.line}>Ready to be the</h2>
+      <h1  className={styles.line}>Next Generation?</h1>
     </div>
   );
 }

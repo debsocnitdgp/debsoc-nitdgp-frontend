@@ -8,6 +8,7 @@ import { useGoogleLogin } from "@react-oauth/google";
 import logo from "../public/Images/DEBSOClogo.png";
 import Modal, { Loading } from "../components/Auditions/Modal";
 export default function Audition() {
+  
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [registered, setRegistered] = useState(false);

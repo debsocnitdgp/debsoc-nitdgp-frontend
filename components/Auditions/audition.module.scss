@@ -225,7 +225,7 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   .section {
     width: 100vw;
     min-height: 100vh;
@@ -449,6 +449,9 @@
   .celldiv {
     font-size: 32px !important;
   }
+  .logo{
+    width: 5rem !important;
+  }
 }
 @media screen and (max-width: 480px) {
   .section3 {
@@ -456,6 +459,9 @@
   }
   .celldiv {
     font-size: 32px !important;
+  }
+   .logo{
+    width: 5rem !important;
   }
 }
 @media screen and (max-width: 650px) {
@@ -465,6 +471,10 @@
   .celldiv {
     font-size: 32px !important;
   }
+   .logo{
+    width: 5rem !important;
+  }
+  
 }
 
 //  .inputGroup{
