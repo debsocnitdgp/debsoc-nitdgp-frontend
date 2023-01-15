@@ -225,7 +225,7 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   .section {
     width: 100vw;
     min-height: 100vh;
