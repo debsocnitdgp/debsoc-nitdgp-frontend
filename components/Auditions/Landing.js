@@ -156,7 +156,7 @@ function Section2() {
 function Section4() {
   return (
     <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
-      <h1>Roles we recruit for</h1>
+      <h1 style={{}}>Roles we recruit for</h1>
       <div className={styles.card}>
         <div className={styles.section3}>
           <img className={styles.img2} src={debating.src} />

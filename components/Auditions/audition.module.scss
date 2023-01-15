@@ -183,7 +183,7 @@
   font-family: "canopee";
   background-color: #fff;
   flex-direction: column;
-  width: 100vw;
+  width: auto;
   min-height: 100vh;
   h1,
   h2,
@@ -397,14 +397,14 @@
 /*Logged In View Styles*/
 .inputGroup {
   font-family: "playfair";
-  margin: 8px 0;
+  margin: 16px 0;
   input,
   textarea {
     padding: 16px 12px;
     width: 100%;
-    border: 3px solid black;
+    border: 2px solid black;
     font-family: "montserrat";
-    font-size: 18px;
+    font-size: 16px;
     min-width: 40vw;
   }
   input:focus {
@@ -428,9 +428,16 @@
 }
 
 .questionText {
-  font-size: 24px;
+  font-size: 18px;
   margin: 12px;
   max-width: 60vw;
+  margin-bottom: 24px;
+}
+.questionText2 {
+  font-size: 18px;
+  margin: 12px;
+  max-width: 60vw;
+  margin-bottom: 2px;
 }
 .section3 {
   margin: 16px 92px;
