@@ -1,5 +1,5 @@
 import FullPage from "@fullpage/react-fullpage";
-import { createRef, useState } from "react";
+import { createRef, useEffect, useState } from "react";
 import styles from "./audition.module.scss";
 import Button from "./Button";
 
@@ -134,6 +134,28 @@ export default function LoggedIn(props) {
       }
     }
   };
+
+  useEffect(() => {
+    for (var i = 0; i < Object.keys(refs).length; i++) {
+      const e = Object.keys(refs)[i];
+      if (refs[e].current) {
+        refs[e].current.addEventListener('change', evt => {
+          const name = "_ds_audi_data_" + e
+          console.log(name)
+           localStorage.setItem(name, evt.target.value)
+        })
+      }
+    }
+  }, [refs]);
+
+  useEffect(() => {
+    for (var i = 0; i < Object.keys(refs).length; i++) {
+      const e = Object.keys(refs)[i];
+      if (refs[e].current && localStorage.getItem("_ds_audi_data_" + e)) {
+          refs[e].current.value = localStorage.getItem("_ds_audi_data_" + e)
+      }
+    }
+  })
 
   return (
     <FullPage
