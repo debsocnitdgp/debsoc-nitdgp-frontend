@@ -153,21 +153,21 @@ function Section4() {
     <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
       <h1>Roles we recruit for</h1>
       <div className={styles.card}>
-        <div>
+        <div className={styles.section3}>
           <img className={styles.img1} src={webdev.src} />
           <h1 className={styles.celldiv}>Web D</h1>
         </div>
-        <div>
+        <div className={styles.section3}>
           <img className={styles.img1} src={contentwriting.src} />
           <h1 className={styles.celldiv}>Content</h1>
         </div>
       </div>
       <div className={styles.card}>
-        <div>
+        <div className={styles.section3}>
           <img className={styles.img2} src={videoedit.src} />
           <h1 className={styles.celldiv}>Graphic</h1>
         </div>
-        <div>
+        <div className={styles.section3}>
           <img className={styles.img2} src={debating.src} />
           <h1 className={styles.celldiv}>Debating</h1>
         </div>

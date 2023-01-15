@@ -7,9 +7,7 @@ import styles from "../components/Auditions/audition.module.scss";
 import { useGoogleLogin } from "@react-oauth/google";
 
 export default function Audition() {
-  const [loggedIn, setLoggedIn] = useState(true);
-<<<<<<< HEAD
-=======
+  const [loggedIn, setLoggedIn] = useState(false);
   const [loading, setLoading] = useState(false);
   const [registered, setRegistered] = useState(false);
 
@@ -57,7 +55,6 @@ export default function Audition() {
     localStorage.removeItem("_ds_aud_db_registered");
     setLoggedIn(false);
   };
->>>>>>> 506fe8d71bac58fae652868513fa3bc12cbda801
   return (
     <>
       <div className={styles.navbarWrapper}>

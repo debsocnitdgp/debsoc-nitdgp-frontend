@@ -38,7 +38,10 @@ function Section2() {
 function Section3() {
   return (
     <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
-      <h3>Questions</h3>
+      <h3>
+        Answer the following questions in accordance with your own thought
+        process. It is to be noted that no answer is strictly right or wrong.
+      </h3>
       <form className={styles.form}>
         <div className={styles.inputGroup}>
           <div className={styles.inputLabel}>Name</div>

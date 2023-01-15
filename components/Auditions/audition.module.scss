@@ -289,3 +289,37 @@
   font-size: 32px;
   // font-weight: bold;
 }
+.section3{
+
+  margin: 16px 92px;
+}
+@media screen and (max-width: 330px){
+  .section3{
+    margin: 8px 12px !important;
+    
+  }
+  .celldiv{
+    font-size: 32px !important;
+  }
+}
+@media screen and (max-width: 480px){
+  .section3{
+    margin: 8px 12px !important;
+  }
+   .celldiv{
+    font-size: 32px !important;
+  }
+}
+@media screen and (max-width: 650px){
+  .section3{
+    margin: 8px 12px !important;
+  }
+   .celldiv{
+    font-size: 32px !important;
+  }
+
+}
+
+//  .inputGroup{
+//   padding: 16px;
+// }
