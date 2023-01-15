@@ -137,12 +137,12 @@ function Section2() {
             <div className={styles.imageGalleryRow}>
               <WhyDSCard
                 src={all.src}
-                text=" who do all the"
+                text=" that work and"
                 rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: 15 }}
               />
               <WhyDSCard
                 src={party.src}
-                text=" fun and entertainment"
+                text="  have fun together."
                 rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: -15 }}
               />
             </div>
@@ -184,6 +184,8 @@ function Section4() {
   );
 }
 
+
+
 export default function AuditionLanding({ onLogin }) {
   return (
     <div className={`${styles.container} ${styles.fixed}`}>
@@ -191,7 +193,8 @@ export default function AuditionLanding({ onLogin }) {
         <h1>AUDITIONS</h1>
         <h1>2023</h1>
         <p className={styles.line}>
-          Some great one liner about debatying society to get everyone hooked
+          Let not the anchor restrict your sail. Let not prejudice restrict your
+          thought. Let not fear restrict your speech.
         </p>
         <Button onClick={onLogin}>Register Now!</Button>
       </div>

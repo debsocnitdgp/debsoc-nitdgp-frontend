@@ -12,22 +12,13 @@
   font-family: "montserrat";
   src: url(/fonts/montserrat.ttf);
 }
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
-.line {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  animation: typing;
-  animation-duration: 4s;
-  animation-timing-function: steps(50, end);
-  animation-fill-mode: forwards;
+.line{
+   
+  animation: fadeIn 3s;
 }
 
 .modalWrapper {
