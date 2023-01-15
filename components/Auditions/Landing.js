@@ -7,6 +7,10 @@ import webdev from "../webdev.gif";
 import videoedit from "../videoedit.gif";
 import debating from "../debating.gif";
 import event from "../event.gif";
+import work from "../work.jpg";
+import group from "../group.jpg";
+import party from "../party.jpg";
+import all from "../all.jpg"
 // rotate(${
 //   Math.floor(Math.random() * 30 + 10) * (Math.random() > 0.5 ? -1 : 1)
 // }deg
@@ -120,25 +124,25 @@ function Section2() {
           <div className={styles.imageGallery} ref={ref_whyCards}>
             <div className={styles.imageGalleryRow}>
               <WhyDSCard
-                src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
-                text="unleash your best self"
+                src={group.src}
+                text="We’re a group of "
                 rotate={{ x: ratio > 1 ? 15 * (ratio - 1) : 15, y: 15 }}
               />
               <WhyDSCard
-                src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
-                text="because we are the best"
+                src={work.src}
+                text="creative people"
                 rotate={{ x: ratio > 1 ? 15 * (ratio - 1) : 15, y: -15 }}
               />
             </div>
             <div className={styles.imageGalleryRow}>
               <WhyDSCard
-                src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
-                text="a team worth being a part of"
+                src={all.src}
+                text=" who do all the"
                 rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: 15 }}
               />
               <WhyDSCard
-                src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
-                text="creativity like no other"
+                src={party.src}
+                text=" fun and entertainment"
                 rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: -15 }}
               />
             </div>
@@ -166,8 +170,7 @@ function Section4() {
           <img className={styles.img1} src={contentwriting.src} />
           <h1 className={styles.celldiv}>Content</h1>
         </div>
-      </div>
-      <div className={styles.card}>
+
         <div className={styles.section3}>
           <img className={styles.img2} src={videoedit.src} />
           <h1 className={styles.celldiv}>Graphic</h1>

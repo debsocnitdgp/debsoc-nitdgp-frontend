@@ -7,7 +7,7 @@ import styles from "../components/Auditions/audition.module.scss";
 import { useGoogleLogin } from "@react-oauth/google";
 import logo from "../public/Images/DEBSOClogo.png";
 export default function Audition() {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
   const [loading, setLoading] = useState(false);
   const [registered, setRegistered] = useState(false);
 
