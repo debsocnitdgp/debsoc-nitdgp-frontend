@@ -72,6 +72,7 @@
     font-size: clamp(80px, 10vw, 200px);
     color: black;
     margin: 0;
+    text-align: center;
   }
   h2 {
     font-size: clamp(50px, 6vw, 200px);
@@ -115,7 +116,7 @@
 .section2 {
   position: relative;
   width: 100vw;
-  height: 200vh;
+  height: 250vh;
   background-color: #fff;
   .ball {
     position: fixed;
@@ -157,18 +158,17 @@
     }
   }
 }
-
 .whyCard {
   font-family: "playfair";
   font-size: 2vw;
   color: white;
-  width: clamp(200px, 30vw, 400px);
+  width: clamp(300px, 30vw, 400px);
   animation: 0.3s enter linear forwards;
   transition: all 150ms ease-out;
   position: relative;
   img {
-    width: clamp(200px, 30vw, 400px);
-    height: 250px;
+    width: clamp(300px, 30vw, 400px);
+    height: clamp(170px, 15vw, 400px);
     object-fit: cover;
     z-index: 0;
     border-radius: 12px;
@@ -183,16 +183,15 @@
     color: white;
     margin: 0;
     width: 80%;
+    font-size: clamp(20px, 4vw, 80px);
   }
 }
 
 .imageGallery {
   display: flex;
-  gap: 5vw;
   width: 100vw;
   height: 100vh;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   position: fixed;
   top: 50vh;
@@ -203,6 +202,34 @@
     justify-content: space-around;
   }
   z-index: 1000;
+}
+
+@media (max-width: 700px) {
+  .imageGalleryRow {
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+  }
+  .whyCard {
+    margin-bottom: 72px;
+    img {
+      width: clamp(300px, 30vw, 400px);
+      height: clamp(170px, 15vw, 400px);
+    }
+    h2 {
+      z-index: 100;
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translateX(-50%) translateZ(30px);
+      text-align: center;
+      color: white;
+      margin: 0;
+      width: 80%;
+      font-size: clamp(24px, 4vw, 80px);
+    }
+  }
 }
 
 .avatar {

@@ -10,6 +10,9 @@ import debating from "../debating.gif";
 //   Math.floor(Math.random() * 30 + 10) * (Math.random() > 0.5 ? -1 : 1)
 // }deg
 function WhyDSCard({ src, text, rotate }) {
+  if (window.innerWidth < 700) {
+    rotate = { x: 0, y: 0 };
+  }
   return (
     <div
       className={styles.whyCard}
@@ -44,11 +47,11 @@ function Section2() {
     const onScroll = (evt) => {
       var ratio = window.scrollY / window.innerHeight;
       setRatio(ratio);
-      if (ratio >= 3) {
+      if (ratio >= 3.5) {
         return;
       }
-      if (ratio >= 2) {
-        ratio = 3 - ratio;
+      if (ratio >= 2.5) {
+        ratio = 3.5 - ratio;
         ref.current.style.borderRadius = "48px";
         ref.current.style.width =
           ratio * window.innerWidth > 48
@@ -67,7 +70,7 @@ function Section2() {
         ref2.current.style.opacity = ratio;
         ref_whyCards.current.style.opacity = ratio;
         ref_whyCards.current.style.top =
-          (-window.innerHeight * (1 - ratio)) / 2 + "px";
+          (window.innerHeight * (ratio - 1.5)) / 2 + "px";
       } else if (ratio >= 1) {
         ref.current.style.width = "100vw";
         ref.current.style.height = "100vh";
@@ -118,24 +121,24 @@ function Section2() {
               <WhyDSCard
                 src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
                 text="unleash your best self"
-                rotate={{ x: ratio > 1 ? 30 * (ratio - 1) : 30, y: 13 }}
+                rotate={{ x: ratio > 1 ? 15 * (ratio - 1) : 15, y: 15 }}
               />
               <WhyDSCard
                 src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
                 text="because we are the best"
-                rotate={{ x: ratio > 1 ? -12 * (ratio - 1) : -12, y: 25 }}
+                rotate={{ x: ratio > 1 ? 15 * (ratio - 1) : 15, y: -15 }}
               />
             </div>
             <div className={styles.imageGalleryRow}>
               <WhyDSCard
                 src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
                 text="a team worth being a part of"
-                rotate={{ x: ratio > 1 ? -7 * (ratio - 1) : -7, y: 18 }}
+                rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: 15 }}
               />
               <WhyDSCard
                 src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
                 text="creativity like no other"
-                rotate={{ x: ratio > 1 ? 30 * (ratio - 1) : 30, y: -10 }}
+                rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: -15 }}
               />
             </div>
           </div>
