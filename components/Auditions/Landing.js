@@ -124,7 +124,7 @@ function Section1() {
     <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
       <h1>AUDITIONS</h1>
       <h1>2023</h1>
-      <p>Some great one liner about debatying society to get everyone hooked</p>
+      <p>Some great one liner about debating society to get everyone hooked</p>
       <Button>Register Now!</Button>
     </div>
   );
