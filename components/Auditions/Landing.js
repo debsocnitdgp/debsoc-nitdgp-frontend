@@ -6,6 +6,11 @@ import contentwriting from "../contentwriting.gif";
 import webdev from "../webdev.gif";
 import videoedit from "../videoedit.gif";
 import debating from "../debating.gif";
+import event from "../event.gif";
+import work from "../work.jpg";
+import group from "../group.jpg";
+import party from "../party.jpg";
+import all from "../all.jpg"
 // rotate(${
 //   Math.floor(Math.random() * 30 + 10) * (Math.random() > 0.5 ? -1 : 1)
 // }deg
@@ -119,25 +124,25 @@ function Section2() {
           <div className={styles.imageGallery} ref={ref_whyCards}>
             <div className={styles.imageGalleryRow}>
               <WhyDSCard
-                src="https://scontent.fdbd3-1.fna.fbcdn.net/v/t39.30808-6/324841296_913895333305648_7727561219733071518_n.jpg?stp=dst-jpg_p180x540&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=6ts6kEqkTqoAX9PoFUK&_nc_ht=scontent.fdbd3-1.fna&oh=00_AfAewz10BAuR5K8Fw0Is7qbXIs5wLrXAzbSyvly6UILBIw&oe=63C9C941"
-                text="unleash your best self"
+                src={group.src}
+                text="We’re a group of "
                 rotate={{ x: ratio > 1 ? 15 * (ratio - 1) : 15, y: 15 }}
               />
               <WhyDSCard
-                src="https://scontent.fdbd3-1.fna.fbcdn.net/v/t39.30808-6/324841296_913895333305648_7727561219733071518_n.jpg?stp=dst-jpg_p180x540&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=6ts6kEqkTqoAX9PoFUK&_nc_ht=scontent.fdbd3-1.fna&oh=00_AfAewz10BAuR5K8Fw0Is7qbXIs5wLrXAzbSyvly6UILBIw&oe=63C9C941"
-                text="because we are the best"
+                src={work.src}
+                text="creative people"
                 rotate={{ x: ratio > 1 ? 15 * (ratio - 1) : 15, y: -15 }}
               />
             </div>
             <div className={styles.imageGalleryRow}>
               <WhyDSCard
-                src="https://scontent.fdbd3-1.fna.fbcdn.net/v/t39.30808-6/324841296_913895333305648_7727561219733071518_n.jpg?stp=dst-jpg_p180x540&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=6ts6kEqkTqoAX9PoFUK&_nc_ht=scontent.fdbd3-1.fna&oh=00_AfAewz10BAuR5K8Fw0Is7qbXIs5wLrXAzbSyvly6UILBIw&oe=63C9C941"
-                text="a team worth being a part of"
+                src={all.src}
+                text=" who do all the"
                 rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: 15 }}
               />
               <WhyDSCard
-                src="https://scontent.fdbd3-1.fna.fbcdn.net/v/t39.30808-6/324841296_913895333305648_7727561219733071518_n.jpg?stp=dst-jpg_p180x540&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=6ts6kEqkTqoAX9PoFUK&_nc_ht=scontent.fdbd3-1.fna&oh=00_AfAewz10BAuR5K8Fw0Is7qbXIs5wLrXAzbSyvly6UILBIw&oe=63C9C941"
-                text="creativity like no other"
+                src={party.src}
+                text=" fun and entertainment"
                 rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: -15 }}
               />
             </div>
@@ -154,6 +159,10 @@ function Section4() {
       <h1>Roles we recruit for</h1>
       <div className={styles.card}>
         <div className={styles.section3}>
+          <img className={styles.img2} src={debating.src} />
+          <h1 className={styles.celldiv}>Debating</h1>
+        </div>
+        <div className={styles.section3}>
           <img className={styles.img1} src={webdev.src} />
           <h1 className={styles.celldiv}>Web D</h1>
         </div>
@@ -161,15 +170,14 @@ function Section4() {
           <img className={styles.img1} src={contentwriting.src} />
           <h1 className={styles.celldiv}>Content</h1>
         </div>
-      </div>
-      <div className={styles.card}>
+
         <div className={styles.section3}>
           <img className={styles.img2} src={videoedit.src} />
-          <h1 className={styles.celldiv}>Graphic</h1>
+          <h1 className={styles.celldiv}>Graphic & Video</h1>
         </div>
         <div className={styles.section3}>
-          <img className={styles.img2} src={debating.src} />
-          <h1 className={styles.celldiv}>Debating</h1>
+          <img className={styles.img2} src={event.src} />
+          <h1 className={styles.celldiv}>Event Management </h1>
         </div>
       </div>
     </div>
@@ -182,7 +190,7 @@ export default function AuditionLanding({ onLogin }) {
       <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
         <h1>AUDITIONS</h1>
         <h1>2023</h1>
-        <p>
+        <p className={styles.line}>
           Some great one liner about debatying society to get everyone hooked
         </p>
         <Button onClick={onLogin}>Register Now!</Button>

@@ -12,6 +12,19 @@
   font-family: "montserrat";
   src: url(/fonts/montserrat.ttf);
 }
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+.line{
+   overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing;
+  animation-duration: 4.0s;
+  animation-timing-function: steps(50, end);
+  animation-fill-mode: forwards;
+}
 
 .buttonWrapper {
   background-color: #000;
@@ -159,7 +172,7 @@
 }
 .whyCard {
   font-family: "playfair";
-  font-size: 2vw;
+  font-size: 1vw;
   color: white;
   width: clamp(300px, 30vw, 400px);
   animation: 0.3s enter linear forwards;
@@ -182,7 +195,7 @@
     color: white;
     margin: 0;
     width: 80%;
-    font-size: clamp(20px, 4vw, 80px);
+    font-size: clamp(15px, 3vw, 50px);
   }
 }
 
@@ -238,7 +251,11 @@
   border: 4px solid black;
   margin-bottom: 32px;
 }
-
+.logo{
+  float: right;
+  padding: 24px;
+  width: 6rem;
+}
 .img1 {
   width: 12rem;
   border-radius: 8px;
@@ -260,7 +277,8 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  max-width: 100%;
+  max-width: 90%;
+  flex-wrap: wrap;
 }
 .celldiv {
   font-size: 4vw !important;

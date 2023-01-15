@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar/navbar";
 import Footer from "../components/Footer/footer";
 import styles from "../components/Auditions/audition.module.scss";
 import { useGoogleLogin } from "@react-oauth/google";
-
+import logo from "../public/Images/DEBSOClogo.png";
 export default function Audition() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -60,7 +60,9 @@ export default function Audition() {
   return (
     <>
       <div className={styles.navbarWrapper}>
-        <Navbar />
+        <a href="https://www.debsocnitdgp.in/">
+          <img className={styles.logo} src={logo.src} />
+        </a>
       </div>
       {user === null ? (
         <AuditionLanding onLogin={handleGoogleLogin} />
