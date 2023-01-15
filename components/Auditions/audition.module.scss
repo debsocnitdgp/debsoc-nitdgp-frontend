@@ -451,6 +451,10 @@
 }
 .section3 {
   margin: 16px 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 330px) {
   .section3 {
@@ -536,7 +540,7 @@
   
   border: 1px black;
   overflow: clip;
-  border-radius: 100px;
+  border-radius: 2000px;
   box-shadow: 0 0 0 5px black;
   margin: 12px;
 }
