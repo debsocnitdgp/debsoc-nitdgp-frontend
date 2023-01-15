@@ -184,6 +184,8 @@ function Section4() {
   );
 }
 
+
+
 export default function AuditionLanding({ onLogin }) {
   return (
     <div className={`${styles.container} ${styles.fixed}`}>
@@ -198,6 +200,7 @@ export default function AuditionLanding({ onLogin }) {
       <Section2 />
       <Section3 />
       <Section4 />
+      
     </div>
   );
 }
