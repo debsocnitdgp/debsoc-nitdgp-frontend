@@ -188,7 +188,7 @@
   h1,
   h2,
   h3 {
-    font-size: clamp(80px, 10vw, 200px);
+    font-size: clamp(70px, 10vw, 200px);
     color: black;
     margin: 0;
     text-align: center;
@@ -302,7 +302,7 @@
     color: white;
     margin: 0;
     width: 80%;
-    font-size: clamp(15px, 3vw, 50px);
+    font-size: clamp(15px, 2vw, 40px);
   }
 }
 
@@ -491,15 +491,16 @@
 }
 
 .website {
-  font-family: "montserrat";
-  font-size: x-large;
+  font-family: "playfair";
+  font-size: clamp(24px, 2vw, 50px);
   font-weight: 400;
-  text-transform: uppercase;
   background-color: #fff;
   flex-direction: column;
   width: 100vw;
   padding: 10vh 0;
-  h5 {
+  div {
     max-width: Max(300px, 50vw);
+    text-align: center;
+    margin-bottom: 14px;
   } 
 }
