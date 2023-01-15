@@ -38,21 +38,11 @@ export default function LoggedIn(props) {
     for (var i = 0; i < Object.keys(refs).length; i++) {
       const e = Object.keys(refs)[i];
       if (refs[e].current) data[e] = refs[e].current.value;
-      if (
-        [
-          "name",
-          "number",
-          "rollno",
-          "hallno",
-          "club_preference",
-          "roles_preference",
-        ].indexOf(e) > -1 &&
-        (data[e] === "" || data[e] === null)
-      ) {
+      if (data[e] === "" || data[e] === null) {
         setModal({
           open: true,
           title: "Alert",
-          children: "Please fill the required details",
+          children: "Please fill all the answers",
           onCancel: () => {
             setModal({ open: false });
           },
@@ -130,7 +120,7 @@ export default function LoggedIn(props) {
       <FullPage
         render={({ state, fullpageApi }) => {
           return (
-            <FullPage.Wrapper style={{background: "#fff"}}>
+            <FullPage.Wrapper style={{ background: "#fff" }}>
               <div className="section">
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
@@ -256,7 +246,7 @@ export default function LoggedIn(props) {
                   </div>
                 </div>
               </div>
-              
+
               <div className="section">
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
@@ -525,11 +515,7 @@ export default function LoggedIn(props) {
                     </div>
                   </form>
                   <div className={styles.submitButtons}>
-                    <Button
-                      onClick={handleSubmit}
-                    >
-                      Submit
-                    </Button>
+                    <Button onClick={handleSubmit}>Submit</Button>
                     <Button
                       onClick={() => fullpageApi.moveSectionUp()}
                       secondary
