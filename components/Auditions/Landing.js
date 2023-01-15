@@ -10,7 +10,7 @@ import event from "../event.gif";
 import work from "../work.jpg";
 import group from "../group.jpg";
 import party from "../party.jpg";
-import all from "../all.jpg"
+import all from "../all.jpg";
 // rotate(${
 //   Math.floor(Math.random() * 30 + 10) * (Math.random() > 0.5 ? -1 : 1)
 // }deg
@@ -52,11 +52,11 @@ function Section2() {
     const onScroll = (evt) => {
       var ratio = window.scrollY / window.innerHeight;
       setRatio(ratio);
-      if (ratio >= 3.5) {
+      if (ratio >= 4) {
         return;
       }
-      if (ratio >= 2.5) {
-        ratio = 3.5 - ratio;
+      if (ratio >= 3) {
+        ratio = 4 - ratio;
         ref.current.style.borderRadius = "48px";
         ref.current.style.width =
           ratio * window.innerWidth > 48
@@ -75,7 +75,7 @@ function Section2() {
         ref2.current.style.opacity = ratio;
         ref_whyCards.current.style.opacity = ratio;
         ref_whyCards.current.style.top =
-          (window.innerHeight * (ratio - 1.5)) / 2 + "px";
+          (window.innerHeight * (ratio - 2)) / 2 + "px";
       } else if (ratio >= 1) {
         ref.current.style.width = "100vw";
         ref.current.style.height = "100vh";
@@ -84,7 +84,7 @@ function Section2() {
         ref.current.style.left = 0;
         ref.current.style.transform = `translateX(0px) translateY(-50%)`;
         ref2.current.style.opacity = 1;
-        ref_whyCards.current.style.opacity = ratio - 1;
+        ref_whyCards.current.style.opacity = (ratio - 1) * 0.65;
         ref_whyCards.current.style.top =
           window.innerHeight / 2 -
           (window.innerHeight * (ratio - 1)) / 2 +
@@ -184,8 +184,6 @@ function Section4() {
   );
 }
 
-
-
 export default function AuditionLanding({ onLogin }) {
   return (
     <div className={`${styles.container} ${styles.fixed}`}>
@@ -194,13 +192,21 @@ export default function AuditionLanding({ onLogin }) {
         <h1>2023</h1>
         <p className={styles.line}>
           Let not the anchor restrict your sail. Let not prejudice restrict your
-          thought. Let not fear restrict your speech.
+          thought. Let not fear restrict your speech.
         </p>
         <Button onClick={onLogin}>Register Now!</Button>
       </div>
       <Section2 />
       <Section3 />
       <Section4 />
+      <div className={`${styles.centred} ${styles.website}`}>
+        <h5>
+          The website you just scrolled through is completely made by Debsoc
+          Tech Team. So you see we just dont debate, we are competent in every
+          sphere
+        </h5>
+        <Button onClick={onLogin}>Join US Now!</Button>
+      </div>
     </div>
   );
 }
