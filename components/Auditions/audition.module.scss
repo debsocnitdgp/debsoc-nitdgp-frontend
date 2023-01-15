@@ -365,14 +365,19 @@
 }
 .img1 {
   width: 12rem;
+  height: 12rem;
+  border: 50%;
   border-radius: 8px;
   filter: grayscale(1);
   // margin: 16px 32px;
 }
 .img2 {
-  width: 12rem;
-  border-radius: 8px;
-  filter: grayscale(1);
+  width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    border-radius: 8px;
+    filter: grayscale(1);
+    margin: 36px;
 }
 .celldiv {
   margin: 16px 0px;
@@ -512,4 +517,14 @@
   h5 {
     max-width: Max(300px, 50vw);
   } 
+}
+.circle{
+  height: 210px;
+  width: 210px;
+  
+  border: 1px black;
+  overflow: clip;
+  border-radius: 100px;
+  box-shadow: 0 0 0 5px black;
+  margin: 12px;
 }
