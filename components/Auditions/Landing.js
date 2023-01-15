@@ -125,7 +125,7 @@ function Section2() {
             <div className={styles.imageGalleryRow}>
               <WhyDSCard
                 src={group.src}
-                text="We’re a group of "
+                text="Always n forever The Debsoc Fam"
                 rotate={{ x: ratio > 1 ? 15 * (ratio - 1) : 15, y: 15 }}
               />
               <WhyDSCard
@@ -167,7 +167,7 @@ function Section4() {
           <h1 className={styles.celldiv}>Web D</h1>
         </div>
         <div className={styles.section3}>
-          <img className={styles.img1} src={contentwriting.src} />
+          <img className={styles.img1} src={contentwriting.src} style={{width: "8rem"}}/>
           <h1 className={styles.celldiv}>Content</h1>
         </div>
 
@@ -176,7 +176,7 @@ function Section4() {
           <h1 className={styles.celldiv}>Graphic & Video</h1>
         </div>
         <div className={styles.section3}>
-          <img className={styles.img2} src={event.src} />
+          <img className={styles.img2} src={event.src} style={{width: "9rem"}} />
           <h1 className={styles.celldiv}>Event Management </h1>
         </div>
       </div>
@@ -188,7 +188,9 @@ export default function AuditionLanding({ onLogin }) {
   return (
     <div className={`${styles.container} ${styles.fixed}`}>
       <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
-        <h1>AUDITIONS</h1>
+        <h1>
+          AUDITIONS
+        </h1>
         <h1>2023</h1>
         <p className={styles.line}>
           Let not the anchor restrict your sail. Let not prejudice restrict your
@@ -200,11 +202,11 @@ export default function AuditionLanding({ onLogin }) {
       <Section3 />
       <Section4 />
       <div className={`${styles.centred} ${styles.website}`}>
-        <h5>
+        <div>
           The website you just scrolled through is completely made by Debsoc
           Tech Team. So you see we just dont debate, we are competent in every
-          sphere
-        </h5>
+          sphere.
+        </div>
         <Button onClick={onLogin}>Join US Now!</Button>
       </div>
     </div>
