@@ -7,7 +7,7 @@ import styles from "../components/Auditions/audition.module.scss";
 import { useGoogleLogin } from "@react-oauth/google";
 
 export default function Audition() {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [registered, setRegistered] = useState(false);
 
@@ -21,12 +21,15 @@ export default function Audition() {
         .then((json) => json.json())
         .then((response) => {
           setLoading("Signing you in...");
-          console.log(response);
           localStorage.setItem("_ds_aud_nm", response.name);
           localStorage.setItem("_ds_aud_purl", response.picture);
           localStorage.setItem("_ds_aud_tk", tokenResponse.access_token);
           localStorage.setItem("_ds_aud_email", response.email);
-
+          setUser({
+            name: response.name,
+            picture: response.picture,
+            email: response.email
+          })
           refresh_register_status();
         });
     },
@@ -44,7 +47,6 @@ export default function Audition() {
     setLoading("Loading...");
     const resp = await res.json();
     setLoading("");
-    setLoggedIn(true);
     setRegistered(resp.data);
   };
 
@@ -53,19 +55,20 @@ export default function Audition() {
     localStorage.removeItem("_ds_aud_tk");
     localStorage.removeItem("_ds_aud_registered");
     localStorage.removeItem("_ds_aud_db_registered");
-    setLoggedIn(false);
+    setUser(null)
   };
   return (
     <>
       <div className={styles.navbarWrapper}>
         <Navbar />
       </div>
-      {loggedIn ? (
+      {user === null ? (
         <AuditionLanding onLogin={handleGoogleLogin} />
       ) : (
         <AuditionLoggedIn
           onLogout={handleLogout}
           onRegister={refresh_register_status}
+          user={user}
         />
       )}
       <Footer />

@@ -119,24 +119,24 @@ function Section2() {
           <div className={styles.imageGallery} ref={ref_whyCards}>
             <div className={styles.imageGalleryRow}>
               <WhyDSCard
-                src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
+                src="https://scontent.fdbd3-1.fna.fbcdn.net/v/t39.30808-6/324841296_913895333305648_7727561219733071518_n.jpg?stp=dst-jpg_p180x540&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=6ts6kEqkTqoAX9PoFUK&_nc_ht=scontent.fdbd3-1.fna&oh=00_AfAewz10BAuR5K8Fw0Is7qbXIs5wLrXAzbSyvly6UILBIw&oe=63C9C941"
                 text="unleash your best self"
                 rotate={{ x: ratio > 1 ? 15 * (ratio - 1) : 15, y: 15 }}
               />
               <WhyDSCard
-                src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
+                src="https://scontent.fdbd3-1.fna.fbcdn.net/v/t39.30808-6/324841296_913895333305648_7727561219733071518_n.jpg?stp=dst-jpg_p180x540&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=6ts6kEqkTqoAX9PoFUK&_nc_ht=scontent.fdbd3-1.fna&oh=00_AfAewz10BAuR5K8Fw0Is7qbXIs5wLrXAzbSyvly6UILBIw&oe=63C9C941"
                 text="because we are the best"
                 rotate={{ x: ratio > 1 ? 15 * (ratio - 1) : 15, y: -15 }}
               />
             </div>
             <div className={styles.imageGalleryRow}>
               <WhyDSCard
-                src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
+                src="https://scontent.fdbd3-1.fna.fbcdn.net/v/t39.30808-6/324841296_913895333305648_7727561219733071518_n.jpg?stp=dst-jpg_p180x540&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=6ts6kEqkTqoAX9PoFUK&_nc_ht=scontent.fdbd3-1.fna&oh=00_AfAewz10BAuR5K8Fw0Is7qbXIs5wLrXAzbSyvly6UILBIw&oe=63C9C941"
                 text="a team worth being a part of"
                 rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: 15 }}
               />
               <WhyDSCard
-                src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
+                src="https://scontent.fdbd3-1.fna.fbcdn.net/v/t39.30808-6/324841296_913895333305648_7727561219733071518_n.jpg?stp=dst-jpg_p180x540&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=6ts6kEqkTqoAX9PoFUK&_nc_ht=scontent.fdbd3-1.fna&oh=00_AfAewz10BAuR5K8Fw0Is7qbXIs5wLrXAzbSyvly6UILBIw&oe=63C9C941"
                 text="creativity like no other"
                 rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: -15 }}
               />
