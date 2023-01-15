@@ -9,6 +9,7 @@ body {
   font-family: 'Raleway',
   sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
@@ -51,4 +52,8 @@ a {
   to {
     transform: rotate(360deg);
   }
+}
+
+.fp-watermark {
+  display: none;
 }
