@@ -23,7 +23,6 @@ export default function LoggedIn(props) {
     answer_9_text: createRef(null),
   };
 
-  const [confirm, setConfirm] = useState({ open: false, action: true });
   const [modal, setModal] = useState({
     open: false,
     children: null,
@@ -46,6 +45,7 @@ export default function LoggedIn(props) {
           onCancel: () => {
             setModal({ open: false });
           },
+          actions: false
         });
         setLoading(false);
         validated = false;
@@ -65,7 +65,8 @@ export default function LoggedIn(props) {
           open: true,
           title: "Success",
           children: "Your response was submitted successfully",
-          permanent: true,
+          actions: true,
+          onCancel: () => props.goBack()
         });
         props.onRegister();
       } else {
@@ -109,14 +110,14 @@ export default function LoggedIn(props) {
         title: "You've responded",
         children:
           "Thank you for registering for auditions of the Debating Society",
-        permanent: true,
+          actions: true,
+          onCancel: () => props.goBack()
       });
   }, [props.registered]);
   return (
     <>
       <Loading show={loading} />
       <Modal {...modal} />
-      <Modal {...confirm} />
       <FullPage
         render={({ state, fullpageApi }) => {
           return (

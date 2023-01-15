@@ -214,7 +214,7 @@ export default function AuditionLanding({ onLogin }) {
       <div className={`${styles.centred} ${styles.website}`}>
         <div>
           The website you just scrolled through is completely made by Debsoc
-          Tech Team. So you see we just dont debate, we are competent in every
+          Tech Team. So you see we just don&apos;t debate, we excel in every
           sphere.
         </div>
         <Button onClick={onLogin}>Join US Now!</Button>

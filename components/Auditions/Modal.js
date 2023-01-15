@@ -21,7 +21,7 @@ export default function Modal(props) {
         )}
         {props.actions && (
           <div className={styles.modalActions}>
-            <Button secondary onClick={props.onConfirm}>Yes</Button>
+            <Button secondary onClick={props.onCancel}>Back to Home</Button>
           </div>
         )}
       </div>
