@@ -193,14 +193,14 @@ export default function AuditionLanding({ onLogin }) {
         <h1>AUDITIONS</h1>
         <h1>2023</h1>
         <p className={styles.line}>
-          Some great one liner about debatying society to get everyone hooked
+          Let not the anchor restrict your sail. Let not prejudice restrict your
+          thought. Let not fear restrict your speech.
         </p>
         <Button onClick={onLogin}>Register Now!</Button>
       </div>
       <Section2 />
       <Section3 />
       <Section4 />
-      
     </div>
   );
 }
