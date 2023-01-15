@@ -35,6 +35,40 @@ function Section2() {
     </div>
   );
 }
+function Section3() {
+  return (
+    <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
+      <h3>Questions</h3>
+      <form className={styles.form}>
+        <div className={styles.inputGroup}>
+          <div className={styles.inputLabel}>Name</div>
+          <input type="text" />
+        </div>
+        <div className={styles.inputGroup}>
+          <div className={styles.inputLabel}>Phone number</div>
+          <input type="text" />
+        </div>
+        <div className={styles.inputGroup}>
+          <div className={styles.inputLabel}>
+            Full Roll No. (For example: use 22E80012 not 12)
+          </div>
+          <input type="text" />
+        </div>
+        <div className={styles.inputGroup}>
+          <div className={styles.inputLabel}>Hall No.</div>
+          <input type="text" />
+        </div>
+        <div className={styles.inputGroup}>
+          <div className={styles.inputLabel}>Club preference order</div>
+          <input type="text" />
+        </div>
+      </form>
+      <Button>Save & Next</Button>
+      <Button>Previous</Button>
+    </div>
+  );
+}
+
 
 export default function LoggedIn() {
   return (
@@ -59,6 +93,9 @@ export default function LoggedIn() {
             </div>
             <div className="section">
               <Section2 />
+            </div>
+            <div className="section">
+                <Section3 />
             </div>
           </FullPage.Wrapper>
         );
