@@ -52,11 +52,11 @@ function Section2() {
     const onScroll = (evt) => {
       var ratio = window.scrollY / window.innerHeight;
       setRatio(ratio);
-      if (ratio >= 3.5) {
+      if (ratio >= 4) {
         return;
       }
-      if (ratio >= 2.5) {
-        ratio = 3.5 - ratio;
+      if (ratio >= 3) {
+        ratio = 4 - ratio;
         ref.current.style.borderRadius = "48px";
         ref.current.style.width =
           ratio * window.innerWidth > 48
@@ -75,7 +75,7 @@ function Section2() {
         ref2.current.style.opacity = ratio;
         ref_whyCards.current.style.opacity = ratio;
         ref_whyCards.current.style.top =
-          (window.innerHeight * (ratio - 1.5)) / 2 + "px";
+          (window.innerHeight * (ratio - 2)) / 2 + "px";
       } else if (ratio >= 1) {
         ref.current.style.width = "100vw";
         ref.current.style.height = "100vh";
@@ -84,7 +84,7 @@ function Section2() {
         ref.current.style.left = 0;
         ref.current.style.transform = `translateX(0px) translateY(-50%)`;
         ref2.current.style.opacity = 1;
-        ref_whyCards.current.style.opacity = ratio - 1;
+        ref_whyCards.current.style.opacity = (ratio - 1) * 0.65;
         ref_whyCards.current.style.top =
           window.innerHeight / 2 -
           (window.innerHeight * (ratio - 1)) / 2 +

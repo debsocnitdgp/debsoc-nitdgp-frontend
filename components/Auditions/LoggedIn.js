@@ -225,7 +225,7 @@ export default function LoggedIn(props) {
             <div
                 className={`${styles.section} ${styles.section1} ${styles.centred}`}
               >
-                <h3>02</h3>
+                <h3>01</h3>
                 <form className={styles.form}>
                   <div className={styles.inputGroup}>
                     <div className={styles.questionText}>
@@ -260,7 +260,7 @@ export default function LoggedIn(props) {
               <div
                 className={`${styles.section} ${styles.section1} ${styles.centred}`}
               >
-                <h3>03</h3>
+                <h3>02</h3>
                 <form className={styles.form}>
                   <div className={styles.inputGroup}>
                     <div className={styles.questionText}>
@@ -294,7 +294,7 @@ export default function LoggedIn(props) {
               <div
                 className={`${styles.section} ${styles.section1} ${styles.centred}`}
               >
-                <h3>04</h3>
+                <h3>03</h3>
                 <form className={styles.form}>
                   <div className={styles.inputGroup}>
                     <div className={styles.questionText}>
@@ -349,7 +349,7 @@ export default function LoggedIn(props) {
               <div
                 className={`${styles.section} ${styles.section1} ${styles.centred}`}
               >
-                <h3>04</h3>
+                <h3>05</h3>
                 <form className={styles.form}>
                   <div className={styles.inputGroup}>
                     <div className={styles.questionText}>
@@ -376,7 +376,7 @@ export default function LoggedIn(props) {
               <div
                 className={`${styles.section} ${styles.section1} ${styles.centred}`}
               >
-                <h3>05</h3>
+                <h3>06</h3>
                 <form className={styles.form}>
                   <div className={styles.inputGroup}>
                     <div className={styles.questionText}>
@@ -403,7 +403,7 @@ export default function LoggedIn(props) {
               <div
                 className={`${styles.section} ${styles.section1} ${styles.centred}`}
               >
-                <h3>06</h3>
+                <h3>07</h3>
                 <form className={styles.form}>
                   <div className={styles.inputGroup}>
                     <div className={styles.questionText}>
@@ -431,7 +431,7 @@ export default function LoggedIn(props) {
               <div
                 className={`${styles.section} ${styles.section1} ${styles.centred}`}
               >
-                <h3>07</h3>
+                <h3>08</h3>
                 <form className={styles.form}>
                   <div className={styles.inputGroup}>
                     <div className={styles.questionText}>
@@ -458,7 +458,7 @@ export default function LoggedIn(props) {
               <div
                 className={`${styles.section} ${styles.section1} ${styles.centred}`}
               >
-                <h3>08</h3>
+                <h3>09</h3>
                 <form className={styles.form}>
                   <div className={styles.inputGroup}>
                     <div className={styles.questionText}>
@@ -486,7 +486,7 @@ export default function LoggedIn(props) {
               <div
                 className={`${styles.section} ${styles.section1} ${styles.centred}`}
               >
-                <h3>09</h3>
+                <h3>10</h3>
                 <form className={styles.form}>
                   <div className={styles.inputGroup}>
                     <div className={styles.questionText}>
