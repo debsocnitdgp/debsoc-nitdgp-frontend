@@ -6,6 +6,7 @@ import contentwriting from "../contentwriting.gif";
 import webdev from "../webdev.gif";
 import videoedit from "../videoedit.gif";
 import debating from "../debating.gif";
+import event from "../event.gif";
 // rotate(${
 //   Math.floor(Math.random() * 30 + 10) * (Math.random() > 0.5 ? -1 : 1)
 // }deg
@@ -154,6 +155,10 @@ function Section4() {
       <h1>Roles we recruit for</h1>
       <div className={styles.card}>
         <div className={styles.section3}>
+          <img className={styles.img2} src={debating.src} />
+          <h1 className={styles.celldiv}>Debating</h1>
+        </div>
+        <div className={styles.section3}>
           <img className={styles.img1} src={webdev.src} />
           <h1 className={styles.celldiv}>Web D</h1>
         </div>
@@ -168,8 +173,8 @@ function Section4() {
           <h1 className={styles.celldiv}>Graphic</h1>
         </div>
         <div className={styles.section3}>
-          <img className={styles.img2} src={debating.src} />
-          <h1 className={styles.celldiv}>Debating</h1>
+          <img className={styles.img2} src={event.src} />
+          <h1 className={styles.celldiv}>Event Management </h1>
         </div>
       </div>
     </div>
