@@ -225,7 +225,7 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   .section {
     width: 100vw;
     min-height: 100vh;
@@ -365,14 +365,19 @@
 }
 .img1 {
   width: 12rem;
+  height: 12rem;
+  border: 50%;
   border-radius: 8px;
   filter: grayscale(1);
   // margin: 16px 32px;
 }
 .img2 {
-  width: 12rem;
-  border-radius: 8px;
-  filter: grayscale(1);
+  width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    border-radius: 8px;
+    filter: grayscale(1);
+    margin: 36px;
 }
 .celldiv {
   margin: 16px 0px;
@@ -442,6 +447,9 @@
   .celldiv {
     font-size: 32px !important;
   }
+  .logo{
+    width: 5rem !important;
+  }
 }
 @media screen and (max-width: 480px) {
   .section3 {
@@ -449,6 +457,9 @@
   }
   .celldiv {
     font-size: 32px !important;
+  }
+   .logo{
+    width: 5rem !important;
   }
 }
 @media screen and (max-width: 650px) {
@@ -458,6 +469,10 @@
   .celldiv {
     font-size: 32px !important;
   }
+   .logo{
+    width: 5rem !important;
+  }
+  
 }
 
 //  .inputGroup{
@@ -503,4 +518,14 @@
     text-align: center;
     margin-bottom: 14px;
   } 
+}
+.circle{
+  height: 210px;
+  width: 210px;
+  
+  border: 1px black;
+  overflow: clip;
+  border-radius: 100px;
+  box-shadow: 0 0 0 5px black;
+  margin: 12px;
 }

@@ -36,8 +36,8 @@ function WhyDSCard({ src, text, rotate }) {
 function Section3() {
   return (
     <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
-      <h2>Ready to be the</h2>
-      <h1>Next Generation?</h1>
+      <h2 className={styles.line}>Ready to be the</h2>
+      <h1 className={styles.line}>Next Generation?</h1>
     </div>
   );
 }
@@ -159,24 +159,34 @@ function Section4() {
       <h1>Roles we recruit for</h1>
       <div className={styles.card}>
         <div className={styles.section3}>
-          <img className={styles.img2} src={debating.src} />
+          <div className={styles.circle}>
+            <img className={styles.img2} src={debating.src} />
+          </div>
           <h1 className={styles.celldiv}>Debating</h1>
         </div>
         <div className={styles.section3}>
-          <img className={styles.img1} src={webdev.src} />
+          <div className={styles.circle}>
+            <img className={styles.img2} src={webdev.src} />
+          </div>
           <h1 className={styles.celldiv}>Web D</h1>
         </div>
         <div className={styles.section3}>
-          <img className={styles.img1} src={contentwriting.src} style={{width: "8rem"}}/>
+          <div className={styles.circle}>
+            <img className={styles.img2} src={contentwriting.src} />
+          </div>
           <h1 className={styles.celldiv}>Content</h1>
         </div>
 
         <div className={styles.section3}>
-          <img className={styles.img2} src={videoedit.src} />
+          <div className={styles.circle}>
+            <img className={styles.img2} src={videoedit.src} />
+          </div>
           <h1 className={styles.celldiv}>Graphic & Video</h1>
         </div>
         <div className={styles.section3}>
-          <img className={styles.img2} src={event.src} style={{width: "9rem"}} />
+          <div className={styles.circle}>
+            <img className={styles.img2} src={event.src} />
+          </div>
           <h1 className={styles.celldiv}>Event Management </h1>
         </div>
       </div>
