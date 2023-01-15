@@ -34,7 +34,6 @@
   font-weight: 600;
   font-size: large;
   cursor: pointer;
-  margin-bottom: 32px;
   transition: 150ms all ease-in-out;
 }
 .buttonWrapper:hover {
@@ -73,7 +72,7 @@
   background-color: #fff;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   h1,
   h2,
   h3 {
@@ -117,7 +116,7 @@
   overflow-x: hidden;
   .section {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
   }
 }
 
@@ -287,53 +286,94 @@
 .inputGroup {
   font-family: "playfair";
   margin: 8px 0;
-  input {
+  input,
+  textarea {
     padding: 16px 12px;
     width: 100%;
     border: 3px solid black;
+    font-family: "montserrat";
+    font-size: 18px;
+    min-width: 40vw;
+  }
+  input:focus {
+    outline: none;
   }
 }
 
 .form {
   margin: 18px 0;
 }
-.inputLabel{
-
-  font-size: 32px;
+.inputLabel {
+  font-size: 24px;
   // font-weight: bold;
 }
-.section3{
 
+.submitButtons {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.questionText {
+  font-size: 24px;
+  margin: 12px;
+  max-width: 60vw;
+}
+.section3 {
   margin: 16px 92px;
 }
-@media screen and (max-width: 330px){
-  .section3{
+@media screen and (max-width: 330px) {
+  .section3 {
     margin: 8px 12px !important;
-    
   }
-  .celldiv{
+  .celldiv {
     font-size: 32px !important;
   }
 }
-@media screen and (max-width: 480px){
-  .section3{
+@media screen and (max-width: 480px) {
+  .section3 {
     margin: 8px 12px !important;
   }
-   .celldiv{
+  .celldiv {
     font-size: 32px !important;
   }
 }
-@media screen and (max-width: 650px){
-  .section3{
+@media screen and (max-width: 650px) {
+  .section3 {
     margin: 8px 12px !important;
   }
-   .celldiv{
+  .celldiv {
     font-size: 32px !important;
   }
+}
 
+//  .inputGroup{
+//   padding: 16px;
+// }
+
+.rolesChoice {
+  min-width: 200px;
+  max-width: 400px;
+  padding: 24px 18px;
+  border: 3px solid black;
+  color: black;
+  background: white;
+  margin: 12px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'montserrat';
+  cursor: pointer;
 }
-.head4{
-  
-  font-family : 'montserrat';
-  font-size: 16px;
+.selected {
+  border: 3px solid white;
+  color: white;
+  background-color: black;
+}
+.rolePicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
