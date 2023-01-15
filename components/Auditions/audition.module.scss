@@ -27,11 +27,23 @@
   font-size: large;
   cursor: pointer;
   margin-bottom: 32px;
-  box-shadow: 0 0 32px #000;
   transition: 150ms all ease-in-out;
 }
 .buttonWrapper:hover {
   background-color: #000;
+  box-shadow: 0 0 16px #000;
+}
+
+.secondaryButton {
+  background-color: #fff;
+  color: black;
+  border: 3px solid #000;
+  box-shadow: none;
+  padding: 12px 24px;
+}
+.secondaryButton:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .navbarWrapper {
@@ -57,15 +69,16 @@
   h1,
   h2,
   h3 {
-    font-size: 10vw;
+    font-size: clamp(80px, 10vw, 200px);
     color: black;
     margin: 0;
+    text-align: center;
   }
   h2 {
-    font-size: 6vw;
+    font-size: clamp(50px, 6vw, 200px);
   }
   h3 {
-    font-size: 4vw;
+    font-size: clamp(40px, 4vw, 200px);
   }
   p {
     font-family: "playfair";
@@ -75,8 +88,21 @@
   }
 }
 
+@media (max-width: 500px) {
+  .section1 {
+    p {
+      font-size: 18px;
+      max-width: 70vw;
+    }
+  }
+  .buttonWrapper {
+    min-width: 150px;
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
+
 .container {
-  height: 600vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -90,7 +116,7 @@
 .section2 {
   position: relative;
   width: 100vw;
-  height: 200vh;
+  height: 250vh;
   background-color: #fff;
   .ball {
     position: fixed;
@@ -117,8 +143,11 @@
     height: 100vh;
     gap: 8px;
     h1 {
-      font-size: 10vw;
+      font-size: clamp(80px, 10vw, 200px);
       margin: 0;
+      text-align: center;
+      z-index: 10001;
+      position: relative;
     }
     p,
     ul {
@@ -129,36 +158,78 @@
     }
   }
 }
-
 .whyCard {
   font-family: "playfair";
   font-size: 2vw;
   color: white;
-  width: clamp(200px, 30vw, 400px);
+  width: clamp(300px, 30vw, 400px);
   animation: 0.3s enter linear forwards;
   transition: all 150ms ease-out;
+  position: relative;
   img {
-    width: clamp(200px, 30vw, 400px);
-    height: 250px;
+    width: clamp(300px, 30vw, 400px);
+    height: clamp(170px, 15vw, 400px);
     object-fit: cover;
     z-index: 0;
     border-radius: 12px;
   }
   h2 {
     z-index: 100;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translateX(-30%) translateY(-20%) translateZ(30px);
     text-align: center;
     color: white;
     margin: 0;
+    width: 80%;
+    font-size: clamp(20px, 4vw, 80px);
   }
 }
 
 .imageGallery {
   display: flex;
-  gap: 5vw;
+  width: 100vw;
+  height: 100vh;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  position: fixed;
+  top: 50vh;
+  opacity: 0;
+  .imageGalleryRow {
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+  }
+  z-index: 1000;
+}
+
+@media (max-width: 700px) {
+  .imageGalleryRow {
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+  }
+  .whyCard {
+    margin-bottom: 72px;
+    img {
+      width: clamp(300px, 30vw, 400px);
+      height: clamp(170px, 15vw, 400px);
+    }
+    h2 {
+      z-index: 100;
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translateX(-50%) translateZ(30px);
+      text-align: center;
+      color: white;
+      margin: 0;
+      width: 80%;
+      font-size: clamp(24px, 4vw, 80px);
+    }
+  }
 }
 
 .avatar {
@@ -166,6 +237,7 @@
   width: 128px;
   border-radius: 50%;
   border: 4px solid black;
+  margin-bottom: 32px;
 }
 
 .img1 {
@@ -198,10 +270,9 @@
   align-items: center;
 }
 
-
 /*Logged In View Styles*/
 .inputGroup {
-  font-family: 'playfair';
+  font-family: "playfair";
   margin: 8px 0;
   input {
     padding: 16px 12px;

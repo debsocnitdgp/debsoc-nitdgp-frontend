@@ -3,13 +3,25 @@ import styles from "./audition.module.scss";
 import { useLayoutEffect, useRef, useState } from "react";
 
 import contentwriting from "../contentwriting.gif";
-import webdev from "../webdev.gif"
-import videoedit from "../videoedit.gif"
-import debating from "../debating.gif"
-
-function WhyDSCard({ src, text }) {
+import webdev from "../webdev.gif";
+import videoedit from "../videoedit.gif";
+import debating from "../debating.gif";
+// rotate(${
+//   Math.floor(Math.random() * 30 + 10) * (Math.random() > 0.5 ? -1 : 1)
+// }deg
+function WhyDSCard({ src, text, rotate }) {
+  if (window.innerWidth < 700) {
+    rotate = { x: 0, y: 0 };
+  }
   return (
-    <div className={styles.whyCard}>
+    <div
+      className={styles.whyCard}
+      style={{
+        transform: ` perspective(1000px) rotateX(${rotate.x}deg) rotateY(${rotate.y}deg) scale3d(1, 1, 1)`,
+
+        transformStyle: "preserve-3d",
+      }}
+    >
       <img src={src} />
       <h2>{text}</h2>
     </div>
@@ -28,15 +40,18 @@ function Section3() {
 function Section2() {
   const ref = useRef(null);
   const ref2 = useRef(null);
+  const ref_whyCards = useRef(null);
+  const [ratio, setRatio] = useState(0);
   useLayoutEffect(() => {
     ref.current.style.top = window.innerHeight - 60 + "px";
     const onScroll = (evt) => {
       var ratio = window.scrollY / window.innerHeight;
-      if (ratio >= 3) {
+      setRatio(ratio);
+      if (ratio >= 3.5) {
         return;
       }
-      if (ratio >= 2) {
-        ratio = 3 - ratio;
+      if (ratio >= 2.5) {
+        ratio = 3.5 - ratio;
         ref.current.style.borderRadius = "48px";
         ref.current.style.width =
           ratio * window.innerWidth > 48
@@ -53,6 +68,9 @@ function Section2() {
           -24 + 24 * ratio
         }px) translateY(-${ratio * 50}%)`;
         ref2.current.style.opacity = ratio;
+        ref_whyCards.current.style.opacity = ratio;
+        ref_whyCards.current.style.top =
+          (window.innerHeight * (ratio - 1.5)) / 2 + "px";
       } else if (ratio >= 1) {
         ref.current.style.width = "100vw";
         ref.current.style.height = "100vh";
@@ -61,6 +79,11 @@ function Section2() {
         ref.current.style.left = 0;
         ref.current.style.transform = `translateX(0px) translateY(-50%)`;
         ref2.current.style.opacity = 1;
+        ref_whyCards.current.style.opacity = ratio - 1;
+        ref_whyCards.current.style.top =
+          window.innerHeight / 2 -
+          (window.innerHeight * (ratio - 1)) / 2 +
+          "px";
       } else if (ratio < 1) {
         // if (window.innerHeight < window.innerWidth) {
         ref.current.style.borderRadius = "48px";
@@ -88,30 +111,36 @@ function Section2() {
     <div className={styles.section2}>
       <div className={styles.ball} ref={ref}>
         <div className={styles.content} ref={ref2}>
-          <div className={styles.imageGallery}>
-            <WhyDSCard
-              src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
-              text="because we are the best"
-            />
-            <WhyDSCard
-              src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
-              text="because we are the best"
-            />
-          </div>
           <h1>Why DEBSOC?</h1>
           {/* <p>
               cbery oiyggeor vpqi3grovy evpigr oergf qhefoqi3 egfygf efq gfo
               qeyug oegy rfq efiqgeir ervgoeg rig uyer gaheroibeor eugigrvwerioh
             </p> */}
-          <div className={styles.imageGallery}>
-            <WhyDSCard
-              src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
-              text="because we are the best"
-            />
-            <WhyDSCard
-              src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
-              text="because we are the best"
-            />
+          <div className={styles.imageGallery} ref={ref_whyCards}>
+            <div className={styles.imageGalleryRow}>
+              <WhyDSCard
+                src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
+                text="unleash your best self"
+                rotate={{ x: ratio > 1 ? 15 * (ratio - 1) : 15, y: 15 }}
+              />
+              <WhyDSCard
+                src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
+                text="because we are the best"
+                rotate={{ x: ratio > 1 ? 15 * (ratio - 1) : 15, y: -15 }}
+              />
+            </div>
+            <div className={styles.imageGalleryRow}>
+              <WhyDSCard
+                src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
+                text="a team worth being a part of"
+                rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: 15 }}
+              />
+              <WhyDSCard
+                src="https://debsoc.onrender.com/media/eventPosters/fictionary.jpg"
+                text="creativity like no other"
+                rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: -15 }}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -119,21 +148,10 @@ function Section2() {
   );
 }
 
-function Section1() {
-  return (
-    <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
-      <h1>AUDITIONS</h1>
-      <h1>2023</h1>
-      <p>Some great one liner about debating society to get everyone hooked</p>
-      <Button>Register Now!</Button>
-    </div>
-  );
-}
-
 function Section4() {
   return (
     <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
-      <h1>Opportunities For You!</h1>
+      <h1>Roles we recruit for</h1>
       <div className={styles.card}>
         <div>
           <img className={styles.img1} src={webdev.src} />
@@ -158,10 +176,17 @@ function Section4() {
   );
 }
 
-export default function AuditionLanding() {
+export default function AuditionLanding({ onLogin }) {
   return (
     <div className={`${styles.container} ${styles.fixed}`}>
-      <Section1 />
+      <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
+        <h1>AUDITIONS</h1>
+        <h1>2023</h1>
+        <p>
+          Some great one liner about debatying society to get everyone hooked
+        </p>
+        <Button onClick={onLogin}>Register Now!</Button>
+      </div>
       <Section2 />
       <Section3 />
       <Section4 />

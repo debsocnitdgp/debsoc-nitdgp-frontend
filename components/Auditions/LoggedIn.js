@@ -2,22 +2,6 @@ import FullPage from "@fullpage/react-fullpage";
 import styles from "./audition.module.scss";
 import Button from "./Button";
 
-function Section1() {
-  return (
-    <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
-      <img className={styles.avatar} />
-      <h3>Welcome</h3>
-      <h2>Jalaj Kumar</h2>
-      <p>
-        Welcome aboard the audition process for the Debating Society!
-        <br />
-        Fill out the following form for your round 1
-      </p>
-      <Button>Get started</Button>
-    </div>
-  );
-}
-
 function Section2() {
   return (
     <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
@@ -32,7 +16,9 @@ function Section2() {
           <input type="text" />
         </div>
         <div className={styles.inputGroup}>
-          <div className={styles.inputLabel}>Full Roll No. (For example: use 22E80012 not 12)</div>
+          <div className={styles.inputLabel}>
+            Full Roll No. (For example: use 22E80012 not 12)
+          </div>
           <input type="text" />
         </div>
         <div className={styles.inputGroup}>
@@ -45,7 +31,7 @@ function Section2() {
         </div>
       </form>
       <Button>Save & Next</Button>
-      <Button>Previous</Button>
+      <Button secondary>Previous</Button>
     </div>
   );
 }
@@ -91,7 +77,19 @@ export default function LoggedIn() {
         return (
           <FullPage.Wrapper>
             <div className="section">
-              <Section1 />
+              <div
+                className={`${styles.section} ${styles.section1} ${styles.centred}`}
+              >
+                <img className={styles.avatar} />
+                <h3>Welcome</h3>
+                <h2>Jalaj Kumar</h2>
+                <p>
+                  Welcome aboard the audition process for the Debating Society!
+                  <br />
+                  Fill out the following form for your round 1
+                </p>
+                <Button onClick={() => fullpageApi.moveSectionDown()}>Get started</Button>
+              </div>
             </div>
             <div className="section">
               <Section2 />
