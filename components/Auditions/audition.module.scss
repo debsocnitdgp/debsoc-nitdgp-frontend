@@ -545,3 +545,18 @@
   box-shadow: 0 0 0 5px black;
   margin: 12px;
 }
+
+.backButton {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  cursor: pointer;
+}

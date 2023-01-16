@@ -168,7 +168,7 @@ function Section4() {
           <div className={styles.circle}>
             <img className={styles.img2} src={webdev.src} />
           </div>
-          <h1 className={styles.celldiv}>Web D</h1>
+          <h1 className={styles.celldiv}>Web Dev</h1>
         </div>
         <div className={styles.section3}>
           <div className={styles.circle}>
