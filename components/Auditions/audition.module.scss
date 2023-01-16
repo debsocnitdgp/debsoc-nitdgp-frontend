@@ -31,6 +31,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  min-height: -webkit-fill-available;
   z-index: 10000;
 }
 
@@ -118,6 +119,7 @@
   0.1% {
     width: 100vw;
     height: 100vh;
+    min-height: -webkit-fill-available;
   }
   100% {
     opacity: 1;
@@ -183,8 +185,11 @@
   font-family: "canopee";
   background-color: #fff;
   flex-direction: column;
-  width: 100vw;
+  width: auto;
   min-height: 100vh;
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
   h1,
   h2,
   h3 {
@@ -246,6 +251,7 @@
     background-color: #000;
     border-radius: 24px;
     overflow: clip;
+    z-index: 1000;
   }
   .content {
     position: fixed;
@@ -302,7 +308,7 @@
     color: white;
     margin: 0;
     width: 80%;
-    font-size: clamp(15px, 2vw, 40px);
+    font-size: clamp(12px, 2vw, 40px);
   }
 }
 
@@ -346,7 +352,7 @@
       color: white;
       margin: 0;
       width: 80%;
-      font-size: clamp(24px, 4vw, 80px);
+      font-size: clamp(20px, 4vw, 80px);
     }
   }
 }
@@ -402,15 +408,16 @@
 /*Logged In View Styles*/
 .inputGroup {
   font-family: "playfair";
-  margin: 8px 0;
+  margin: 16px 0;
   input,
   textarea {
     padding: 16px 12px;
     width: 100%;
-    border: 3px solid black;
+    border: 2px solid black;
     font-family: "montserrat";
-    font-size: 18px;
+    font-size: 16px;
     min-width: 40vw;
+    resize: none;
   }
   input:focus {
     outline: none;
@@ -433,12 +440,23 @@
 }
 
 .questionText {
-  font-size: 24px;
+  font-size: 18px;
   margin: 12px;
   max-width: 60vw;
+  margin-bottom: 24px;
+}
+.questionText2 {
+  font-size: 18px;
+  margin: 12px;
+  max-width: 60vw;
+  margin-bottom: 2px;
 }
 .section3 {
   margin: 16px 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 330px) {
   .section3 {
@@ -447,7 +465,7 @@
   .celldiv {
     font-size: 32px !important;
   }
-  .logo{
+  .logo {
     width: 5rem !important;
   }
 }
@@ -458,7 +476,7 @@
   .celldiv {
     font-size: 32px !important;
   }
-   .logo{
+  .logo {
     width: 5rem !important;
   }
 }
@@ -469,10 +487,9 @@
   .celldiv {
     font-size: 32px !important;
   }
-   .logo{
+  .logo {
     width: 5rem !important;
   }
-  
 }
 
 //  .inputGroup{
@@ -517,7 +534,7 @@
     max-width: Max(300px, 50vw);
     text-align: center;
     margin-bottom: 14px;
-  } 
+  }
 }
 .circle{
   height: 210px;
@@ -525,7 +542,33 @@
   
   border: 1px black;
   overflow: clip;
-  border-radius: 100px;
+  border-radius: 2000px;
   box-shadow: 0 0 0 5px black;
   margin: 12px;
+}
+
+.backButton {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  cursor: pointer;
+}
+
+.section6{
+  height: 200vh;
+  position: relative;
+  .line {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+  }
 }

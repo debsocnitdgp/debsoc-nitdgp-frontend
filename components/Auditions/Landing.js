@@ -34,10 +34,93 @@ function WhyDSCard({ src, text, rotate }) {
 }
 
 function Section3() {
+  const [text, setText] = useState("your best self");
+  const [ratio, setRatio] = useState(0);
+  useLayoutEffect(() => {
+    const onScroll = (evt) => {
+      var ratio = window.scrollY / window.innerHeight;
+      if (ratio >= 5) {
+        setText("the next generation");
+        setRatio(5);
+      } else if (ratio >= 3) {
+        setRatio(ratio);
+        if (ratio >= 4 && ratio <= 4.2) {
+          setText("your best self");
+        }else if (ratio >= 4.4 && ratio <= 4.7) {
+          setText("part of the fam");
+        } else if (ratio >= 4.9) {
+          setText("the next generation")
+        } else {
+          const chars = [
+            " ",
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "j",
+            "k",
+            " ",
+            "l",
+            "m",
+            "n",
+            "o",
+            "p",
+            "q",
+            " ",
+            "r",
+            "s",
+            "t",
+            "u",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z",
+            " ",
+          ];
+          const replaceAt = (str, index, replacement) => {
+            return (
+              str.substring(0, index) +
+              replacement +
+              str.substring(index + replacement.length)
+            );
+          };
+          Math.random() > 0.2 && setText((txt) =>
+            replaceAt(
+              txt,
+              Math.floor(Math.random() * txt.length),
+              chars[Math.floor(Math.random() * 30)]
+            )
+          );
+        }
+      } else {
+        setRatio(0);
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
-    <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
-      <h2 className={styles.line}>Ready to be the</h2>
-      <h1 className={styles.line}>Next Generation?</h1>
+    <div
+      className={`${styles.section} ${styles.section1} ${styles.centred} ${styles.section6}`}
+    >
+      <div
+        className={styles.line}
+        style={{
+          position: ratio >= 4 && ratio !== 5 ? "fixed" : "absolute",
+          top: ratio >= 5 ? "150vh" : "50vh",
+        }}
+      >
+        <div>
+          <h2>ready to be</h2>
+          <h1>{text}?</h1>
+        </div>
+      </div>
     </div>
   );
 }
@@ -51,62 +134,64 @@ function Section2() {
     ref.current.style.top = window.innerHeight - 60 + "px";
     const onScroll = (evt) => {
       var ratio = window.scrollY / window.innerHeight;
-      setRatio(ratio);
       if (ratio >= 4) {
         return;
-      }
-      if (ratio >= 3) {
-        ratio = 4 - ratio;
-        ref.current.style.borderRadius = "48px";
-        ref.current.style.width =
-          ratio * window.innerWidth > 48
-            ? ratio * window.innerWidth + "px"
-            : "48px";
-        ref.current.style.height =
-          ratio * window.innerHeight > 48
-            ? ratio * window.innerHeight + "px"
-            : "48px";
-        ref.current.style.top =
-          window.innerHeight - 60 - (window.innerHeight * ratio) / 2 + "px";
-        ref.current.style.left = (window.innerWidth - 48) * (1 - ratio) + "px";
-        ref.current.style.transform = `translateX(${
-          -24 + 24 * ratio
-        }px) translateY(-${ratio * 50}%)`;
-        ref2.current.style.opacity = ratio;
-        ref_whyCards.current.style.opacity = ratio;
-        ref_whyCards.current.style.top =
-          (window.innerHeight * (ratio - 2)) / 2 + "px";
-      } else if (ratio >= 1) {
-        ref.current.style.width = "100vw";
-        ref.current.style.height = "100vh";
-        ref.current.style.top = window.innerHeight / 2 + "px";
-        ref.current.style.borderRadius = 0;
-        ref.current.style.left = 0;
-        ref.current.style.transform = `translateX(0px) translateY(-50%)`;
-        ref2.current.style.opacity = 1;
-        ref_whyCards.current.style.opacity = (ratio - 1) * 0.65;
-        ref_whyCards.current.style.top =
-          window.innerHeight / 2 -
-          (window.innerHeight * (ratio - 1)) / 2 +
-          "px";
-      } else if (ratio < 1) {
-        // if (window.innerHeight < window.innerWidth) {
-        ref.current.style.borderRadius = "48px";
-        ref.current.style.width =
-          ratio * window.innerWidth > 48
-            ? ratio * window.innerWidth + "px"
-            : "48px";
-        ref.current.style.height =
-          ratio * window.innerHeight > 48
-            ? ratio * window.innerHeight + "px"
-            : "48px";
-        ref.current.style.top =
-          window.innerHeight - 60 - (window.innerHeight * ratio) / 2 + "px";
-        ref.current.style.left = 48 - 48 * ratio + "px";
-        ref.current.style.transform = `translateX(${
-          -24 + 24 * ratio
-        }px) translateY(-${ratio * 50}%)`;
-        ref2.current.style.opacity = ratio;
+      } else {
+        setRatio(ratio);
+        if (ratio >= 3) {
+          ratio = 4 - ratio;
+          ref.current.style.borderRadius = "48px";
+          ref.current.style.width =
+            ratio * window.innerWidth > 48
+              ? ratio * window.innerWidth + "px"
+              : "48px";
+          ref.current.style.height =
+            ratio * window.innerHeight > 48
+              ? ratio * window.innerHeight + "px"
+              : "48px";
+          ref.current.style.top =
+            window.innerHeight - 60 - (window.innerHeight * ratio) / 2 + "px";
+          ref.current.style.left =
+            (window.innerWidth - 48) * (1 - ratio) + "px";
+          ref.current.style.transform = `translateX(${
+            -24 + 24 * ratio
+          }px) translateY(-${ratio * 50}%)`;
+          ref2.current.style.opacity = ratio;
+          ref_whyCards.current.style.opacity = ratio;
+          ref_whyCards.current.style.top =
+            (window.innerHeight * (ratio - 2)) / 2 + "px";
+        } else if (ratio >= 1) {
+          ref.current.style.width = "100vw";
+          ref.current.style.height = "100vh";
+          ref.current.style.top = window.innerHeight / 2 + "px";
+          ref.current.style.borderRadius = 0;
+          ref.current.style.left = 0;
+          ref.current.style.transform = `translateX(0px) translateY(-50%)`;
+          ref2.current.style.opacity = 1;
+          ref_whyCards.current.style.opacity = (ratio - 1) * 0.65;
+          ref_whyCards.current.style.top =
+            window.innerHeight / 2 -
+            (window.innerHeight * (ratio - 1)) / 2 +
+            "px";
+        } else if (ratio < 1) {
+          // if (window.innerHeight < window.innerWidth) {
+          ref.current.style.borderRadius = "48px";
+          ref.current.style.width =
+            ratio * window.innerWidth > 48
+              ? ratio * window.innerWidth + "px"
+              : "48px";
+          ref.current.style.height =
+            ratio * window.innerHeight > 48
+              ? ratio * window.innerHeight + "px"
+              : "48px";
+          ref.current.style.top =
+            window.innerHeight - 60 - (window.innerHeight * ratio) / 2 + "px";
+          ref.current.style.left = 48 - 48 * ratio + "px";
+          ref.current.style.transform = `translateX(${
+            -24 + 24 * ratio
+          }px) translateY(-${ratio * 50}%)`;
+          ref2.current.style.opacity = ratio;
+        }
       }
     };
     window.addEventListener("scroll", onScroll);
@@ -130,19 +215,19 @@ function Section2() {
               />
               <WhyDSCard
                 src={work.src}
-                text="creative people"
+                text="Unforgettable experiences & moments"
                 rotate={{ x: ratio > 1 ? 15 * (ratio - 1) : 15, y: -15 }}
               />
             </div>
             <div className={styles.imageGalleryRow}>
               <WhyDSCard
                 src={all.src}
-                text=" that work and"
+                text="Voice your Thoughts n Opinions"
                 rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: 15 }}
               />
               <WhyDSCard
                 src={party.src}
-                text="  have fun together."
+                text="Moments to cherish"
                 rotate={{ x: ratio > 1 ? -15 * (ratio - 1) : -15, y: -15 }}
               />
             </div>
@@ -156,7 +241,7 @@ function Section2() {
 function Section4() {
   return (
     <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
-      <h1>Roles we recruit for</h1>
+      <h1 style={{}}>Roles we recruit for</h1>
       <div className={styles.card}>
         <div className={styles.section3}>
           <div className={styles.circle}>
@@ -168,7 +253,7 @@ function Section4() {
           <div className={styles.circle}>
             <img className={styles.img2} src={webdev.src} />
           </div>
-          <h1 className={styles.celldiv}>Web D</h1>
+          <h1 className={styles.celldiv}>Web Dev</h1>
         </div>
         <div className={styles.section3}>
           <div className={styles.circle}>
@@ -198,9 +283,7 @@ export default function AuditionLanding({ onLogin }) {
   return (
     <div className={`${styles.container} ${styles.fixed}`}>
       <div className={`${styles.section} ${styles.section1} ${styles.centred}`}>
-        <h1>
-          AUDITIONS
-        </h1>
+        <h1>AUDITIONS</h1>
         <h1>2023</h1>
         <p className={styles.line}>
           Let not the anchor restrict your sail. Let not prejudice restrict your
@@ -214,7 +297,7 @@ export default function AuditionLanding({ onLogin }) {
       <div className={`${styles.centred} ${styles.website}`}>
         <div>
           The website you just scrolled through is completely made by Debsoc
-          Tech Team. So you see we just dont debate, we are competent in every
+          Tech Team. So you see we just don&apos;t debate, we excel in every
           sphere.
         </div>
         <Button onClick={onLogin}>Join US Now!</Button>
