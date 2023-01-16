@@ -39,64 +39,17 @@ function Section3() {
   useLayoutEffect(() => {
     const onScroll = (evt) => {
       var ratio = window.scrollY / window.innerHeight;
-      if (ratio >= 5) {
+      if (ratio >= 6) {
         setText("the next generation");
-        setRatio(5);
+        setRatio(6);
       } else if (ratio >= 3) {
         setRatio(ratio);
-        if (ratio >= 4 && ratio <= 4.2) {
+        if (ratio >= 3.9 && ratio <= 4.2) {
           setText("your best self");
         }else if (ratio >= 4.4 && ratio <= 4.7) {
           setText("part of the fam");
-        } else if (ratio >= 4.9) {
+        } else if (ratio >= 5.38) {
           setText("the next generation")
-        } else {
-          const chars = [
-            " ",
-            "a",
-            "b",
-            "c",
-            "d",
-            "e",
-            "f",
-            "g",
-            "h",
-            "i",
-            "j",
-            "k",
-            " ",
-            "l",
-            "m",
-            "n",
-            "o",
-            "p",
-            "q",
-            " ",
-            "r",
-            "s",
-            "t",
-            "u",
-            "v",
-            "w",
-            "x",
-            "y",
-            "z",
-            " ",
-          ];
-          const replaceAt = (str, index, replacement) => {
-            return (
-              str.substring(0, index) +
-              replacement +
-              str.substring(index + replacement.length)
-            );
-          };
-          Math.random() > 0.2 && setText((txt) =>
-            replaceAt(
-              txt,
-              Math.floor(Math.random() * txt.length),
-              chars[Math.floor(Math.random() * 30)]
-            )
-          );
         }
       } else {
         setRatio(0);
@@ -105,6 +58,7 @@ function Section3() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  console.log(ratio)
   return (
     <div
       className={`${styles.section} ${styles.section1} ${styles.centred} ${styles.section6}`}
@@ -112,13 +66,13 @@ function Section3() {
       <div
         className={styles.line}
         style={{
-          position: ratio >= 4 && ratio !== 5 ? "fixed" : "absolute",
-          top: ratio >= 5 ? "150vh" : "50vh",
+          position: ratio >= 4 && ratio !== 6 ? "fixed" : "absolute",
+          top: ratio >= 6 ? "250vh" : "50vh",
         }}
       >
         <div>
           <h2>ready to be</h2>
-          <h1>{text}?</h1>
+          <h1 style={{opacity: Math.abs(Math.cos((3.9 - ratio) * Math.PI))}}>{text}?</h1>
         </div>
       </div>
     </div>
