@@ -8,7 +8,6 @@ import { useGoogleLogin } from "@react-oauth/google";
 import logo from "../public/Images/DEBSOClogo.png";
 import Modal, { Loading } from "../components/Auditions/Modal";
 export default function Audition() {
-  
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [registered, setRegistered] = useState(false);
@@ -55,7 +54,9 @@ export default function Audition() {
   };
 
   const handleLogout = async (e) => {
-    e.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
     localStorage.removeItem("_ds_aud_tk");
     localStorage.removeItem("_ds_aud_registered");
     localStorage.removeItem("_ds_aud_db_registered");
@@ -80,6 +81,7 @@ export default function Audition() {
           onRegister={refresh_register_status}
           user={user}
           registered={registered}
+          goBack={handleLogout}
         />
       )}
       <div style={{ filter: "grayscale(1)" }}>

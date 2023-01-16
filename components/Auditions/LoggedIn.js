@@ -1,4 +1,5 @@
 import FullPage from "@fullpage/react-fullpage";
+import { ChevronLeft } from "@material-ui/icons";
 import { createRef, useEffect, useState } from "react";
 import styles from "./audition.module.scss";
 import Button from "./Button";
@@ -23,7 +24,6 @@ export default function LoggedIn(props) {
     answer_9_text: createRef(null),
   };
 
-  const [confirm, setConfirm] = useState({ open: false, action: true });
   const [modal, setModal] = useState({
     open: false,
     children: null,
@@ -38,24 +38,15 @@ export default function LoggedIn(props) {
     for (var i = 0; i < Object.keys(refs).length; i++) {
       const e = Object.keys(refs)[i];
       if (refs[e].current) data[e] = refs[e].current.value;
-      if (
-        [
-          "name",
-          "number",
-          "rollno",
-          "hallno",
-          "club_preference",
-          "roles_preference",
-        ].indexOf(e) > -1 &&
-        (data[e] === "" || data[e] === null)
-      ) {
+      if (data[e] === "" || data[e] === null) {
         setModal({
           open: true,
           title: "Alert",
-          children: "Please fill the required details",
+          children: "Please fill all the answers",
           onCancel: () => {
             setModal({ open: false });
           },
+          actions: false
         });
         setLoading(false);
         validated = false;
@@ -75,7 +66,8 @@ export default function LoggedIn(props) {
           open: true,
           title: "Success",
           children: "Your response was submitted successfully",
-          permanent: true,
+          actions: true,
+          onCancel: () => props.goBack()
         });
         props.onRegister();
       } else {
@@ -119,18 +111,21 @@ export default function LoggedIn(props) {
         title: "You've responded",
         children:
           "Thank you for registering for auditions of the Debating Society",
-        permanent: true,
+          actions: true,
+          onCancel: () => props.goBack()
       });
   }, [props.registered]);
   return (
     <>
       <Loading show={loading} />
       <Modal {...modal} />
-      <Modal {...confirm} />
+      <div className={styles.backButton} onClick={() => {console.log("called");props.goBack();}}>
+        <ChevronLeft />
+      </div>
       <FullPage
         render={({ state, fullpageApi }) => {
           return (
-            <FullPage.Wrapper>
+            <FullPage.Wrapper style={{ background: "#fff" }}>
               <div className="section">
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
@@ -149,35 +144,29 @@ export default function LoggedIn(props) {
                   </Button>
                 </div>
               </div>
-              <div className="section">
+              <div className="section fp-auto-hide-responsive">
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
                 >
                   <h3>Personal Details</h3>
                   <form className={styles.form}>
                     <div className={styles.inputGroup}>
-                      <div className={styles.questionText}>Name</div>
+                      <div className={styles.questionText2}>Name</div>
                       <input type="text" ref={refs.name} />
                     </div>
                     <div className={styles.inputGroup}>
-                      <div className={styles.questionText}>Phone number</div>
+                      <div className={styles.questionText2}>Phone number</div>
                       <input type="text" ref={refs.number} />
                     </div>
                     <div className={styles.inputGroup}>
-                      <div className={styles.questionText}>
+                      <div className={styles.questionText2}>
                         Full Roll No. (For example: use 22E80012 not 12)
                       </div>
                       <input type="text" ref={refs.rollno} />
                     </div>
                     <div className={styles.inputGroup}>
-                      <div className={styles.questionText}>Hall No.</div>
+                      <div className={styles.questionText2}>Hall No.</div>
                       <input type="text" ref={refs.hallno} />
-                    </div>
-                    <div className={styles.inputGroup}>
-                      <div className={styles.questionText}>
-                        Club preference order
-                      </div>
-                      <input type="text" ref={refs.club_preference} />
                     </div>
                   </form>
 
@@ -199,6 +188,36 @@ export default function LoggedIn(props) {
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
                 >
                   <h3>01</h3>
+                  <form className={styles.form}>
+                    <div className={styles.inputGroup}>
+                      <div className={styles.questionText}>
+                        What is your club preference order?
+                      </div>
+                      <textarea
+                        rows={5}
+                        ref={refs.club_preference}
+                        placeholder="Example: Club 1, Club 2, Club 3, ..."
+                      />
+                    </div>
+                  </form>
+                  <div className={styles.submitButtons}>
+                    <Button onClick={() => fullpageApi.moveSectionDown()}>
+                      Next
+                    </Button>
+                    <Button
+                      onClick={() => fullpageApi.moveSectionUp()}
+                      secondary
+                    >
+                      Previous
+                    </Button>
+                  </div>
+                </div>
+              </div>
+              <div className="section">
+                <div
+                  className={`${styles.section} ${styles.section1} ${styles.centred}`}
+                >
+                  <h3>02</h3>
                   <form className={styles.form}>
                     <div className={styles.inputGroup}>
                       <div className={styles.questionText}>
@@ -232,11 +251,12 @@ export default function LoggedIn(props) {
                   </div>
                 </div>
               </div>
+
               <div className="section">
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
                 >
-                  <h3>02</h3>
+                  <h3>03</h3>
                   <form className={styles.form}>
                     <div className={styles.inputGroup}>
                       <div className={styles.questionText}>
@@ -273,7 +293,7 @@ export default function LoggedIn(props) {
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
                 >
-                  <h3>03</h3>
+                  <h3>04</h3>
                   <form className={styles.form}>
                     <div className={styles.inputGroup}>
                       <div className={styles.questionText}>
@@ -304,7 +324,7 @@ export default function LoggedIn(props) {
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
                 >
-                  <h3>04</h3>
+                  <h3>05</h3>
                   <form className={styles.form}>
                     <div className={styles.inputGroup}>
                       <div className={styles.questionText}>
@@ -334,7 +354,7 @@ export default function LoggedIn(props) {
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
                 >
-                  <h3>05</h3>
+                  <h3>06</h3>
                   <form className={styles.form}>
                     <div className={styles.inputGroup}>
                       <div className={styles.questionText}>
@@ -364,7 +384,7 @@ export default function LoggedIn(props) {
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
                 >
-                  <h3>06</h3>
+                  <h3>07</h3>
                   <form className={styles.form}>
                     <div className={styles.inputGroup}>
                       <div className={styles.questionText}>
@@ -394,7 +414,7 @@ export default function LoggedIn(props) {
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
                 >
-                  <h3>07</h3>
+                  <h3>08</h3>
                   <form className={styles.form}>
                     <div className={styles.inputGroup}>
                       <div className={styles.questionText}>
@@ -425,7 +445,7 @@ export default function LoggedIn(props) {
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
                 >
-                  <h3>08</h3>
+                  <h3>09</h3>
                   <form className={styles.form}>
                     <div className={styles.inputGroup}>
                       <div className={styles.questionText}>
@@ -455,7 +475,7 @@ export default function LoggedIn(props) {
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
                 >
-                  <h3>09</h3>
+                  <h3>10</h3>
                   <form className={styles.form}>
                     <div className={styles.inputGroup}>
                       <div className={styles.questionText}>
@@ -486,7 +506,7 @@ export default function LoggedIn(props) {
                 <div
                   className={`${styles.section} ${styles.section1} ${styles.centred}`}
                 >
-                  <h3>10</h3>
+                  <h3>11</h3>
                   <form className={styles.form}>
                     <div className={styles.inputGroup}>
                       <div className={styles.questionText}>
@@ -500,11 +520,7 @@ export default function LoggedIn(props) {
                     </div>
                   </form>
                   <div className={styles.submitButtons}>
-                    <Button
-                      onClick={handleSubmit}
-                    >
-                      Submit
-                    </Button>
+                    <Button onClick={handleSubmit}>Submit</Button>
                     <Button
                       onClick={() => fullpageApi.moveSectionUp()}
                       secondary
