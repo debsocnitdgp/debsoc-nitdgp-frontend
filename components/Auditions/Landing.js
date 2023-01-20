@@ -243,7 +243,9 @@ export default function AuditionLanding({ onLogin }) {
           Let not the anchor restrict your sail. Let not prejudice restrict your
           thought. Let not fear restrict your speech.
         </p>
-        <Button onClick={onLogin}>Register Now!</Button>
+        <p className={styles.line}>
+          Sorry, we are no longer accepting audition registrations.
+        </p>
       </div>
       <Section2 />
       <Section3 />
@@ -254,7 +256,6 @@ export default function AuditionLanding({ onLogin }) {
           Tech Team. So you see we just don&apos;t debate, we excel in every
           sphere.
         </div>
-        <Button onClick={onLogin}>Join US Now!</Button>
       </div>
     </div>
   );
