@@ -76,10 +76,13 @@ export default function Footer() {
           <div className={styles.head}>CONTACT INFO</div>
 
           <div className={styles.Items}>
-            President - +91 8617028221 (Rishav)
+            President - +91 9903329404 (Kumkum)
           </div>
           <div className={styles.Items}>
-            Sponsorship Head - +91 9382748755 (Animesh)
+            Treasurer - +91 9636081068 (Satyam)
+          </div>
+          <div className={styles.Items}>
+            Sponsorship Head - +91 9023054978 (Swaroop)
           </div>
           <div className={styles.Items}>debatingsociety.nitdgp@gmail.com</div>
         </div>

@@ -1,4 +1,4 @@
-import ENDPOINTS from "../../../api/endpoints";
+import ENDPOINTS, { BASE_URL } from "../../../api/endpoints";
 import styles from "./past.module.scss";
 import { useState, useEffect, useCallback } from "react";
 
@@ -28,7 +28,7 @@ export default function PastEvents() {
         {data.map((pass) => (
           <div className={styles.col1} key={pass.id}>
             <div className={styles.col2}>
-              <img src={pass.poster} alt="" key={pass.id} />
+              <img src={BASE_URL + pass.poster} alt="" key={pass.id} />
               <div className={styles.head} key={pass.event_name}>
                 {pass.event_name}
               </div>
