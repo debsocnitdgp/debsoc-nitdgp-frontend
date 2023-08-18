@@ -1,10 +1,9 @@
-import styles from "../2018/2018.module.scss";
+import styles from "../2021/2021.module.scss";
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
+import ENDPOINTS, {BASE_URL} from "../../../api/endpoints";
 
-export default function Nine() {
-  const dpurl = process.env.NEXT_PUBLIC_IMG_URL
-  const url = process.env.NEXT_PUBLIC_ALUMNI_URL;
+export default function TwentyThree() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -12,24 +11,23 @@ export default function Nine() {
   const getData = useCallback(async () => {
     setLoading(true);
 
-    const response = await fetch(url);
+    const response = await fetch(ENDPOINTS.ALUMNI + 2023);
     const past = await response.json();
-    const nine = past[2022]
-    setData(nine);
+    setData(past);
     setLoading(false);
 
-  }, [url]);
+  }, []);
 
   useEffect(() => {
     getData();
-  }, [url, getData]);
+  }, [getData]);
   return (
     <>
       <div className={styles.sopho}>
       {loading && <span className={styles.loaderSpinner} />}
         {data?.map((pass) => (
           <div className={styles.col1} key={pass.id}>
-            <img src={dpurl+pass.dp} alt="" key={pass.id} className={styles.photo} />
+            <img src={BASE_URL + pass.dp} alt="" key={pass.id} className={styles.photo} />
             <div className={styles.col2}>
               <div className={styles.head1} key={pass.firstname}>
                 {pass.firstname} {pass.lastname}
@@ -67,6 +65,3 @@ export default function Nine() {
     </>
   );
 }
-
-
-

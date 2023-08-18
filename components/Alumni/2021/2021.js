@@ -1,45 +1,26 @@
-import styles from "../sophomore/sophomore.module.scss";
+import styles from "./2021.module.scss";
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
 import ENDPOINTS, { BASE_URL } from "../../../api/endpoints";
 
-export default function Sophomore() {
+export default function Eight() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
+  const getData = useCallback(async () => {
+    setLoading(true);
 
-      try {
-        const response = await fetch(ENDPOINTS.PRE_FINAL_YEAR);
-        const past = await response.json();
-        
-        
-      
-          setData(past);
-          setLoading(false);
-        
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        setLoading(false);
-      }
-    };
+    const response = await fetch(ENDPOINTS.ALUMNI + 2021);
+    const past = await response.json();
+    setData(past);
+    setLoading(false);
 
-    fetchData();
-
-  
   }, []);
 
-  if (loading) {
-    return <span className={styles.loaderSpinner} />;
-  }
-
-  if (!Array.isArray(data)) {
-    return <div>No data available</div>; 
-  }
-
+  useEffect(() => {
+    getData();
+  }, [getData]);
   return (
     <>
       <div className={styles.sopho}>
@@ -51,7 +32,7 @@ export default function Sophomore() {
               <div className={styles.head1} key={pass.firstname}>
                 {pass.firstname} {pass.lastname}
               </div>
-              <div className={styles.head2}>Senior Member</div>
+              <div className={styles.head2}></div>
               <div className={styles.links}>
               {pass.facebook_url &&    
                     (<Link href={pass.facebook_url}>

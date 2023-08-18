@@ -1,9 +1,9 @@
+import ENDPOINTS from "../../../api/endpoints";
 import styles from "./upcoming.module.scss";
 import { useState, useEffect, useCallback } from "react";
 
 export default function UpcomingEvents() {
-  const posterurl = process.env.NEXT_PUBLIC_IMG_URL;
-  const url = process.env.NEXT_PUBLIC_EVENT_URL;
+  
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -13,16 +13,16 @@ export default function UpcomingEvents() {
 
   const getData = useCallback(async () => {
     setLoading(true);
-    const response = await fetch(url);
+    const response = await fetch(ENDPOINTS.UPCOMING_EVENTS);
     const upComing = await response.json();
     const events = upComing.upcoming;
     setData(events);
     setLoading(false);
-  }, [url]);
+  }, []);
 
   useEffect(() => {
     getData();
-  }, [url, getData]);
+  }, [getData]);
   return (
     <>
       <div className={styles.upcoming}>
@@ -30,7 +30,7 @@ export default function UpcomingEvents() {
         {data.map((pass) => (
           <div className={styles.col1} key={pass.id}>
             <div className={styles.cols2}>
-              <img src={posterurl + pass.poster} alt="" key={pass.id} />
+              <img src={pass.poster} alt="" key={pass.id} />
               <div className={styles.head} key={pass.event_name}>
                 {pass.event_name}
               </div>
@@ -39,7 +39,7 @@ export default function UpcomingEvents() {
               </div>
             </div>
             <div>
-              <button className={styles.btn} onClick={registerHandler}>REGISTER NOW!</button>
+              {/* <button className={styles.btn} onClick={registerHandler}>REGISTER NOW!</button> */}
             </div>
           </div>
         ))}

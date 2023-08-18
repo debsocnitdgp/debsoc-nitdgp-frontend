@@ -7,25 +7,25 @@ import UpcomingEvents from "../components/EventsPage/Upcoming/upcoming";
 import styles from "../components/EventsPage/events.module.scss";
 
 export default function EVENT() {
-  const [isActive, setActive] = useState(false);
-  const [isTrue, setTrue] = useState(false);
-  const add = () => { 
-    setActive(true);
-    setTrue(false);
-  };
-  const add2 = () => {
-    setTrue(true);
-    setActive(false);
-  };
-  const add3 = () => {
-    setTrue(false);
-    setActive(false);
-  };
-  useEffect(() => {
-    add();
-    add2();
-    add3();
-  }, []);
+  const [isActive, setActive] = useState(1);
+
+  // const add = () => { 
+  //   setActive(true);
+  //   setTrue(false);
+  // };
+  // const add2 = () => {
+  //   setTrue(true);
+  //   setActive(false);
+  // };
+  // const add3 = () => {
+  //   setTrue(false);
+  //   setActive(false);
+  // };
+  // useEffect(() => {
+  //   add();
+  //   add2();
+  //   add3();
+  // }, []);
 
   return (
     <>
@@ -43,17 +43,17 @@ export default function EVENT() {
         <div className={styles.col2}>
           <div
             className={
-              isActive || isTrue ? `${styles.head2}` : `${styles.head1}`
+              isActive === 1 ? `${styles.head1}` : `${styles.head2}`
             }
-            onClick={add3}
+            onClick={() => setActive(1)}
           >
             ALL EVENTS
           </div>
           <div
             className={
-              isTrue && !isActive ? `${styles.head1}` : `${styles.head2}`
+              isActive === 2 ? `${styles.head1}` : `${styles.head2}`
             }
-            onClick={add2}
+            onClick={() => setActive(2)}
           >
             UPCOMING EVENTS
           </div>
@@ -66,8 +66,8 @@ export default function EVENT() {
             UPCOMING EVENTS
           </div> */}
         </div>
-        {!isActive && !isTrue ? <PastEvent /> : <></>}
-        {!isActive && isTrue ? <UpcomingEvents /> : <></>}
+        {isActive === 1 && <PastEvent />}
+        {isActive === 2 && <UpcomingEvents />}
         {/* {isActive && !isTrue ? <OngoingEvents /> : <></>} */}
       </div>
       <Footer />

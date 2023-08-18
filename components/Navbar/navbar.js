@@ -28,12 +28,14 @@ function Navbar({ page }) {
     <div className={`${styles.header} ${top ? styles.navShadow : ""}`} id="navbar">
       <div className={styles.headerContainer}>
         <div className={styles.headerLeft}>
-          <div className={`${styles.debsoc}`}>DEBSOC</div>
+          <div className={`${styles.debsoc}`}>
+          <Link href="/">DEBSOC</Link>
+          </div>
         </div>
         <div className={styles.headerRight}>
           <div className={styles.menuList}>
             <div className={styles.menuListItem}>
-              <Link href="/audition">AUDITIONS</Link>
+              <a href="https://vistaar.debsocnitdgp.in/" target="_blank">VISTAAR</a>
             </div>
             <div className={styles.menuListItem}>
               <Link href="/">HOME</Link>

@@ -1,35 +1,53 @@
 import styles from "../sophomore/sophomore.module.scss";
 import Link from "next/link";
 import { useState, useEffect, useCallback } from "react";
+import ENDPOINTS,{BASE_URL} from "../../../api/endpoints";
 
 export default function Sophomore() {
-  const dpurl = process.env.NEXT_PUBLIC_IMG_URL
-  const url = process.env.NEXT_PUBLIC_MEMBERS_URL;
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
 
-  const getData = useCallback(async () => {
-    setLoading(true);
-
-    const response = await fetch(url);
-    const past = await response.json();
-    const final = past['4']
-    setData(final);
-    setLoading(false);
-
-  }, [url]);
-
   useEffect(() => {
-    getData();
-  }, [url, getData]);
+    const fetchData = async () => {
+      setLoading(true);
+
+      try {
+        const response = await fetch(ENDPOINTS.FINAL_YEAR);
+        const past = await response.json();
+        
+        
+      
+          setData(past);
+          setLoading(false);
+        
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+
+  
+  }, []);
+
+  if (loading) {
+    return <span className={styles.loaderSpinner} />;
+  }
+
+  if (!Array.isArray(data)) {
+    return <div>No data available</div>; 
+  }
+
+
   return (
     <>
       <div className={styles.sopho}>
       {loading && <span className={styles.loaderSpinner} />}
         {data?.map((pass) => (
           <div className={styles.col1} key={pass.id}>
-            <img src={dpurl+pass.dp} alt="" key={pass.id} className={styles.photo} />
+            <img src={BASE_URL + pass.dp} alt="" key={pass.id} className={styles.photo} />
             <div className={styles.col2}>
               <div className={styles.head1} key={pass.firstname}>
                 {pass.firstname} {pass.lastname}

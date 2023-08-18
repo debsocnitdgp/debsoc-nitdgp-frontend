@@ -1,31 +1,14 @@
 import styles from "../components/Alumni/alumni.module.scss";
 import Navbar from "../components/Navbar/navbar";
 import React, { useState, useEffect } from "react";
-import Twenty from "../components/Alumni/2020/2020";
-import Nine from "../components/Alumni/2019/2019";
-import Eight from "../components/Alumni/2018/2018";
+//import Twenty from "../components/Alumni/2020/2020";
+import Eight from "../components/Alumni/2021/2021";
+import Nine from "../components/Alumni/2022/2022";
+import TwentyThree from "../components/Alumni/2023/2023";
 import Footer from "../components/Footer/footer";
 
 export default function About() {
-  const [isActive, setActive] = useState(false);
-  const [isTrue, setTrue] = useState(false);
-  const add = () => {
-    setActive(true);
-    setTrue(false);
-  };
-  const add2 = () => {
-    setTrue(true);
-    setActive(false);
-  };
-  const add3 = () => {
-    setTrue(false);
-    setActive(false);
-  };
-  useEffect(() => {
-    add();
-    add2();
-    add3();
-  }, []);
+  const [isActive, setActive] = useState(1);
 
   return (
     <>
@@ -41,24 +24,33 @@ export default function About() {
         <div className={styles.col3}>
           <div
             className={
-              isActive || isTrue ? `${styles.head2}` : `${styles.head1}`
+              isActive === 1 ? `${styles.head1}` : `${styles.head2}`
             }
-            onClick={add3}
+            onClick={() => setActive(1)}
           >
            2017 - 2021
           </div>
           <div
             className={
-              isTrue && !isActive ? `${styles.head1}` : `${styles.head2}`
+              isActive === 2 ? `${styles.head1}` : `${styles.head2}`
             }
-            onClick={add2} 
+            onClick={() => setActive(2)}
           >
             2018 - 2022
           </div>
+          <div
+            className={
+             isActive === 3 ? `${styles.head1}` : `${styles.head2}`
+            }
+            onClick={() => setActive(3)}
+          >
+            2019 - 2023
+          </div>
         </div>
-        {!isActive && !isTrue ?  <Eight /> : <></>}
-        {!isActive && isTrue ? <Nine /> : <></>}
-        {isActive && !isTrue ? <Twenty />: <></>}
+        {isActive === 1 &&  <Eight />}
+        {isActive === 2 &&  <Nine />}
+        {isActive === 3 &&  <TwentyThree />}
+
       </div>
       <Footer />
     </>
