@@ -6,7 +6,7 @@ import DurgaMandap from "../public/kyc/durga-mandap.webp";
 import Hall14 from "../public/kyc/hall-14.webp";
 import Nescafe from "../public/kyc/nescafe.webp";
 import Ovals from "../public/kyc/ovals.webp";
-import debsoclogo from "../public/kyc/1/ds-logo.png";
+import debsoclogo from "../public/kyc/1/ds-logo.webp";
 import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
@@ -115,8 +115,8 @@ export default function Audition() {
                   <img src={elem[0].src} alt="" className={styles.image} />
                   {index % 2 === 0 ? (
                     <Advert
-                      content="Answer thought provoking questions on our story to win exciting prizes!"
-                      link="http://debsoc-website.herokuapp.com/main/creatives/current"
+                      content="The biggest debating festival of entire eastern India - Vistaar - is organised by us"
+                      link="https://vistaar.debsocnitdgp.in/"
                     />
                   ) : (
                     <Advert />

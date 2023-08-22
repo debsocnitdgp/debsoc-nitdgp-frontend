@@ -35,7 +35,7 @@ function Navbar({ page }) {
         <div className={styles.headerRight}>
           <div className={styles.menuList}>
             <div className={styles.menuListItem}>
-              <a href="https://vistaar.debsocnitdgp.in/" target="_blank">VISTAAR</a>
+              <a href="https://vistaar.debsocnitdgp.in/" target="_blank" rel="noreferrer">VISTAAR</a>
             </div>
             <div className={styles.menuListItem}>
               <Link href="/">HOME</Link>
