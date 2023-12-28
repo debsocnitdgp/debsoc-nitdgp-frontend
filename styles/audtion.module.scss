@@ -44,7 +44,7 @@
 
     .content {
       padding: 30px clamp(3px, 0.5vw, 7px);
-      font-size: clamp(16px, 1.65vw, 24px);
+      font-size: clamp(14px, 1.4vw, 20px);
       line-height: 1.4;
     }
     .load {
@@ -179,4 +179,8 @@
       width: 100%;
     }
   }
+}
+
+.poster {
+  width: 100%;
 }

@@ -6,7 +6,7 @@ import styles from "./Sidebar.module.scss";
 
 function Sidebar({ state, closeHandler }) {
   return (
-    <div className={`${styles.sidebar} ${state ? styles.open : ""}`}>
+    <div className={`${styles.sidebar} ${state ? styles.open : ""} main-sidebar`}>
       <div className={styles.sidebarDrawer}>
         <div className={styles.cross}>
           <img src="Images/cross.png" alt="" onClick={closeHandler} />
@@ -16,7 +16,7 @@ function Sidebar({ state, closeHandler }) {
           <a href="https://vistaar.debsocnitdgp.in/" target="_blank" rel="noreferrer">VISTAAR</a>
           </div>
           <div className={styles.menuListItem}>
-            <Link href="/">HOME</Link>
+            <Link href="/takedebait">TDB 5.0</Link>
           </div>
 
           <div className={styles.menuListItem}>

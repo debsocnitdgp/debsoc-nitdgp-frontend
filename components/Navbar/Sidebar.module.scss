@@ -9,6 +9,8 @@
     min-width: 100vw;
     min-height: 100% !important;
     height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
 }
 
 .sidebar {
@@ -26,16 +28,19 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+
     .cross {
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-        width: clamp(240px,19.4vw,280px);
-      img {
-          margin-top: 20px;
-          cursor: pointer;
-      }
+        width: clamp(240px, 19.4vw, 280px);
+
+        img {
+            margin-top: 20px;
+            cursor: pointer;
+        }
     }
+
     .menuList {
         display: flex;
         align-items: flex-start;
@@ -50,14 +55,16 @@
                 // font-weight: $font-medium;
                 font-size: 1.25rem;
             }
-                a:active {
-                    color: $purple;
-                    font-weight: 700;
-                }
-                   a:hover {
-                       color: $purple;
-                       font-weight: 700;
-                   }
+
+            a:active {
+                color: $purple;
+                font-weight: 700;
+            }
+
+            a:hover {
+                color: $purple;
+                font-weight: 700;
+            }
         }
     }
 

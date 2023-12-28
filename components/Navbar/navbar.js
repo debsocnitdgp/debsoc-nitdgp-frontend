@@ -38,7 +38,7 @@ function Navbar({ page }) {
               <a href="https://vistaar.debsocnitdgp.in/" target="_blank" rel="noreferrer">VISTAAR</a>
             </div>
             <div className={styles.menuListItem}>
-              <Link href="/">HOME</Link>
+              <Link href="/takedebait">TDB 5.0</Link>
             </div>
 
             <div className={styles.menuListItem}>

@@ -96,7 +96,7 @@ export default function Audition() {
       <div className={styles.about}>
         <div className={styles.col1}>
           <div className={styles.head1}>REGISTER</div>
-          <div className={styles.head2}>TAKE DEBAIT 4.0</div>
+          <div className={styles.head2}>TAKE DEBAIT 5.0</div>
         </div>
         <div className={styles.content}>
           {/* Being a club that believes in coherence and clarity, we relish a
