@@ -3,8 +3,8 @@ import Navbar from "../components/Navbar/navbar";
 import Footer from "../components/Footer/footer";
 import style from "../styles/audtion.module.scss";
 import { useEffect, useState } from "react";
-// import Reverberate from "../components/reverberate";
-// import WhatIf from "../components/whatif";
+import Reverberate from "../components/reverberate";
+import WhatIf from "../components/whatif";
 import { useGoogleLogin } from "@react-oauth/google";
 
 export default function Audition() {
@@ -72,7 +72,7 @@ export default function Audition() {
       <div className={styles.about}>
         <div className={styles.col1}>
           <div className={styles.head1}>REGISTER</div>
-          <div className={styles.heads2}>REVERBERATE IV</div>
+          <div className={styles.heads2}>REVERBERATE V</div>
         </div>
         <div className={styles.contents}>
           We all know how it feels to have to present your ideas, only to find
@@ -91,19 +91,19 @@ export default function Audition() {
               <img src="Images/whatif.webp" alt="" />
             </div>
             <div className={style.head}>
-              {/* Register Now! */}
-              Sorry, registrations are closed!
+              Register Now!
+              {/* Sorry, registrations are closed! */}
             </div>
-            <div className={style.content}>Thank you for such an amazing response! But the seats are full and the form is closed.</div>
+            {/* <div className={style.content}>Thank you for such an amazing response! But the seats are full and the form is closed.</div> */}
 
-                {/* <div
+                <div
                   className={style.gButton}
                   onClick={handleGoogleLogin}
                 >
                   <img src="Images/Google.png" alt="" />
                   Sign in with Google
                 </div>
-            <div className={style.load}>{loading}</div> */}
+            <div className={style.load}>{loading}</div>
 
             <div className={style.content}>
               &#8220;THE DECISION IS YOUR OWN VOICE, AN OPINION IS THE ECHO OF
@@ -112,17 +112,16 @@ export default function Audition() {
           </div>
         </div>
       {
-        /**
-         * ) : (
+        
         <>
           <Reverberate
             registered={registered.rev}
             refresh={refresh_register_status}
           />
-          <WhatIf
+          {/* <WhatIf
             registered={registered.whatif}
             refresh={refresh_register_status}
-          />
+          /> */}
           <div
             style={{
               width: "100%",
@@ -137,9 +136,6 @@ export default function Audition() {
             </button>
           </div>
         </>
-      )}
-         */
-        ''
       }
 
       <Footer />

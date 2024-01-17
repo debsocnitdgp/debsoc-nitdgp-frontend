@@ -70,6 +70,27 @@ export default function WhatIf(props) {
               *Do not refresh or change the page while typing the answers.
             </div>
             <div className={style.inputGrp}>
+              <div className={style.question}>Team Name</div>
+              {/* <div style={{ marginTop: 8, marginLeft: 8, fontWeight: 700 }}>
+                This is a team event. You can make a team of 3-5 people. Every
+                team member will have to register seperately, just keep the team
+                names same.
+              </div>
+              <div style={{ margin: 8, color: "#4caf50", fontWeight: 700 }}>
+                If you don&apos;t have a team, you can register individually as
+                well. We will get you a team later on.
+              </div> */}
+              <input
+                type="text"
+                value={data.teamname}
+                placeholder="Enter your answer"
+                onChange={(e) => {
+                  setData({ ...data, teamname: e.target.value });
+                }}
+              />
+            </div>
+            
+            <div className={style.inputGrp}>
               <div className={style.question}>Name</div>
               <input
                 type="text"
@@ -102,7 +123,7 @@ export default function WhatIf(props) {
                 }}
               />
             </div>
-            <div className={style.inputGrp}>
+            {/* <div className={style.inputGrp}>
               <div className={style.question}>Section</div>
               <input
                 type="text"
@@ -112,7 +133,7 @@ export default function WhatIf(props) {
                   setData({ ...data, section: e.target.value });
                 }}
               />
-            </div>
+            </div> */}
             <div className={style.inputGrp}>
               <div className={style.question}>Hall No.</div>
               <input
@@ -125,25 +146,117 @@ export default function WhatIf(props) {
               />
             </div>
             <div className={style.inputGrp}>
-              <div className={style.question}>Team Name</div>
-              <div style={{ marginTop: 8, marginLeft: 8, fontWeight: 700 }}>
-                This is a team event. You can make a team of 3-5 people. Every
-                team member will have to register seperately, just keep the team
-                names same.
-              </div>
-              <div style={{ margin: 8, color: "#4caf50", fontWeight: 700 }}>
-                If you don&apos;t have a team, you can register individually as
-                well. We will get you a team later on.
-              </div>
+              <div className={style.question}>Member 2 Name</div>
               <input
                 type="text"
-                value={data.teamname}
+                value={data.name2}
                 placeholder="Enter your answer"
                 onChange={(e) => {
-                  setData({ ...data, teamname: e.target.value });
+                  setData({ ...data, name2: e.target.value });
                 }}
               />
             </div>
+            <div className={style.inputGrp}>
+              <div className={style.question}>Member 2 Phone No</div>
+              <input
+                type="text"
+                value={data.number2}
+                placeholder="Enter your answer"
+                onChange={(e) => {
+                  setData({ ...data, number2: e.target.value });
+                }}
+              />
+            </div>{" "}
+            <div className={style.inputGrp}>
+              <div className={style.question}>Member 2 Roll No.</div>
+              <input
+                type="text"
+                value={data.roll_no2}
+                placeholder="Enter your answer"
+                onChange={(e) => {
+                  setData({ ...data, roll_no2: e.target.value });
+                }}
+              />
+            </div>
+            {/* <div className={style.inputGrp}>
+              <div className={style.question}>Section</div>
+              <input
+                type="text"
+                value={data.section}
+                placeholder="Enter your answer"
+                onChange={(e) => {
+                  setData({ ...data, section: e.target.value });
+                }}
+              />
+            </div> */}
+            <div className={style.inputGrp}>
+              <div className={style.question}>Member 2 Hall No.</div>
+              <input
+                type="text"
+                value={data.hallno2}
+                placeholder="Enter your answer"
+                onChange={(e) => {
+                  setData({ ...data, hallno2: e.target.value });
+                }}
+              />
+            </div>
+            <div className={style.inputGrp}>
+              <div className={style.question}>Member 3 Name</div>
+              <input
+                type="text"
+                value={data.name3}
+                placeholder="Enter your answer"
+                onChange={(e) => {
+                  setData({ ...data, name3: e.target.value });
+                }}
+              />
+            </div>
+            <div className={style.inputGrp}>
+              <div className={style.question}>Member 3 Phone No</div>
+              <input
+                type="text"
+                value={data.number3}
+                placeholder="Enter your answer"
+                onChange={(e) => {
+                  setData({ ...data, number3: e.target.value });
+                }}
+              />
+            </div>{" "}
+            <div className={style.inputGrp}>
+              <div className={style.question}>Member 3 Roll No.</div>
+              <input
+                type="text"
+                value={data.roll_no3}
+                placeholder="Enter your answer"
+                onChange={(e) => {
+                  setData({ ...data, roll_no3: e.target.value });
+                }}
+              />
+            </div>
+            {/* <div className={style.inputGrp}>
+              <div className={style.question}>Section</div>
+              <input
+                type="text"
+                value={data.section}
+                placeholder="Enter your answer"
+                onChange={(e) => {
+                  setData({ ...data, section: e.target.value });
+                }}
+              />
+            </div> */}
+            <div className={style.inputGrp}>
+              <div className={style.question}>Member 3 Hall No.</div>
+              <input
+                type="text"
+                value={data.hallno3}
+                placeholder="Enter your answer"
+                onChange={(e) => {
+                  setData({ ...data, hallno3: e.target.value });
+                }}
+              />
+            </div>
+
+          
             {loading && (
               <div className={style.loading}>
                 Hold on! We are submitting your responses...
