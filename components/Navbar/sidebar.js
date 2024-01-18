@@ -16,7 +16,7 @@ function Sidebar({ state, closeHandler }) {
           <a href="https://vistaar.debsocnitdgp.in/" target="_blank" rel="noreferrer">VISTAAR</a>
           </div>
           <div className={styles.menuListItem}>
-            <Link href="/takedebait">TDB 5.0</Link>
+            <Link href="/">HOME</Link>
           </div>
 
           <div className={styles.menuListItem}>

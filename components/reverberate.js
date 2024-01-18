@@ -11,9 +11,8 @@ export default function Reverberate(props) {
     email: localStorage.getItem("rev_email"),
     name: "",
     number: "",
-    roll_no: "",
+    rollno: "",
     hallno: "",
-    section: "",
   });
 
   const handleSubmit = async (e) => {
@@ -46,8 +45,7 @@ export default function Reverberate(props) {
       email: "",
       name: "",
       number: "",
-      roll_no: "",
-      section: "",
+      rollno: "",
       hallno: ""
     });
   };
@@ -55,7 +53,7 @@ export default function Reverberate(props) {
       <div className={style.formWrap}>
         <img src={image} alt="" className={style.profileImage} />
         <div className={style.name}>Hi, {name}</div>
-        {!props.registered ? (
+        {props.registered ? (
           <>
             <div>
               *Do not refresh or change the page while typing the answers.
@@ -89,18 +87,7 @@ export default function Reverberate(props) {
                 value={data.roll_no}
                 placeholder="Enter your answer"
                 onChange={(e) => {
-                  setData({ ...data, roll_no: e.target.value });
-                }}
-              />
-            </div>
-            <div className={style.inputGrp}>
-              <div className={style.question}>Section</div>
-              <input
-                type="text"
-                value={data.section}
-                placeholder="Enter your answer"
-                onChange={(e) => {
-                  setData({ ...data, section: e.target.value });
+                  setData({ ...data, rollno: e.target.value });
                 }}
               />
             </div>

@@ -3,27 +3,29 @@ import Navbar from "../components/Navbar/navbar";
 import Footer from "../components/Footer/footer";
 import style from "../styles/audtion.module.scss";
 import { useEffect, useState } from "react";
-// import Reverberate from "../components/reverberate";
+import Reverberate from "../components/reverberate";
 // import WhatIf from "../components/whatif";
 import { useGoogleLogin } from "@react-oauth/google";
 
 export default function Audition() {
-  // const [loggedIn, setLoggedIn] = useState(false);
-  const [registered, setRegistered] = useState({ rev: false, whatif: false });
-  // useEffect(() => {
-  //   if (
-  //     localStorage.getItem("rev_tk") &&
-  //     localStorage.getItem("rev_tk") !== ""
-  //   ) {
-  //     setLoggedIn(true);
-  //     refresh_register_status();
-  //   }
-  // }, []);
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [registered, setRegistered] = useState(false);
+  const [message, setMessage] = useState("");
+  useEffect(() => {
+    if (
+      localStorage.getItem("rev_tk") &&
+      localStorage.getItem("rev_tk") !== ""
+    ) {
+      setLoggedIn(true);
+      refresh_register_status();
+    }
+  }, []);
   const [loading, setLoading] = useState("");
 
   const handleGoogleLogin = useGoogleLogin({
     onSuccess: (tokenResponse) => {
-      // setMessage("Fetching your information from Google...");
+      console.log("cjkberuyivcfg")
+      setMessage("Fetching your information from Google...");
       fetch(
         "https://www.googleapis.com/oauth2/v3/userinfo?access_token=" +
           tokenResponse.access_token
@@ -31,7 +33,7 @@ export default function Audition() {
         .then((json) => json.json())
         .then((response) => {
           setLoading("Signing you in...");
-          console.log(response)
+          console.log(response);
           localStorage.setItem("rev_nm", response.name);
           localStorage.setItem("rev_purl", response.picture);
           localStorage.setItem("rev_tk", tokenResponse.access_token);
@@ -55,7 +57,8 @@ export default function Audition() {
     const resp = await res.json();
     setLoading("");
     setLoggedIn(true);
-    setRegistered(resp.data);
+    console.log(resp)
+    setRegistered(resp.success);
   };
 
   const handleLogout = async (e) => {
@@ -66,13 +69,15 @@ export default function Audition() {
     setLoggedIn(false);
   };
 
+  console.log(message)
+
   return (
     <>
       <Navbar />
       <div className={styles.about}>
         <div className={styles.col1}>
           <div className={styles.head1}>REGISTER</div>
-          <div className={styles.heads2}>REVERBERATE IV</div>
+          <div className={styles.heads2}>REVERBERATE V</div>
         </div>
         <div className={styles.contents}>
           We all know how it feels to have to present your ideas, only to find
@@ -83,44 +88,32 @@ export default function Audition() {
           year, and collects a lot of positive applause as well.
         </div>
       </div>
-      {/* {!loggedIn ? ( */}
-        <div className={style.col}>
-          <div className={style.col2}>
-            <div className={style.images}>
-              <img src="Images/rev.webp" alt="" />
-              <img src="Images/whatif.webp" alt="" />
-            </div>
-            <div className={style.head}>
-              {/* Register Now! */}
-              Sorry, registrations are closed!
-            </div>
-            <div className={style.content}>Thank you for such an amazing response! But the seats are full and the form is closed.</div>
+      {!loggedIn ? (
+      <div className={style.col}>
+        <div className={style.col2}>
+          <div className={style.images}>
+            <img src="Images/rev.jpeg" alt="" />
+          </div>
+          <div className={style.head}>Register Now!</div>
+          {/*<div className={style.content}>Thank you for such an amazing response! But the seats are full and the form is closed.</div>*/}
 
-                {/* <div
-                  className={style.gButton}
-                  onClick={handleGoogleLogin}
-                >
-                  <img src="Images/Google.png" alt="" />
-                  Sign in with Google
-                </div>
-            <div className={style.load}>{loading}</div> */}
+          <div className={style.gButton} onClick={handleGoogleLogin}>
+            <img src="Images/Google.png" alt="" />
+            Sign in with Google
+          </div>
+          <div className={style.load}>{loading}</div>
 
-            <div className={style.content}>
-              &#8220;THE DECISION IS YOUR OWN VOICE, AN OPINION IS THE ECHO OF
-              SOMEONE ELSE&apos;`S VOICE: CHOOSE THE RIGHT ONE.&#8220;
-            </div>
+          <div className={style.content}>
+            &#8220;THE DECISION IS YOUR OWN VOICE, AN OPINION IS THE ECHO OF
+            SOMEONE ELSE&apos;`S VOICE: CHOOSE THE RIGHT ONE.&#8220;
           </div>
         </div>
-      {
-        /**
-         * ) : (
+      </div>
+      
+         ) : (
         <>
           <Reverberate
-            registered={registered.rev}
-            refresh={refresh_register_status}
-          />
-          <WhatIf
-            registered={registered.whatif}
+            registered={registered}
             refresh={refresh_register_status}
           />
           <div
@@ -138,9 +131,6 @@ export default function Audition() {
           </div>
         </>
       )}
-         */
-        ''
-      }
 
       <Footer />
     </>
