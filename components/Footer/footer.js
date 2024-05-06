@@ -75,9 +75,7 @@ export default function Footer() {
         <div className={styles.col}>
           <div className={styles.head}>CONTACT INFO</div>
 
-          <div className={styles.Items}>
-            President - +91 9903329404 (Kumkum)
-          </div>
+          
           <div className={styles.Items}>
             Treasurer - +91 9636081068 (Satyam)
           </div>
