@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
         <div className={styles.futureWrapper}>
           <div className={styles.head}>
-            Get latest Updates on <br />
+            Get the latest Updates on <br />
             <span>FUTURE EVENTS</span>
           </div>
           <div className={styles.col2}>
@@ -74,15 +74,16 @@ export default function Footer() {
         </div>
         <div className={styles.col}>
           <div className={styles.head}>CONTACT INFO</div>
-
-          
-          <div className={styles.Items}>
-            Treasurer - +91 9636081068 (Satyam)
+           <div className={styles.Items}>
+            President - +91 9381033844 (Umang Jhawar)
           </div>
           <div className={styles.Items}>
-            Sponsorship Head - +91 9023054978 (Swaroop)
+            Treasurer - +91 8957469339 (Ayush Verma)
           </div>
-          <div className={styles.Items}>debatingsociety.nitdgp@gmail.com</div>
+          <div className={styles.Items}>
+            Sponsorship Head - +91 7890912728 (Ayush Bhartia)
+          </div>
+          <div className={styles.Items}>debatingsociety@nitdgp.ac.in</div>
         </div>
         <div className={styles.col}>
           <div className={styles.head}>QUICK LINKS</div>
@@ -99,7 +100,7 @@ export default function Footer() {
       </div>
       <div className={styles.copyright}>
         <div className={styles.body}>
-          &copy; The Debating Scoiety, NIT Durgapur
+          &copy; The Debating Society, NIT Durgapur
         </div>
       </div>
     </>
