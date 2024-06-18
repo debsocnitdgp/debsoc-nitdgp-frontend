@@ -83,7 +83,7 @@ export default function Footer() {
           <div className={styles.Items}>
             Sponsorship Head - +91 7890912728 (Ayush Bhartia)
           </div>
-          <div className={styles.Items}>debatingsociety.nitdgp@gmail.com</div>
+          <div className={styles.Items}>debatingsociety@nitdgp.ac.in</div>
         </div>
         <div className={styles.col}>
           <div className={styles.head}>QUICK LINKS</div>
