@@ -19,6 +19,7 @@ export default function Sponsors() {
           <img src="Images/SBI.png" alt="" />
           <img src="Images/cppsecrets.png" alt="" />
           <img src='Images/citiresi.png' alt=''/>
+          <img src='Images/LIC_logo.png' alt=''/>
           <img src='Images/TimeCoding.png' alt=''/>
           <img src='Images/ADR.png' alt=''/>
           <img src='Images/chemacad.png' alt=''/>
