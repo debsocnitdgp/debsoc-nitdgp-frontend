@@ -1,27 +1,27 @@
-@import "styles/variables.scss";
+@use "styles/variables";
 
 .sponsors {
     max-width: 1440px;
     margin: 0 auto;
     margin-top: 720px;
      flex-direction: column;
-           @include disp;
+           @include variables.disp;
      background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
-        @include min-q(1380px) {
+        @include variables.min-q(1380px) {
                 margin-top: 650px;
         }
    .col1 {
-           @include disp;
+           @include variables.disp;
            flex-direction: column;
      .head1 {
-        color: $white;
+        color: variables.$white;
         font-size: clamp(50px,10vw,144px);
         font-weight: 700;
         position: absolute;
         z-index: 0;
     }
     .head2{
-        color: $black;
+        color: variables.$black;
          z-index: 50;
          margin-top: clamp(28px, 4vw, 60px);
          font-size: clamp(20px, 3.5vw, 48px);
@@ -37,7 +37,7 @@
                 margin-bottom: clamp(15px, 1.8vw, 20px);
 }
 .logos {
-    @include disp;
+    @include variables.disp;
     flex-wrap: wrap;
     max-width: 1353px;
     img {

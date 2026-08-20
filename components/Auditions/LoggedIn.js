@@ -1,5 +1,4 @@
 import FullPage from "@fullpage/react-fullpage";
-import { ChevronLeft } from "@material-ui/icons";
 import { createRef, useEffect, useState } from "react";
 import styles from "./audition.module.scss";
 import Button from "./Button";
@@ -120,7 +119,6 @@ export default function LoggedIn(props) {
       <Loading show={loading} />
       <Modal {...modal} />
       <div className={styles.backButton} onClick={() => {console.log("called");props.goBack();}}>
-        <ChevronLeft />
       </div>
       <FullPage
         render={({ state, fullpageApi }) => {

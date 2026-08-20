@@ -1,16 +1,16 @@
-@import "styles/variables.scss";
+@use "styles/variables";
 
 .col {
-  background-color: $white;
-  color: $black;
+  background-color: variables.$white;
+  color: variables.$black;
   width: clamp(280px, 52.5vw, 756px);
   margin: 100px auto;
   border-radius: clamp(10px, 1.38vw, 20px);
   box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.25);
-  @include disp;
+  @include variables.disp;
 
   .col2 {
-    @include disp;
+    @include variables.disp;
     flex-direction: column;
     text-align: center;
     padding: clamp(10px, 1.5vw, 20px);
@@ -19,12 +19,12 @@
       margin: 30px 0;
       font-weight: 700;
       width: 85%;
-      @include disp;
+      @include variables.disp;
       font-size: clamp(20px, 2.5vw, 36px);
     }
 
     .gButton {
-      @include disp;
+      @include variables.disp;
       gap: 10px;
       width: clamp(210px, 24.3vw, 350px);
       height: 60px;
@@ -56,7 +56,7 @@
 }
 
 .formWrap {
-  @include disp;
+  @include variables.disp;
   flex-direction: column;
   width: 90%;
   max-width: 1000px;
@@ -67,7 +67,7 @@
     height: 160px;
     width: 160px;
     object-fit: cover;
-    border: 3px solid $black;
+    border: 3px solid variables.$black;
     box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.25);
   }
   .name {
@@ -89,28 +89,28 @@
     input {
       width: 100%;
       outline: none;
-      background-color: $white;
-      border: 2px solid $black;
+      background-color: variables.$white;
+      border: 2px solid variables.$black;
       font-size: clamp(16px, 1.65vw, 24px);
       border-radius: 8px;
       height: 60px;
       padding: 15px;
       &:focus {
-        border: 2px solid $purple;
+        border: 2px solid variables.$purple;
       }
     }
     textarea {
       width: 100%;
       outline: none;
       font-size: clamp(16px, 1.65vw, 24px);
-      background-color: $white;
-      border: 2px solid $black;
+      background-color: variables.$white;
+      border: 2px solid variables.$black;
       border-radius: 8px;
       height: 160px;
       padding: 15px;
       resize: none;
       &:focus {
-        border: 2px solid $purple;
+        border: 2px solid variables.$purple;
       }
     }
   }
@@ -138,8 +138,8 @@
   }
 }
 .bigButton {
-  background-color: $purple;
-  color: $white;
+  background-color: variables.$purple;
+  color: variables.$white;
   border: none;
   width: clamp(250px, 24.3vw, 350px);
   height: 60px;
@@ -149,7 +149,7 @@
   cursor: pointer;
   font-weight: bold;
   &:hover {
-    background-color: $black;
+    background-color: variables.$black;
   }
 }
 .msg {

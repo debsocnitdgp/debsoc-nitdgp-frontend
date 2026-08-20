@@ -13,6 +13,7 @@ export default function Sophomore() {
       setLoading(true);
 
       try {
+        // const response = await fetch(`/api/members?year=1`);
         const response = await fetch(ENDPOINTS.PRE_FINAL_YEAR);
         const past = await response.json();
         
@@ -55,25 +56,19 @@ export default function Sophomore() {
               <div className={styles.links}>
               {pass.facebook_url &&    
                     (<Link href={pass.facebook_url}>
-                    <a>
                     <img src="Images/facebook.png" alt="" key={pass.facebook_url} />
-                    </a>
                     </Link>)
                   }
 
                   {pass.linkedin_url &&    
                     (<Link href={pass.linkedin_url}>
-                    <a>
                     <img src="Images/linkedin.png" alt="" key={pass.linkedin_url} />
-                    </a>
                     </Link>)
                   }
 
                   {pass.instagram_url &&    
                     (<Link href={pass.instagram_url}>
-                    <a>
                     <img src="Images/insta.png" alt="" key={pass.instagram_url} />
-                    </a>
                     </Link>)
                   }
               </div>

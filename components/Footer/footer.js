@@ -77,12 +77,27 @@ export default function Footer() {
 
           
           <div className={styles.Items}>
-            Treasurer - +91 9636081068 (Satyam)
+            Club Heads - 
+            <div>
+              +91 9474547125(Punjaya Tulsi Sharma), 
+            </div>
+            <div>
+              +91 9352405160(Krishna Taparia)
+            </div>
           </div>
           <div className={styles.Items}>
-            Sponsorship Head - +91 9023054978 (Swaroop)
+            Joint Treasurers - 
+            <div>
+              +91 7817956175(Vardan Sharma), 
+            </div>
+            <div>
+              +91 7439470070(Saqlean Zafar)
+            </div>
           </div>
-          <div className={styles.Items}>debatingsociety.nitdgp@gmail.com</div>
+          <div className={styles.Items}>
+            Sponsorship Head - +91 7060392612 (Aviral Verma)
+          </div>
+          <div className={styles.Items}>debatingsociety@nitdgp.ac.in</div>
         </div>
         <div className={styles.col}>
           <div className={styles.head}>QUICK LINKS</div>
@@ -99,7 +114,7 @@ export default function Footer() {
       </div>
       <div className={styles.copyright}>
         <div className={styles.body}>
-          &copy; The Debating Scoiety, NIT Durgapur
+          &copy; The Debating Society, NIT Durgapur
         </div>
       </div>
     </>

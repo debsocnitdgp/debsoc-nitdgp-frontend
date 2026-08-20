@@ -8,6 +8,7 @@ import Events from "../components/HomePage/Events/events";
 import Landing from "../components/HomePage/landing_section/landing";
 import What from "../components/HomePage/what_we/what_we_do";
 import Sponsors from  "../components/HomePage/sponsors/sponsors";
+// import Glimpses from "../components/HomePage/glimpses/glimpses";
 // import { ACTION_TYPES } from "../redux/actions/countriesAction";
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
        <Navbar/>
        <Landing/>
        <What />
+       {/* <Glimpses /> */}
        <Sponsors />
        <Events />
        <Footer />

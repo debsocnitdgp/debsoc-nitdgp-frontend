@@ -5,6 +5,9 @@ import React, { useState, useEffect } from "react";
 import Eight from "../components/Alumni/2021/2021";
 import Nine from "../components/Alumni/2022/2022";
 import TwentyThree from "../components/Alumni/2023/2023";
+import TwentyFour from "../components/Alumni/2024/2024";
+import TwentyFive from "../components/Alumni/2025/2025"
+import TwentySix from "../components/Alumni/2026/2026"
 import Footer from "../components/Footer/footer";
 
 export default function About() {
@@ -46,11 +49,37 @@ export default function About() {
           >
             2019 - 2023
           </div>
+          <div
+            className={
+             isActive === 4 ? `${styles.head1}` : `${styles.head2}`
+            }
+            onClick={() => setActive(4)}
+          >
+            2020 - 2024
+          </div>
+          <div
+            className={
+             isActive === 5 ? `${styles.head1}` : `${styles.head2}`
+            }
+            onClick={() => setActive(5)}
+          >
+            2021 - 2025
+          </div>
+          <div
+            className={
+             isActive === 6 ? `${styles.head1}` : `${styles.head2}`
+            }
+            onClick={() => setActive(6)}
+          >
+            2022 - 2026
+          </div>
         </div>
         {isActive === 1 &&  <Eight />}
         {isActive === 2 &&  <Nine />}
         {isActive === 3 &&  <TwentyThree />}
-
+        {isActive === 4 &&  <TwentyFour />}
+        {isActive === 5 &&  <TwentyFive />}
+        {isActive === 6 &&  <TwentySix />}
       </div>
       <Footer />
     </>

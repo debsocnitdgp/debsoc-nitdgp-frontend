@@ -1,4 +1,4 @@
-@import "styles/variables.scss";
+@use "styles/variables" as *;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 .header {
   width: 100%;

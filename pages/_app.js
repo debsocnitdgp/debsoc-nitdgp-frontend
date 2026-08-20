@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import "../styles/globals.css";
+import "./../styles/globals.css"
 import React from "react";
 import App from "next/app";
 import { wrapper } from "../redux/store";

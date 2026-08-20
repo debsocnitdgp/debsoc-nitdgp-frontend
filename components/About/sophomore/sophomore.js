@@ -15,7 +15,10 @@ export default function Sophomore() {
       setLoading(true);
 
       try {
+
+        // const response = await fetch(`/api/members?year=0`);
         const response = await fetch(ENDPOINTS.SOPHOMORES);
+
         const past = await response.json();
         //const sophomore = past["2"];
         
@@ -50,27 +53,21 @@ export default function Sophomore() {
           <img src={BASE_URL + pass.dp} alt="" className={styles.photo} />
           <div className={styles.col2}>
             <div className={styles.head1}>{pass.firstname} {pass.lastname}</div>
-            <div className={styles.head2}>{pass.post}</div>
+            <div className={styles.head2}>{pass.post != "NA" && pass.post}</div>
             <div className={styles.links}>
               {pass.facebook_url && (
                 <Link href={pass.facebook_url}>
-                  <a>
                     <img src="Images/facebook.png" alt="" />
-                  </a>
                 </Link>
               )}
               {pass.linkedin_url && (
                 <Link href={pass.linkedin_url}>
-                  <a>
                     <img src="Images/linkedin.png" alt="" />
-                  </a>
                 </Link>
               )}
               {pass.instagram_url && (
                 <Link href={pass.instagram_url}>
-                  <a>
                     <img src="Images/insta.png" alt="" />
-                  </a>
                 </Link>
               )}
             </div>

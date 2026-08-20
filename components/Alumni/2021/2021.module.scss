@@ -68,6 +68,10 @@
                 margin: 0px clamp(4px, 0.48vw, 7px);
                 cursor: pointer;
             }
+
+            .links {
+                display: flex;
+            }
         }
     }
 

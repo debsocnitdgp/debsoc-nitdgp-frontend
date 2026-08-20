@@ -26,7 +26,7 @@ function Navbar({ page }) {
   };
   return (
     <div className={`${styles.header} ${top ? styles.navShadow : ""}`} id="navbar">
-      <div className={styles.headerContainer}>
+      <div id="headerContainer" className={styles.headerContainer}>
         <div className={styles.headerLeft}>
           <div className={`${styles.debsoc}`}>
           <Link href="/">DEBSOC</Link>
@@ -35,7 +35,7 @@ function Navbar({ page }) {
         <div className={styles.headerRight}>
           <div className={styles.menuList}>
             <div className={styles.menuListItem}>
-              <a href="https://vistaar.debsocnitdgp.in/" target="_blank" rel="noreferrer">VISTAAR</a>
+              <a href="https://vistaar.debsocnitdgp.com/" target="_blank" rel="noreferrer">VISTAAR</a>
             </div>
             <div className={styles.menuListItem}>
               <Link href="/">HOME</Link>

@@ -1,4 +1,4 @@
-@import "styles/variables.scss";
+@use "styles/variables" as *;
 
 .upcoming {
   max-width: 1353px;

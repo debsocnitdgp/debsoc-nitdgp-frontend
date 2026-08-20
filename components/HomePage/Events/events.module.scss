@@ -1,11 +1,11 @@
-@import "styles/variables.scss";
+@use "styles/variables";
 
 .wrapper {
   margin-top: clamp(100px, 18.5vw, 270px);
-  @include disp;
+  @include variables.disp;
   .head1 {
     text-align: center;
-    color: $purple;
+    color: variables.$purple;
     font-weight: 700;
     font-size: clamp(64px, 10vw, 144px);
     position: absolute;
@@ -14,8 +14,8 @@
 }
 .events {
   margin-top: clamp(18px, 3vw, 40px);
-  background-color: $purple;
-  color: $white;
+  background-color: variables.$purple;
+  color: variables.$white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,8 +54,8 @@
     background: transparent;
   }
     button {
-      background-color: $white;
-      color: $black;
+      background-color: variables.$white;
+      color: variables.$black;
       border: none;
       width: clamp(80px, 12vw, 156px);
       height: clamp(34px, 3.2vw, 47px);

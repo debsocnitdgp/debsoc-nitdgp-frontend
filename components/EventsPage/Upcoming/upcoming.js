@@ -13,6 +13,16 @@ export default function UpcomingEvents() {
 
   const getData = useCallback(async () => {
     setLoading(true);
+
+    // const response = await fetch(`/api/events`, {
+    //   method: 'POST',
+    //   headers:{
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify({
+    //     event: 'upcoming'
+    //   })
+    // });
     const response = await fetch(ENDPOINTS.UPCOMING_EVENTS);
     const upComing = await response.json();
     const events = upComing.upcoming;

@@ -54,6 +54,7 @@
         //    width: clamp(60px,10vw,137px);
       }
       .links {
+        display: flex;
         margin-left : clamp(-4px, -0.48vw, -7px);
       img {
         border-radius: 0;

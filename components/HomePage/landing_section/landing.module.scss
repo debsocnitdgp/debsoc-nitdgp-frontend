@@ -1,11 +1,11 @@
-@import "styles/variables.scss";
+@use "styles/variables";
 
 .landing {
   max-width: 1440px;
   margin: 0 auto;
   background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
   .colwrapper {
-    @include disp;
+    @include variables.disp;
       margin: 0 auto;
     .col1 {
       display: flex;
@@ -28,7 +28,7 @@
         align-items: flex-end;
       }
       .head1 {
-        color: $white;
+        color: variables.$white;
         font-size: clamp(42px, 12vw, 134px);
         margin: 0px;
         z-index: 0;
@@ -40,20 +40,20 @@
       }
       .head2 {
         font-size: clamp(18px, 4.5vw, 50px);
-        color: $black;
+        color: variables.$black;
         margin: 0px;
         width:fit-content;
         font-weight: 700;
         line-height: 1.4;
         z-index: 1;
         span {
-          color: $purple;
+          color: variables.$purple;
         }
       }
       .line {
         width: clamp(100px, 50vw, 580px);
         height: 1px;
-        background-color: $black;
+        background-color: variables.$black;
       }
       .head3 {
         font-size: clamp(18px, 3.5vw, 36px);
@@ -65,21 +65,21 @@
       width: clamp(500px,40.3vw,580px);
         line-height: 1.4;
         font-weight: 400;
-        @include max-q(758px) {
+        @include variables.max-q(758px) {
           display: none;
         }
       }
       .bigButton {
         margin-top: 20px;
-        @include max-q(758px) {
+        @include variables.max-q(758px) {
           display: none;
         }
       }
     }
   }
   button {
-    background-color: $purple;
-    color: $white;
+    background-color: variables.$purple;
+    color: variables.$white;
     border: none;
     width: clamp(100px, 12vw, 156px);
     height: clamp(30px, 3.2vw, 47px);
@@ -99,28 +99,28 @@
     .smallButton {
       margin-top: 15px;
     }
-    @include min-q(757px) {
+    @include variables.min-q(757px) {
       display: none;
     }
   }
 }
 .bannerItems {
     width: 100%;
-     @include disp;
+     @include variables.disp;
          position: absolute;
          z-index: 1;
 .banner {
   margin: 0 auto;
-   @include disp;
-  background-color: $white;
+   @include variables.disp;
+  background-color: variables.$white;
    width: clamp(305px, 60vw, 890px);
     height: clamp(60px, 8.7vw, 130px);
    border-radius: 7px;
    box-shadow: 0px 3px 30px 4px rgba(0, 0, 0, 0.15);
-   border: clamp(1.5px, 0.5vw, 3px) solid $black;
+   border: clamp(1.5px, 0.5vw, 3px) solid variables.$black;
    margin-top: clamp(50px, 6vw, 77px);
   .item{
-     @include disp;
+     @include variables.disp;
       margin: clamp(10px, 2vw, 30px);
       font-weight: 700;
       font-size: clamp(15px,1.8vw,30px);

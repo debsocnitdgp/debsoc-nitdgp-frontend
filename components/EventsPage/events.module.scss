@@ -1,4 +1,4 @@
-@import "styles/variables.scss";
+@use "styles/variables";
 
 .event {
     max-width: 1440px;
@@ -6,14 +6,14 @@
     flex-direction: column;
     margin-top: clamp(70px,6.94vw,100px);
     background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
-    @include disp;
+    @include variables.disp;
     .col1 {
-        @include disp;
+        @include variables.disp;
         flex-direction: column;
             background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
         .head1 {
             background: radial-gradient(50% 50% at 50% 50%, rgba(116, 68, 253, 0.12) 0%, rgba(116, 68, 253, 0.0012) 100%);
-            color: $white;
+            color: variables.$white;
             font-size: clamp(50px, 10vw, 144px);
             font-weight: 700;
             position: absolute;
@@ -21,7 +21,7 @@
         }
 
         .head2 {
-            color: $black;
+            color: variables.$black;
             z-index: 50;
             margin-top: clamp(28px, 4vw, 60px);
             font-size: clamp(20px, 3.5vw, 48px);
@@ -39,7 +39,7 @@
         margin-bottom: clamp(65px, 8vw, 100px);
     }
     .col2 {
-        @include disp;
+        @include variables.disp;
           margin-bottom: clamp(35px, 5.2vw, 70px);
         .head1 {
              margin: 0px clamp(20px, 6.5vw, 150px);
@@ -48,12 +48,12 @@
             font-weight: 700;
             width: clamp(115px,16.6vw,240px);
             height: clamp(26px,4.15vw,62px);
-            @include disp;
-            background-color: $purple;
+            @include variables.disp;
+            background-color: variables.$purple;
             border-radius: clamp(3px, 0.48vw, 7px);
             cursor: pointer;
-            color: $white;
-            @include max-q(600px) {
+            color: variables.$white;
+            @include variables.max-q(600px) {
                 margin: clamp(9px, 2vw, 30px);
             }
         }
@@ -62,12 +62,12 @@
             cursor: pointer;
             font-size: clamp(11px, 1.65vw, 24px);
             font-weight: 700;
-                  @include max-q(600px) {
+                  @include variables.max-q(600px) {
                       margin: clamp(7px,2vw,30px);
                   }
         }
         .head2:hover {
-            color: $purple;
+            color: variables.$purple;
         }
     }
 }
